@@ -1,1 +1,0 @@
-# richardlent.github.io
