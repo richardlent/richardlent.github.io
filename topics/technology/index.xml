@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Technology on Richard A. Lent, Ph.D.</title>
+    <link>/topics/technology/</link>
+    <description>Recent content in Technology on Richard A. Lent, Ph.D.</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; 2017 Richard A. Lent. All rights reserved.</copyright>
+    <lastBuildDate>Mon, 15 May 2017 11:56:48 -0400</lastBuildDate>
+    
+	<atom:link href="/topics/technology/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Musings on blogdown and Hugo</title>
+      <link>/post/musings-on-blogdown-and-hugo/</link>
+      <pubDate>Mon, 15 May 2017 11:56:48 -0400</pubDate>
+      
+      <guid>/post/musings-on-blogdown-and-hugo/</guid>
+      <description>Reading time: 4 minute(s) @ 200 WPM.
+I am a huge fan of R and RStudio, especially relative to their use in creating reproducible research (see RStudio as a Research and Writing Platform). I was thus thrilled to learn that a new R package, blogdown, was being developed for producing websites from R Markdown files using RStudio and the static website generator, Hugo.
+This website was built and is maintained using blogdown and Hugo running inside of RStudio, and is hosted on GitHub Pages.</description>
+    </item>
+    
+    <item>
+      <title>The Plain Text Workflow</title>
+      <link>/post/the-plain-text-workflow/</link>
+      <pubDate>Thu, 11 May 2017 15:38:00 -0400</pubDate>
+      
+      <guid>/post/the-plain-text-workflow/</guid>
+      <description>Reading time: 12 minute(s) @ 200 WPM.
+The Plain Text Workflow is an alternative to writing with a word processor. Mind you, I said writing, not typesetting or formatting, which is a major part of what word processors do. The idea of the plain text workflow is that you separate the act of writing from that of producing a formatted, typeset final document. You initially capture your words using a plain text editor, perhaps using a lightweight formatting language like Markdown.</description>
+    </item>
+    
+    <item>
+      <title>Google Search</title>
+      <link>/post/google-search/</link>
+      <pubDate>Mon, 08 May 2017 14:54:00 -0400</pubDate>
+      
+      <guid>/post/google-search/</guid>
+      <description>Reading time: 2 minute(s) @ 200 WPM.
+Following the directions for Google’s Custom Search Engine, with additional help from How I added search to my static blog, I have added a local search function to this website. It’s on the sidebar menu, with an adorable magnifying glass icon from Font Awesome Icons, and it basically works.
+This search function will, in all likelihood, probably search only the specific content of richardlent.</description>
+    </item>
+    
+    <item>
+      <title>Video test</title>
+      <link>/post/video-test/</link>
+      <pubDate>Fri, 05 May 2017 14:37:00 -0400</pubDate>
+      
+      <guid>/post/video-test/</guid>
+      <description>Reading time: 1 minute(s) @ 200 WPM.
+We now attempt to insert into our R Markdown file, which Hugo then renders into HTML, an mp4 video of dragonflies (insect order Odonata, in case you’re wondering) that were congregating in my front yard a few summers ago.
+So I’m thinking, just insert it using a regular Markdown image tag, yes?
+Like this:
+![](/mp4/Dragonflies.mp4).
+  And so, that worked.
+To center this video on the page I am using the deprecated HTML &amp;lt;center&amp;gt; tag inside of my R Markdown.</description>
+    </item>
+    
+  </channel>
+</rss>

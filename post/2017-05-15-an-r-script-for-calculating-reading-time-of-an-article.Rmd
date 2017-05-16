@@ -1,0 +1,53 @@
+---
+title: An R script for calculating the reading time of an R Markdown file
+author: Richard Lent
+date: 2017-05-15T13:00:00-04:00
+slug: an-r-script-for-calculating-reading-time-of-an-article
+categories: []
+tags: [R]
+description: Because life is short.
+draft: no
+topics: [Programming]
+---
+```{r echo=FALSE}
+bytes <- file.size("2017-05-15-an-r-script-for-calculating-reading-time-of-an-article.Rmd")
+words <- bytes/10
+minutes <- words/200
+```
+
+Reading time: `r round(minutes)` minute(s) @ 200 WPM.
+
+To see how we just did that, read on.
+
+Because psychological research tells us that [including estimated reading times can increase reader engagement](http://marketingland.com/estimated-reading-times-increase-engagement-79830) with digital content, I decided to include reading times for my riveting posts.
+
+So I wrote a simple R script. Here it is:
+
+```{r eval=FALSE}
+bytes <- file.size("2017-05-15-an-r-script-for-calculating-reading-time-of-an-article.Rmd")
+words <- bytes/10
+minutes <- words/200
+```
+
+The script is very simple, such that even I could program it. We first get the number of [bytes](https://en.wikipedia.org/wiki/Byte) in the R Markdown file specified in the argument to the `file.size()` function. A byte is basically equivalent to a single character, and because [a typical text word is 10 bytes](http://searchstorage.techtarget.com/definition/How-many-bytes-for), we divide bytes by 10 to get the approximate number of words in the document. And because [more research](http://marketingland.com/estimated-reading-times-increase-engagement-79830) suggests that the average adult human can read 200-250 words in one minute, we divide the number of words by 200 to get a conservative estimate of the number of minutes it would take an average person to read the number of words in the document. This only takes into account reading the text. Time involved in studying figures, following hyperlinks, rumination, and so forth are ignored in this simple computation. So the estimated reading time is most likely a *minimum* reading time. But at least it gives you a ballpark estimate of how long it might take to read the document. 
+
+The script must be inserted into each R Markdown file for which you want to compute reading time. To use the script, place the three lines of R code inside of an [R code chunk](http://rmarkdown.rstudio.com/authoring_rcodechunks.html) in your document (the script will only work for R Markdown documents). You also have to insert the file name of the R Markdown document that contains the script as an argument to the `file.size()` function, which is part of the [Base R distribution](https://stat.ethz.ch/R-manual/R-devel/library/base/html/00Index.html). 
+
+Then, in the text of your document, reference the `minutes` variable like this, using [inline R code](http://rmarkdown.rstudio.com/lesson-4.html) inside of a pair of backticks:
+
+Reading time: ```r`` round(minutes)` minute(s) @ 200 WPM.
+
+This will result, for the text of this post, in:
+
+Reading time: `r round(minutes)` minute(s) @ 200 WPM.
+
+Note that the inline code uses the R `round()` function to round the number of reading minutes to the nearest integer (using the default value of 0 decimal places).
+
+For all of this to work, the script has to be placed in the R Markdown file before the point at which you reference the `minutes` variable, or else the inline code won't know about the `minutes` variable.
+
+
+
+
+    
+
+

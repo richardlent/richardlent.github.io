@@ -1,0 +1,29 @@
+---
+title: Search this site
+author: Richard Lent
+date: '2017-05-08'
+slug: search
+categories: []
+tags: []
+description: Enter search terms in the box below.
+draft: no
+topics: []
+---
+<script>
+  (function() {
+    var cx = '015106575056108656717:bbgtidhw-d0';
+    var gcse = document.createElement('script');
+    gcse.type = 'text/javascript';
+    gcse.async = true;
+    gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(gcse, s);
+  })();
+</script>
+<gcse:search linktarget="_self"></gcse:search>
+
+
+
+
+
+

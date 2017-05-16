@@ -1,0 +1,28 @@
+---
+title: Cripple Creek
+author: Richard Lent
+date: 2017-05-10T15:19:00-04:00
+slug: cripple-creek
+categories: []
+tags: []
+description: Fingerstyle guitar solo
+draft: no
+topics: [Guitar]
+---
+
+My take on [Leo Kottke's](http://leokottke.com) arrangement of the old banjo tune.  If you listen carefully, somewhere around the third section I substituted about 20 seconds of original material. Recorded live at <a href="http://www.passim.org">Club Passim</a> in Cambridge, Massachusetts, by Steve Friedman of [Melville Park Studio](http://melvillepark.com), July 8, 2002.
+
+If you want to hear Kottke himself play it, here you go:
+
+`r htmltools::HTML("{{< youtube 9iZ6yE2oYFc >}}")`
+
+But please, no comparisons with me.
+
+* Guitar: Taylor 415 (Click for larger image.)
+
+[![](/img/taylor415jumbo_small.jpg)](/img/taylor415jumbo_large.jpg)
+
+* Tuning: DADF#AD
+
+* Listen/download: [Cripple Creek](/mp3/Cripple_Creek.mp3)
+

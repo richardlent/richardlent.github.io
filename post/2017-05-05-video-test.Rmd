@@ -1,0 +1,53 @@
+---
+title: Video test
+author: Richard lent
+date: 2017-05-05T14:37:00-04:00
+slug: video-test
+categories: []
+tags: [insects]
+description: Another proof-of-concept
+draft: yes
+topics: [Technology, R, RStudio, Ecology]
+---
+```{r echo=FALSE}
+bytes <- file.size("2017-05-05-video-test.Rmd")
+words <- bytes/10
+minutes <- words/200
+```
+
+Reading time: `r round(minutes)` minute(s) @ 200 WPM.
+
+We now attempt to insert into our [R Markdown](http://rmarkdown.rstudio.com) file, which [Hugo](https://gohugo.io) then renders into HTML, an [mp4](https://en.wikipedia.org/wiki/MPEG-4_Part_14) video of dragonflies (insect order [Odonata](http://www.ucmp.berkeley.edu/arthropoda/uniramia/odonatoida.html), in case you're wondering) that were congregating in my front yard a few summers ago.
+
+So I'm thinking, just insert it using a regular Markdown image tag, yes?
+
+Like this: 
+
+`![](/mp4/Dragonflies.mp4)`.
+
+<center>
+![](/mp4/Dragonflies.mp4)
+</center>
+
+And so, that worked.
+
+To center this video on the page I am using the [deprecated](https://en.wikipedia.org/wiki/Deprecation) HTML `<center>` tag inside of my R Markdown.
+
+To view the raging controversy surrounding the deprecation of the beloved `<center>` tag, click [here](http://stackoverflow.com/questions/1798817/why-is-the-center-tag-deprecated-in-html).
+
+The video above used the default Markdown image tag. But here we're using R Markdown, which understands [Pandoc Markdown](http://rmarkdown.rstudio.com/authoring_pandoc_markdown.html#pandoc_markdown), and thus we can adjust the size of the video player like so:
+
+`![](/mp4/Dragonflies.mp4){width=400 height=300}`
+
+<center>
+![](/mp4/Dragonflies.mp4){width=500 height=300}
+</center>
+
+This gives us a better-looking video frame than what we get by default, at least on a desktop web browser. The size difference in video players doesn't really make any difference when viewed on a small mobile device like a smartphone. Both sizes look the same in the smartphone's video player. 
+
+Width and height are assumed to be in pixels unless specified otherwise. See [Images](http://rmarkdown.rstudio.com/authoring_pandoc_markdown.html#images) for more details.
+
+
+
+
+

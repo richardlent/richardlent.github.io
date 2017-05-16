@@ -1,0 +1,15 @@
+---
+date: 2017-04-26T14:49:48-04:00
+description: "R, RStudio, Blogdown, Hugo"
+draft: no
+tags: []
+title: First post
+topics: [Miscellaneous]
+---
+
+This site is written, built, and maintained in [RStudio](https://www.rstudio.com) using the [R](https://www.r-project.org) [blogdown](https://github.com/rstudio/blogdown) package and the [Hugo](https://gohugo.io) static website generator. See [Making a Website Using Blogdown, Hugo, and GitHub](https://proquestionasker.github.io/blog/Making_Site). 
+
+An apparent quirk (or maybe it's a [feature](http://www.urbandictionary.com/define.php?term=It%27s%20not%20a%20bug%2C%20it%27s%20a%20feature)) of this system is that hyperlinks are not displayed in the short summary displayed by default for each post. The summary consists simply of the first `n` lines of the posts's text, where the variable `n` has a value that is unknown to me. Random experimentation suggests that `n = 4`, after which a `Read more >>` link is provided. If one clicks that link, the hyperlinks are then properly displayed. Another quirk is that paragraph breaks are ignored in the brief post summary. This will probably only be an issue for people who create paragraphs consisting of only a single sentence.
+
+For something slightly more interesting than this (maybe), see [About](/about/).
+

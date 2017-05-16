@@ -1,0 +1,22 @@
+---
+title: Bossa Novish
+author: Richard Lent
+date: 2017-05-05T12:08:00-04:00
+slug: bossa-novish
+categories: []
+tags: []
+description: Fingerstyle guitar solo
+draft: no
+topics: [Guitar]
+---
+
+An original tune of mine. This recording gets kind of screwed up in the middle, but hey, that's how we know it's live and not lip-synched, right?
+
+* Guitar: Martin 00-18V (Click for larger image.)
+
+[![](/img/Martin00-18VSmall.jpg)](/img/Martin00-18VLarge.jpg)
+
+* Tuning: Standard
+
+* Listen/download: [Bossa Novish](/mp3/Bossa_Novish.mp3)
+

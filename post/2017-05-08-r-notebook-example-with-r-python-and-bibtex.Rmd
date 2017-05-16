@@ -1,0 +1,18 @@
+---
+title: R Notebook Example with R, Python, and BibTeX
+author: Richard Lent
+date: 2017-05-08T12:20:00-04:00
+slug: r-notebook-example-with-r-python-and-bibtex
+categories: []
+tags: [BibTex, Python]
+description: ''
+draft: no
+topics: [Programming, R Notebooks, R]
+---
+The accompanying [R Notebook](http://rmarkdown.rstudio.com/r_notebooks.html) is a simple example that combines [R code chunks](http://rmarkdown.rstudio.com/authoring_rcodechunks.html), [Python](https://www.python.org) [code chunks](http://rmarkdown.rstudio.com/authoring_knitr_engines.html), and [BibTeX](http://www.bibtex.org) literature citations in one [R Markdown](http://rmarkdown.rstudio.com) document.
+
+For additional information please see [RStudio as a Research and Writing Platform](/post/rstudio-as-a-research-and-writing-platform/).
+
+Click [here](/rnotebooks/basemap.nb.html) to read the notebook.
+
+

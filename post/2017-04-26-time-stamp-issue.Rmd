@@ -1,0 +1,21 @@
+---
+title: Time stamp issue
+author: Richard Lent
+date: 2017-04-26T14:52:42-04:00
+slug: time-stamp-issue
+tags: []
+description: ""
+draft: no
+topics: [Miscellaneous]
+---
+
+There seems to be a bug in [blogdown](https://github.com/rstudio/blogdown) in which time stamps for posts are all `00:00`.
+
+Either that or there is something in some setting somewheres that I am missing.
+
+If we use the `blogdown` "New Post" RStudio addin, the time stamp for the post is 00:00.
+
+However, if we create a post using the `blogdown` `new_post()` function, the time stamp is correct.
+
+This either needs to be fixed or I need to be re-educated.
+

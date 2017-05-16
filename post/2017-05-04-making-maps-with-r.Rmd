@@ -1,0 +1,16 @@
+---
+title: Making Maps with R
+author: Richard Lent
+date: 2017-05-04T13:45:00-04:00
+slug: making-maps-with-r
+categories: []
+tags: [GIS, maps]
+description: Who needs a GIS? Make your maps with R!
+draft: yes
+topics: [R, R Notebooks]
+---
+
+Making maps on a computer has traditionally required the use of desktop geographic information system (GIS) software such as [ArcGIS](http://desktop.arcgis.com/en/) or [QGIS.](http://qgis.org/) An alternative is to use [R](https://www.r-project.org/), a free software environment for statistical computing and graphics. R has many features that allow it to read GIS data and produce both static and interactive maps. This document (which is an [R Notebook](http://rmarkdown.rstudio.com/r_notebooks.html)) shows how to make maps with R and [RStudio](https://www.rstudio.com/), using R base graphics and the [maps](https://cran.r-project.org/web/packages/maps/index.html) and [mapdata](https://cran.r-project.org/web/packages/mapdata/index.html) packages, in addition to the [leaflet](http://rstudio.github.io/leaflet/) and [tmap](https://github.com/mtennekes/tmap) packages. We will also map U.S. Census data with help from the [tigris](https://github.com/walkerke/tigris) and [acs](https://github.com/cran/acs) packages.
+
+Click [here](/rnotebooks/maps.nb.html) to read the notebook.
+

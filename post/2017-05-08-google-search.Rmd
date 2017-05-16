@@ -1,0 +1,46 @@
+---
+title: Google Search
+author: Richard Lent
+date: 2017-05-08T14:54:00-04:00
+slug: google-search
+categories: []
+tags: []
+description: Because it's there.
+draft: no
+topics: [Technology]
+---
+```{r echo=FALSE}
+bytes <- file.size("2017-05-08-google-search.Rmd")
+words <- bytes/10
+minutes <- words/200
+```
+
+Reading time: `r round(minutes)` minute(s) @ 200 WPM.
+
+Following the directions for Google's [Custom Search Engine](https://cse.google.com/cse/), with additional help from [How I added search to my static blog](https://www.raymondcamden.com/2016/03/07/how-i-added-search-to-my-static-blog), I have added a local search function to this website. It's on the sidebar menu, with an adorable magnifying glass icon from [Font Awesome Icons](http://fontawesome.io/icons/), and it basically works.
+
+This search function will, in all likelihood, probably search only the specific content of [richardlent.github.io](https://richardlent.github.io/). Most likely, it will, that is, in a manner of speaking.
+
+But I assume, and probably also believe, somewhat, that because it's a Google search tool, that [it relies on Google's site indexing](https://www.quora.com/How-does-the-Google-custom-search-for-other-websites-work). And because I recently changed the URL of this site from `richardlent.github.io/home/` to just plain `richardlent.github.io`, there are some dead links still laying around out on the internet that the search engine is still finding. These will have `/home/` in the URL. I have requested that Google delete the old URL and replace it with the new URL. Thus the problem should be resolved "in a few days."
+
+We'll see.
+
+Also, with Google Custom Search, you occasionally get ads from Google. Often more than occasionally. These seem to either be there or not according to the whims of Google. Depending on what you search for, maybe, sometimes you get a list of ads before you get to your search results, sometimes you get your search results directly. I have no control over this. Although, we are getting the Search function for free, and so we shouldn't begrudge Google a few billions of dollars in ad revenue. 
+
+Also, I assume that when I add new content to this website it will take a while for Google to index it so that it shows up in Google Custom Search. And as quoted from [this site](https://www.impactbnd.com/blog/how-long-does-it-take-google-to-index-a-new-page):
+
+> "There's really no set timetable for how quickly your new page will be indexed by Google."
+
+And from the same source we have this equally encouraging news:
+
+> "[T]here’s nothing you can do to ensure that your new page gets indexed by Google, and quite honestly, there really isn’t anything guaranteed to get it done."
+
+I rationalize all of this as follows. Older posts and pages of this website will eventually get indexed by Google and will show up in Search results (we hope). New content may take a while to get indexed, but new content is also at the top of the list of posts, so you are likely to see the new content anyway. 
+
+And so. Happy searching! Smoke 'em if you got 'em.
+
+In the meantime I will be studying [A Beginner's Guide to Google Search Console](https://moz.com/blog/a-beginners-guide-to-the-google-search-console).
+
+
+
+
