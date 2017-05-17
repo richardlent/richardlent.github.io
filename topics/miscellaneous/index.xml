@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Miscellaneous on Richard A. Lent, Ph.D.</title>
+    <link>/topics/miscellaneous/</link>
+    <description>Recent content in Miscellaneous on Richard A. Lent, Ph.D.</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; 2017 Richard A. Lent. All rights reserved.</copyright>
+    <lastBuildDate>Wed, 26 Apr 2017 14:52:42 -0400</lastBuildDate>
+    
+	<atom:link href="/topics/miscellaneous/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Time stamp issue</title>
+      <link>/post/time-stamp-issue/</link>
+      <pubDate>Wed, 26 Apr 2017 14:52:42 -0400</pubDate>
+      
+      <guid>/post/time-stamp-issue/</guid>
+      <description>There seems to be a bug in blogdown in which time stamps for posts are all 00:00.
+Either that or there is something in some setting somewheres that I am missing.
+If we use the blogdown “New Post” RStudio addin, the time stamp for the post is 00:00.
+However, if we create a post using the blogdown new_post() function, the time stamp is correct.
+This either needs to be fixed or I need to be re-educated.</description>
+    </item>
+    
+    <item>
+      <title>First post</title>
+      <link>/post/2017-04-26-first-post/</link>
+      <pubDate>Wed, 26 Apr 2017 14:49:48 -0400</pubDate>
+      
+      <guid>/post/2017-04-26-first-post/</guid>
+      <description>This site is written, built, and maintained in RStudio using the R blogdown package and the Hugo static website generator. See Making a Website Using Blogdown, Hugo, and GitHub.
+An apparent quirk (or maybe it’s a feature) of this system is that hyperlinks are not displayed in the short summary displayed by default for each post. The summary consists simply of the first n lines of the posts’s text, where the variable n has a value that is unknown to me.</description>
+    </item>
+    
+  </channel>
+</rss>
