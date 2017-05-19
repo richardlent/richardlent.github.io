@@ -2,76 +2,103 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Topics on Richard A. Lent, Ph.D.</title>
-    <link>https://richardlent.github.io/topics/</link>
+    <link>/topics/</link>
     <description>Recent content in Topics on Richard A. Lent, Ph.D.</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2017 Richard A. Lent. All rights reserved.</copyright>
-    <lastBuildDate>Wed, 10 May 2017 15:19:00 -0400</lastBuildDate>
+    <lastBuildDate>Fri, 19 May 2017 14:09:00 -0400</lastBuildDate>
     
-	<atom:link href="https://richardlent.github.io/topics/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/topics/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
+      <title>Data Science</title>
+      <link>/topics/data-science/</link>
+      <pubDate>Fri, 19 May 2017 14:09:00 -0400</pubDate>
+      
+      <guid>/topics/data-science/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Ecology</title>
+      <link>/topics/ecology/</link>
+      <pubDate>Fri, 05 May 2017 14:37:00 -0400</pubDate>
+      
+      <guid>/topics/ecology/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Guitar</title>
-      <link>https://richardlent.github.io/topics/guitar/</link>
+      <link>/topics/guitar/</link>
       <pubDate>Wed, 10 May 2017 15:19:00 -0400</pubDate>
       
-      <guid>https://richardlent.github.io/topics/guitar/</guid>
+      <guid>/topics/guitar/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Miscellaneous</title>
-      <link>https://richardlent.github.io/topics/miscellaneous/</link>
+      <link>/topics/miscellaneous/</link>
       <pubDate>Wed, 26 Apr 2017 14:52:42 -0400</pubDate>
       
-      <guid>https://richardlent.github.io/topics/miscellaneous/</guid>
+      <guid>/topics/miscellaneous/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Programming</title>
-      <link>https://richardlent.github.io/topics/programming/</link>
+      <link>/topics/programming/</link>
       <pubDate>Mon, 15 May 2017 13:00:00 -0400</pubDate>
       
-      <guid>https://richardlent.github.io/topics/programming/</guid>
+      <guid>/topics/programming/</guid>
       <description></description>
     </item>
     
     <item>
       <title>R</title>
-      <link>https://richardlent.github.io/topics/r/</link>
-      <pubDate>Mon, 08 May 2017 12:20:00 -0400</pubDate>
+      <link>/topics/r/</link>
+      <pubDate>Wed, 10 May 2017 14:20:08 -0400</pubDate>
       
-      <guid>https://richardlent.github.io/topics/r/</guid>
+      <guid>/topics/r/</guid>
       <description></description>
     </item>
     
     <item>
       <title>R Notebooks</title>
-      <link>https://richardlent.github.io/topics/r-notebooks/</link>
+      <link>/topics/r-notebooks/</link>
       <pubDate>Mon, 08 May 2017 12:20:00 -0400</pubDate>
       
-      <guid>https://richardlent.github.io/topics/r-notebooks/</guid>
+      <guid>/topics/r-notebooks/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Rstudio</title>
-      <link>https://richardlent.github.io/topics/rstudio/</link>
-      <pubDate>Wed, 03 May 2017 14:47:00 -0400</pubDate>
+      <link>/topics/rstudio/</link>
+      <pubDate>Wed, 10 May 2017 14:20:08 -0400</pubDate>
       
-      <guid>https://richardlent.github.io/topics/rstudio/</guid>
+      <guid>/topics/rstudio/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Statistics</title>
+      <link>/topics/statistics/</link>
+      <pubDate>Fri, 19 May 2017 14:09:00 -0400</pubDate>
+      
+      <guid>/topics/statistics/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Technology</title>
-      <link>https://richardlent.github.io/topics/technology/</link>
+      <link>/topics/technology/</link>
       <pubDate>Fri, 19 May 2017 14:32:00 -0400</pubDate>
       
-      <guid>https://richardlent.github.io/topics/technology/</guid>
+      <guid>/topics/technology/</guid>
       <description></description>
     </item>
     
