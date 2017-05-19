@@ -28,10 +28,9 @@ Readers of this website (if any) may have noticed that I recently implemented Di
       <pubDate>Fri, 19 May 2017 14:09:00 -0400</pubDate>
       
       <guid>/post/introduction-to-r/</guid>
-      <description> Introduzione   Reading time: 0 minute(s) @ 200 WPM.
-Introduzione Readers of this post may find the Glossary of Statistical Terms helpful.
-R is a free, open-source, cross-platform statistical and graphical environment that can be obtained from www.r-project.org.
- </description>
+      <description>Introduzione   Reading time: 1 minute(s) @ 200 WPM.
+So, this post should not be here. It’s marked as a draft in RStudio, and Hugo should not build it.
+But it seems that including it is the only way to get all the other files of this website to be in sync, so here it is. Readers may follow it as it develops. I hope you can stand the excitement.</description>
     </item>
     
     <item>
