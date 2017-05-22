@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Rstudio on Richard A. Lent, Ph.D.</title>
+    <link>/tags/rstudio/</link>
+    <description>Recent content in Rstudio on Richard A. Lent, Ph.D.</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; 2017 Richard A. Lent. All rights reserved.</copyright>
+    <lastBuildDate>Wed, 17 May 2017 12:02:00 -0400</lastBuildDate>
+    
+	<atom:link href="/tags/rstudio/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>How I Deploy My Website to GitHub Using RStudio, blogdown, and Hugo</title>
+      <link>/post/how-i-deploy-my-website-to-github-using-rstudio-blogdown-and-hugo/</link>
+      <pubDate>Wed, 17 May 2017 12:02:00 -0400</pubDate>
+      
+      <guid>/post/how-i-deploy-my-website-to-github-using-rstudio-blogdown-and-hugo/</guid>
+      <description>Reading time: 3 minute(s) @ 200 WPM.
+I have worked for days trying to get this website up and running on GitHub Pages. I think I finally have gotten it to work.
+This is that story.
+I have studied the following sources of punditage:
+ Making a Website Using Blogdown, Hugo, and GitHub pages Update: Deploying Hugo-generated websites on personal GitHub Pages How to make a GitHub pages blog with RStudio and Hugo Including image using blogdown Building a Blog with Blogdown and GitHub The Hugo documentation Create Blogs and Websites with R Markdown Hosting on GitHub Pages Build_Site and Serve_Site Output Issues Create a Free Personal Academic Website with Hugo  All of the articles and discussions were enlightening, and helped me arrive at what I believe to be the simplest way to deploy a Hugo-generated website on GitHub Pages, at least for me.</description>
+    </item>
+    
+  </channel>
+</rss>
