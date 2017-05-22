@@ -1,0 +1,64 @@
+# A Markdown Example
+
+## Markdown
+
+### Markdown
+
+#### Markdown
+
+Paragraph breaks are simply blank lines. 
+
+Four score and seven years ago our fathers brought forth on this continent a new nation, conceived in liberty, and dedicated to the proposition that all men are created equal.
+
+A blockquote is the greater-than symbol:
+
+> Now we are engaged in a great civil war, testing whether that nation, or any nation so conceived and so dedicated, can long endure. We are met on a great battlefield of that war. We have come to dedicate a portion of that field, as a final resting place for those who here gave their lives that that nation might live. It is altogether fitting and proper that we should do this.
+
+But, in a larger sense, we can not dedicate, we can not consecrate, we can not hallow this ground. The brave men, living and dead, who struggled here, have consecrated it, far above our poor power to add or detract. The world will little note, nor long remember what we say here, but it can never forget what they did here. It is for us the living, rather, to be dedicated here to the unfinished work which they who fought here have thus far so nobly advanced. It is rather for us to be here dedicated to the great task remaining before us--that from these honored dead we take increased devotion to that cause for which they gave the last full measure of devotion--that we here highly resolve that these dead shall not have died in vain--that this nation, under God, shall have a new birth of freedom--and that government of the people, by the people, for the people, shall not perish from the earth.[^1]
+
+[^1]: Abraham Lincoln wrote this. 
+      Subsequent lines of the footnote need to be indented. A jump from the footnote back to the text is conveniently generated.     
+      
+Or else they are not considered to be part of the footnote.
+
+Thus we keep typing, and if we insert another footnote, like right here[^2], we get another footnote.
+
+[^2]: And here is the material for the second footnote.
+
+You can insert plain-text bibliographic citations into a footnote, as we are doing right here[^3]. In this case the footnote contains a citation marker pasted in from RefWorks, which we will later format.
+
+[^3]: {{816 Wang,Jiawu 2014;}}
+
+Indentation is produced by multiples of `<space><space>*<space>`. 
+
+(And notice the use of the backtick character to delimit use of a monospaced font.)
+
+  * So here is some indentation.
+    * More indentation.
+      * And more.
+      * Useful for outlines.
+
+Numbered lists? Just type them:
+
+1. First line.
+2. Second line.
+3. Third line.
+
+The numbers are produced automatically by the MacDown editor.
+
+For "code blocks," which are blocks of monospaced text, indent every line of the block at least 4 spaces or 1 tab:
+
+    Like this.
+    These are handy for inserting examples of computer code statements or for simply setting off blocks of text for extra emphasis.
+    
+And now we are back to normal text, because we are no longer indenting 1 tab space.
+
+A hyperlink looks like this:
+
+[College of the Holy Cross](http://www.holycross.edu)
+
+An image link looks like this:
+
+![](/img/ThePlainTextWorkflow/fish.jpg)
+
+More information on Markdown and its syntax can be found [here](https://daringfireball.net/projects/markdown/).
