@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="R is not like other statistical software. But that&#39;s a good thing.">
+  <meta name="generator" content="Hugo 0.20.6" />
+
+  <title>Introduction to R &middot; Richard A. Lent, Ph.D.</title>
+
+  
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/0.6.0/pure-min.css">
+
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/0.6.0/grids-responsive-old-ie-min.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/0.6.0/grids-responsive-min.css">
+  <!--<![endif]-->
+
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="../../css/side-menu-old-ie.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+  <link rel="stylesheet" href="../../css/side-menu.css">
+  <!--<![endif]-->
+
+  <link rel="stylesheet" href="../../css/blackburn.css">
+
+  
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+  
+  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet" type="text/css">
+
+  
+  
+
+  
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.1.0/styles/androidstudio.min.css">
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.1.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+  
+
+  <link rel="shortcut icon" href="../../img/favicon.ico" type="image/x-icon" />
+
+  
+  
+
+</head>
+
+
+<body>
+<div id="layout">
+
+  
+<a href="#menu" id="menuLink" class="menu-link">
+  
+  <span></span>
+</a>
+<div id="menu">
+
+  
+  <a class="pure-menu-heading brand" href="../../">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;^(;,;)^</a>
+
+
+  <div class="pure-menu">
+    <ul class="pure-menu-list">
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="../../"><i class='fa fa-home fa-fw'></i>Home</a>
+      
+        </li>
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="../../about/"><i class='fa fa-user fa-fw'></i>About</a>
+      
+        </li>
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="../../post/"><i class='fa fa-list fa-fw'></i>Posts</a>
+      
+        </li>
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="../../topics/"><i class='fa fa-folder fa-fw'></i>Topics</a>
+      
+        </li>
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="../../tags/"><i class='fa fa-tag fa-fw'></i>Tags</a>
+      
+        </li>
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="http://richard-lent.pixels.com"><i class='fa fa-camera fa-fw'></i>Photography</a>
+      
+        </li>
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="../../topics/guitar/"><i class='fa fa-music fa-fw'></i>Guitar</a>
+      
+        </li>
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="../../publications/"><i class='fa fa-list fa-fw'></i>Publications</a>
+      
+        </li>
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="mailto:richardlent@gmail.com"><i class='fa fa-envelope-o fa-fw'></i>Contact</a>
+      
+        </li>
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="../../search/"><i class='fa fa-search fa-fw'></i>Search</a>
+      
+        </li>
+      
+    </ul>
+  </div>
+
+  <div class="pure-menu social">
+  <ul class="pure-menu-list">
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://twitter.com/lentrichard" target="_blank"><i class="fa fa-twitter-square fa-fw"></i>Twitter</a>
+    </li>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://instagram.com/richardlent3710" target="_blank"><i class="fa fa-instagram fa-fw"></i>Instagram</a>
+    </li>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+  </ul>
+</div>
+
+
+  <div>
+  <div class="small-print">
+    <small>&copy; 2017 Richard A. Lent. All rights reserved.</small>
+  </div>
+  <div class="small-print">
+    <small>Built with&nbsp;<a href="https://gohugo.io/" target="_blank">Hugo</a></small>
+    <small>Theme&nbsp;<a href="https://github.com/yoshiharuyamashita/blackburn" target="_blank">Blackburn</a></small>
+  </div>
+</div>
+
+</div>
+
+
+  <div id="main">
+
+  
+<div class="header">
+  <h1>Introduction to R</h1>
+  <h2>R is not like other statistical software. But that&#39;s a good thing.</h2>
+</div>
+<div class="content">
+
+  <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>23 May 2017, 14:09</time>
+  </div>
+
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-folder fa-fw"></i>
+    
+      <a class="post-taxonomy-topic" href="../../topics/statistics">Statistics</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-topic" href="../../topics/data-science">Data Science</a>
+    
+  </div>
+  
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="../../tags/r">R</a>
+    
+  </div>
+  
+  
+
+</div>
+
+  <div id="TOC">
+<ul>
+<li><a href="#introduction">Introduction</a></li>
+<li><a href="#getting-a-feel-for-r">Getting a feel for R</a><ul>
+<li><a href="#the-console">The console</a></li>
+<li><a href="#function-calls-and-arguments">Function calls and arguments</a><ul>
+<li><a href="#hint-getting-help">HINT: Getting help</a></li>
+</ul></li>
+</ul></li>
+</ul>
+</div>
+
+<!-- 
+
+Don't forget to update the date in the YAML. 
+
+And turn comments back on.
+
+-->
+<p>Reading time: 3 minute(s) @ 200 WPM.</p>
+<center>
+<strong>DRAFT DRAFT DRAFT DRAFT DRAFT DRAFT DRAFT</strong>
+</center>
+<div id="introduction" class="section level1">
+<h1>Introduction</h1>
+<p>Readers may find the <a href="http://www.stat.berkeley.edu/~stark/SticiGui/Text/gloss.htm">Glossary of Statistical Terms</a> helpful.</p>
+<p><strong>R is a free</strong>, open-source, cross-platform statistical and graphical environment that can be obtained from <a href="http://www.r-project.org/">www.r-project.org</a>.</p>
+<p><strong>Some reasons for using R</strong>:</p>
+<ul>
+<li><p>R is world-class software for data analysis and visualization.</p></li>
+<li><p>R is free. There are no license fees and no restrictions on how many times and where you can install the software.</p></li>
+<li><p>R runs on a variety of computer platforms including Windows, MacOS, and Unix.</p></li>
+<li><p>R provides an unparalleled platform for programming new statistical methods in an easy and straightforward manner.</p></li>
+<li><p>R contains advanced statistical routines not yet available in other packages.</p></li>
+<li><p>R has state-of-the-art graphics capabilities.</p></li>
+</ul>
+<p>More reasons for using R can be found <a href="https://thetarzan.wordpress.com/2011/07/15/why-use-r-a-grad-students-2-cents/">here.</a> And <a href="http://www.nytimes.com/2009/01/07/technology/business-computing/07program.html?pagewanted=all&amp;_r=1&amp;">here.</a> See also <a href="http://www.sharpsightlabs.com/learn-r-data-science/">Why you should learn R first for data science</a>, <a href="http://blog.revolutionanalytics.com/2013/11/the-rise-of-r-as-the-language-of-analytics.html">The rise of R as the language of analytics</a>, and <a href="http://www.nature.com/news/programming-tools-adventures-with-r-1.16609">Programming tools: Adventures with R</a>.</p>
+<p>One may also benefit from reading <a href="http://www.statmethods.net/about/learningcurve.html">Why R has A Steep Learning Curve</a>. (And then, stop your whining.)</p>
+<p><strong>And before we proceed further</strong>, we note that R is <em>way</em> easier to use when run inside of <a href="https://www.rstudio.com">RStudio</a>, a free, cross-platform <a href="https://en.wikipedia.org/wiki/Integrated_development_environment">integrated development environment</a> (IDE). Every example in this post can either be run in standalone R or in the R console panel inside of RStudio. (More on this later; see also <a href="../../post/rstudio-as-a-research-and-writing-platform/">RStudio as a Research and Writing Platform</a>).</p>
+<p><strong>There are many excellent sources</strong> of R documentation available on the Internet. These include <a href="http://cran.r-project.org/doc/manuals/r-release/R-intro.html">An Introduction to R</a>, the gigantic <a href="http://cran.r-project.org/doc/manuals/r-release/fullrefman.pdf">R Reference Index</a> (PDF), and my personal favorite, <a href="http://www.statmethods.net/">Quick-R</a>. There is also an <a href="http://journal.r-project.org/">R Journal</a>, an <a href="http://cran.r-project.org/doc/FAQ/R-FAQ.html">R FAQ</a> (Frequently Asked Questions), many <a href="http://www.r-project.org/doc/bib/R-books.html">books</a>, the <a href="http://cran.r-project.org/doc/contrib/Short-refcard.pdf">R Reference Card</a> (PDF), various <a href="http://web.mit.edu/hackl/www/lab/turkshop/slides/r-cheatsheet.pdf">R cheat sheets</a> (Google it), and other assorted <a href="http://www.r-project.org/other-docs.html">R websites</a>.</p>
+<p><strong>To install R</strong>, go to the <a href="http://www.r-project.org/">R website</a>. Under “Getting Started:”, click <a href="http://cran.r-project.org/mirrors.html">download R</a>. Choose a CRAN (<strong>C</strong>omprehensive <strong>R</strong> <strong>A</strong>rchive <strong>N</strong>etwork) mirror site that is closest to you. Then, under “Download and Install R,” download the installer (“Precompiled binary distribution”) for your particular computer platform. Run the downloaded installer application and you should be off and running. Extensive additional gory details can be found at <a href="http://cran.r-project.org/doc/manuals/r-release/R-admin.html">R Installation and Administration</a>.</p>
+<p><strong>R is not like other statistical software</strong>. Rather than being a “software package” in the usual sense of SPSS, SAS, Systat, etc., where the user fills in the blanks in a series of menus and dialog boxes and then has to sift through reams of canned output, R is actually a programming language customized for statistical analysis and graphics. You can install a menu-driven, graphical user interface (<a href="http://www.rcommander.com/">R Commander</a>) that makes the language easier to use, but the true power of R lies in its programmability.</p>
+</div>
+<div id="getting-a-feel-for-r" class="section level1">
+<h1>Getting a feel for R</h1>
+<p>The impact of this introduction to R will be greater if you follow along in R, entering the commands as shown. You can copy and paste R commands from this introduction directly into the R console instead of typing them by hand.</p>
+<p>When you start R you will see a command console window, into which you type R commands. It looks like this on the Mac:</p>
+<div class="figure">
+<img src="../../img/IntroductionToR/RConsole.png" />
+
+</div>
+<p>The command prompt is the <code>&gt;</code> symbol.</p>
+<div id="the-console" class="section level2">
+<h2>The console</h2>
+<p>You type R statements into the console, which is a <a href="https://en.wikipedia.org/wiki/Command-line_interface">command-line interface</a>. R then evaluates the statements, and if it finds no errors, does something, like printing a result or storing a value for later use. It then waits for you to type in another command. This is how computing was done in the <a href="https://en.wikipedia.org/wiki/History_of_computing">olden days</a>, and it is still <a href="https://code.tutsplus.com/tutorials/the-command-line-is-your-best-friend--net-30362">the most efficient and powerful way to do computing</a>.</p>
+</div>
+<div id="function-calls-and-arguments" class="section level2">
+<h2>Function calls and arguments</h2>
+<p>Much of R involves function calls, arguments, and return values. Like in your high school algebra class, when you wrote <code>f(x)</code> (“the f of x”), the <code>f</code> stands for the name of the function and the <code>x</code> stands for the arguments passed into the function. In algebra and in computer programming, a function is an equation or a piece of computer code that takes in one or more values (arguments), does some sort of computation with them, and then returns a result.</p>
+<p>For example, in R we can generate a vector of 1000 random values from a normal distribution having a mean = 0 and standard deviation = 1 (the default arguments) by typing:</p>
+<blockquote>
+<p>y = rnorm(1000)</p>
+</blockquote>
+<hr />
+<div id="hint-getting-help" class="section level3">
+<h3>HINT: Getting help</h3>
+<p>You can get help on any R command by typing <code>help(command)</code>.</p>
+<p>e.g.,</p>
+<p><code>help(plot)</code></p>
+<p><code>?(command)</code> works the same, e.g. <code>?(plot)</code></p>
+<p>You can also search for all help topics that contain a particular command by typing two question marks immediately followed by the command, without parentheses, e.g.:</p>
+<p><code>??plot</code></p>
+<hr />
+</div>
+</div>
+</div>
+
+
+  
+<div class="prev-next-post pure-g">
+  <div class="pure-u-1-24" style="text-align: left;">
+    
+    <a href="../../post/a-comment-about-comments/"><i class="fa fa-chevron-left"></i></a>
+    
+  </div>
+  <div class="pure-u-10-24">
+    
+    <nav class="prev">
+      <a href="../../post/a-comment-about-comments/">A Comment About Comments</a>
+    </nav>
+    
+  </div>
+  <div class="pure-u-2-24">
+    &nbsp;
+  </div>
+  <div class="pure-u-10-24">
+    
+  </div>
+  <div class="pure-u-1-24" style="text-align: right;">
+    
+  </div>
+</div>
+
+
+
+  
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+
+(function() {
+    
+    
+    if (window.location.hostname == "localhost")
+        return;
+
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+    var disqus_shortname = 'richardlent';
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com/" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+</div>
+
+</div>
+</div>
+<script src="../../js/ui.js"></script>
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-48234901-2', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+
+
+</body>
+</html>
+
