@@ -1,4 +1,4 @@
----
+----
 title: Habitat structure and phenotypic variation in the invading butterfly *Coenonympha
   tullia*
 csl: nature.csl
@@ -9,7 +9,7 @@ output:
   pdf_document: default
   word_document: default
 bibliography: sites.bib
----
+----
 
 <!--
 The following two lines are LaTeX commands to prevent duplication of
