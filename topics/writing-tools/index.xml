@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Writing Tools on Richard A. Lent, Ph.D.</title>
+    <link>https://richardlent.github.io/topics/writing-tools/</link>
+    <description>Recent content in Writing Tools on Richard A. Lent, Ph.D.</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; 2017 Richard A. Lent. All rights reserved.</copyright>
+    <lastBuildDate>Thu, 11 May 2017 15:38:00 -0400</lastBuildDate>
+    
+	<atom:link href="https://richardlent.github.io/topics/writing-tools/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>The Plain Text Workflow</title>
+      <link>https://richardlent.github.io/post/the-plain-text-workflow/</link>
+      <pubDate>Thu, 11 May 2017 15:38:00 -0400</pubDate>
+      
+      <guid>https://richardlent.github.io/post/the-plain-text-workflow/</guid>
+      <description>Introduction What is Plain Text? Why Plain Text? An Example of the Plain Text Workflow Parting Thoughts     Reading time: 9 minute(s) @ 200 WPM.
+Introduction The Plain Text Workflow is an alternative to writing with a word processor. Mind you, I said writing, not typesetting or formatting, which is a major part of what word processors do. The idea of the plain text workflow is that you separate the act of writing from that of producing a formatted, typeset final document.</description>
+    </item>
+    
+    <item>
+      <title>RStudio as a Research and Writing Platform</title>
+      <link>https://richardlent.github.io/post/rstudio-as-a-research-and-writing-platform/</link>
+      <pubDate>Wed, 03 May 2017 14:47:00 -0400</pubDate>
+      
+      <guid>https://richardlent.github.io/post/rstudio-as-a-research-and-writing-platform/</guid>
+      <description>Reproducible Research Software Installation Rendering Documents in RStudio Writing and Citing in RStudio R Notebooks Reproducible Research Revisited Coda I: Python Coda II: Inspirational Quotes About Data   Reading time: 21 minute(s) @ 200 WPM.
+R (r-project.org) is a programming language and software platform for statistical computing and graphics, widely used in academia and industry (see Introduction to R). RStudio is an integrated development environment for R. RStudio makes R easier to use, and it also enables the creation and rendering of plain-text documents that contain embedded R code.</description>
+    </item>
+    
+  </channel>
+</rss>
