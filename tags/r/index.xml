@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>R on Richard A. Lent, Ph.D.</title>
+    <link>https://richardlent.github.io/tags/r/</link>
+    <description>Recent content in R on Richard A. Lent, Ph.D.</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; 2017 Richard A. Lent. All rights reserved.</copyright>
+    <lastBuildDate>Mon, 15 May 2017 13:00:00 -0400</lastBuildDate>
+    
+	<atom:link href="https://richardlent.github.io/tags/r/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>An R script for calculating the reading time of an R Markdown file</title>
+      <link>https://richardlent.github.io/post/an-r-script-for-calculating-reading-time-of-an-article/</link>
+      <pubDate>Mon, 15 May 2017 13:00:00 -0400</pubDate>
+      
+      <guid>https://richardlent.github.io/post/an-r-script-for-calculating-reading-time-of-an-article/</guid>
+      <description>Reading time: 2 minute(s) @ 200 WPM.
+To see how we just did that, read on.
+Because psychological research tells us that including estimated reading times can increase reader engagement with digital content, I decided to include reading times for my riveting posts.
+So I wrote a simple R script. Here it is:
+bytes &amp;lt;- file.size(&amp;quot;2017-05-15-an-r-script-for-calculating-reading-time-of-an-article.Rmd&amp;quot;) words &amp;lt;- bytes/10 minutes &amp;lt;- words/200 The script is very simple, such that even I could program it.</description>
+    </item>
+    
+  </channel>
+</rss>
