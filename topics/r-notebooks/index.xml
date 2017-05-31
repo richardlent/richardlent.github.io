@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>R Notebooks on Richard A. Lent, Ph.D.</title>
+    <link>https://richardlent.github.io/topics/r-notebooks/</link>
+    <description>Recent content in R Notebooks on Richard A. Lent, Ph.D.</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; 2017 Richard A. Lent. All rights reserved.</copyright>
+    <lastBuildDate>Mon, 08 May 2017 12:20:00 -0400</lastBuildDate>
+    
+	<atom:link href="https://richardlent.github.io/topics/r-notebooks/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>R Notebook Example with R, Python, and BibTeX</title>
+      <link>https://richardlent.github.io/post/r-notebook-example-with-r-python-and-bibtex/</link>
+      <pubDate>Mon, 08 May 2017 12:20:00 -0400</pubDate>
+      
+      <guid>https://richardlent.github.io/post/r-notebook-example-with-r-python-and-bibtex/</guid>
+      <description>The accompanying R Notebook is a simple example that combines R code chunks, Python code chunks, and BibTeX literature citations in one R Markdown document.
+For additional information please see RStudio as a Research and Writing Platform.
+Click here to read the notebook.</description>
+    </item>
+    
+    <item>
+      <title>Making Maps with R</title>
+      <link>https://richardlent.github.io/post/making-maps-with-r/</link>
+      <pubDate>Thu, 04 May 2017 13:45:00 -0400</pubDate>
+      
+      <guid>https://richardlent.github.io/post/making-maps-with-r/</guid>
+      <description>Making maps on a computer has traditionally required the use of desktop geographic information system (GIS) software such as ArcGIS or QGIS. An alternative is to use R, a free software environment for statistical computing and graphics. R has many features that allow it to read GIS data and produce both static and interactive maps. This document (which is an R Notebook) shows how to make maps with R and RStudio, using R base graphics and the maps and mapdata packages, in addition to the leaflet and tmap packages.</description>
+    </item>
+    
+    <item>
+      <title>Habitat structure and phenotypic variation in the invading butterfly Coenonympha tullia</title>
+      <link>https://richardlent.github.io/post/habitat-structure-and-phenotypic-variation-in-the-invading-butterfly-coenonympha-tullia/</link>
+      <pubDate>Thu, 04 May 2017 11:18:00 -0400</pubDate>
+      
+      <guid>https://richardlent.github.io/post/habitat-structure-and-phenotypic-variation-in-the-invading-butterfly-coenonympha-tullia/</guid>
+      <description>The R Notebook Habitat structure and phenotypic variation in the invading butterfly Coenonympha tullia is a mockup of a scientific paper (although the field data are real) to illustrate the use of R Notebooks as a means of creating reproducible research. The objective is to produce publication-quality output, in HTML, PDF, and Microsoft Word formats, with text, literature citations, a formatted bibliography, statistical analyses, tables, and graphics, all from one, plain-text R Notebook.</description>
+    </item>
+    
+  </channel>
+</rss>
