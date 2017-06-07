@@ -1,0 +1,766 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="R is not like other statistical software. But that&#39;s a good thing.">
+  <meta name="generator" content="Hugo 0.20.6" />
+
+  <title>An Introduction to R &middot; Richard A. Lent, Ph.D.</title>
+
+  
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/0.6.0/pure-min.css">
+
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/0.6.0/grids-responsive-old-ie-min.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/0.6.0/grids-responsive-min.css">
+  <!--<![endif]-->
+
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="../../css/side-menu-old-ie.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+  <link rel="stylesheet" href="../../css/side-menu.css">
+  <!--<![endif]-->
+
+  <link rel="stylesheet" href="../../css/blackburn.css">
+
+  
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+  
+  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet" type="text/css">
+
+  
+  
+
+  
+
+  <link rel="shortcut icon" href="https://richardlent.github.io/img/favicon.ico" type="image/x-icon" />
+
+  
+  
+
+</head>
+
+
+<body>
+<div id="layout">
+
+  
+<a href="#menu" id="menuLink" class="menu-link">
+  
+  <span></span>
+</a>
+<div id="menu">
+
+  
+  <a class="pure-menu-heading brand" href="../../">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;^(;,;)^</a>
+
+
+  <div class="pure-menu">
+    <ul class="pure-menu-list">
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="../../"><i class='fa fa-home fa-fw'></i>Home</a>
+      
+        </li>
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="../../misc/about/"><i class='fa fa-user fa-fw'></i>About</a>
+      
+        </li>
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="../../post/"><i class='fa fa-list fa-fw'></i>Posts</a>
+      
+        </li>
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="../../topics/"><i class='fa fa-folder fa-fw'></i>Topics</a>
+      
+        </li>
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="../../tags/"><i class='fa fa-tag fa-fw'></i>Tags</a>
+      
+        </li>
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="http://richard-lent.pixels.com"><i class='fa fa-camera fa-fw'></i>Photography</a>
+      
+        </li>
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="../../topics/guitar/"><i class='fa fa-music fa-fw'></i>Guitar</a>
+      
+        </li>
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="../../misc/publications/"><i class='fa fa-list fa-fw'></i>Publications</a>
+      
+        </li>
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="mailto:richardlent@gmail.com"><i class='fa fa-envelope-o fa-fw'></i>Contact</a>
+      
+        </li>
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="../../misc/search/"><i class='fa fa-search fa-fw'></i>Search</a>
+      
+        </li>
+      
+    </ul>
+  </div>
+
+  <div class="pure-menu social">
+  <ul class="pure-menu-list">
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://twitter.com/lentrichard" target="_blank"><i class="fa fa-twitter-square fa-fw"></i>Twitter</a>
+    </li>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://instagram.com/richardlent3710" target="_blank"><i class="fa fa-instagram fa-fw"></i>Instagram</a>
+    </li>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+  </ul>
+</div>
+
+
+  <div>
+  <div class="small-print">
+    <small>&copy; 2017 Richard A. Lent. All rights reserved.</small>
+  </div>
+  <div class="small-print">
+    <small>Built with&nbsp;<a href="https://gohugo.io/" target="_blank">Hugo</a></small>
+    <small>Theme&nbsp;<a href="https://github.com/yoshiharuyamashita/blackburn" target="_blank">Blackburn</a></small>
+  </div>
+</div>
+
+</div>
+
+
+  <div id="main">
+
+  
+<div class="header">
+  <h1>An Introduction to R</h1>
+  <h2>R is not like other statistical software. But that&#39;s a good thing.</h2>
+</div>
+<div class="content">
+
+  <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>02 Jun 2017, 16:14</time>
+  </div>
+
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-folder fa-fw"></i>
+    
+      <a class="post-taxonomy-topic" href="https://richardlent.github.io/topics/statistics">Statistics</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-topic" href="https://richardlent.github.io/topics/data-science">Data Science</a>
+    
+  </div>
+  
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="https://richardlent.github.io/tags/r">R</a>
+    
+  </div>
+  
+  
+
+</div>
+
+  <div id="TOC">
+<ul>
+<li><a href="#prologue">Prologue</a></li>
+<li><a href="#getting-a-feel-for-r">Getting a feel for R</a><ul>
+<li><a href="#the-console">The console</a></li>
+<li><a href="#function-calls-and-arguments">Function calls and arguments</a><ul>
+<li><a href="#hint-getting-help">HINT: Getting help</a></li>
+</ul></li>
+<li><a href="#some-graphics">Some graphics</a><ul>
+<li><a href="#hint-command-history-and-workspace">HINT: Command history and workspace</a></li>
+</ul></li>
+</ul></li>
+<li><a href="#getting-data-into-r">Getting data into R</a><ul>
+<li><a href="#data-frames">Data frames</a></li>
+<li><a href="#creating-data-frames">Creating data frames</a><ul>
+<li><a href="#hint-data-management-in-r-and-rstudio.">HINT: Data management in R and RStudio.</a></li>
+</ul></li>
+</ul></li>
+<li><a href="#exploratory-data-analysis">Exploratory data analysis</a><ul>
+<li><a href="#scatterplot-matrix">Scatterplot matrix</a><ul>
+<li><a href="#hint-r-packages">HINT: R packages</a></li>
+</ul></li>
+<li><a href="#summary-statistics-and-data-screening">Summary statistics and data screening</a></li>
+<li><a href="#box-plots">Box plots</a></li>
+<li><a href="#stem-and-leaf-display">Stem-and-leaf display</a></li>
+<li><a href="#categorical-variables-factors">Categorical variables: factors</a></li>
+<li><a href="#some-confirmatory-analysis">Some confirmatory analysis</a></li>
+</ul></li>
+<li><a href="#more-graphics">More graphics</a></li>
+<li><a href="#r-scripts-command-files">R scripts (command files)</a></li>
+<li><a href="#an-r-menu-system-r-commander">An R menu system: R-commander</a></li>
+<li><a href="#epilogue">Epilogue</a></li>
+</ul>
+</div>
+
+<!-- 
+
+Don't forget to update the date in the YAML. 
+
+And turn comments back on.
+
+-->
+<p>Reading time: 23 minute(s) @ 200 WPM.</p>
+<div id="prologue" class="section level1">
+<h1>Prologue</h1>
+<p><strong>R is a free</strong>, open-source, cross-platform statistical and graphical environment that can be obtained from <a href="http://www.r-project.org/">www.r-project.org</a>.</p>
+<p><strong>Some reasons for using R</strong>:</p>
+<ul>
+<li><p>R is world-class software for data analysis and visualization.</p></li>
+<li><p>R is free. There are no license fees and no restrictions on how many times and where you can install the software.</p></li>
+<li><p>R runs on a variety of computer platforms including Windows, MacOS, and Unix.</p></li>
+<li><p>R provides an unparalleled platform for programming new statistical methods in an easy and straightforward manner.</p></li>
+<li><p>R contains advanced statistical routines not yet available in other packages.</p></li>
+<li><p>R has state-of-the-art graphics capabilities.</p></li>
+</ul>
+<p>More reasons for using R can be found <a href="https://thetarzan.wordpress.com/2011/07/15/why-use-r-a-grad-students-2-cents/">here.</a> And <a href="http://www.nytimes.com/2009/01/07/technology/business-computing/07program.html?pagewanted=all&amp;_r=1&amp;">here.</a> See also <a href="http://www.sharpsightlabs.com/learn-r-data-science/">Why you should learn R first for data science</a>, <a href="http://blog.revolutionanalytics.com/2013/11/the-rise-of-r-as-the-language-of-analytics.html">The rise of R as the language of analytics</a>, and <a href="http://www.nature.com/news/programming-tools-adventures-with-r-1.16609">Programming tools: Adventures with R</a>.</p>
+<p>One may also benefit from reading <a href="http://www.statmethods.net/about/learningcurve.html">Why R has A Steep Learning Curve</a>. (And then, stop your whining.)</p>
+<p>And after you have stopped whining, you could read <a href="http://www.datasciencecentral.com/profiles/blogs/why-r-is-bad-for-you">Why R is Bad for You</a> and formulate your own opinion.</p>
+<p><strong>Assuming you are still interested in R</strong>, we note that R is <em>way</em> easier to use when run inside of <a href="https://www.rstudio.com">RStudio</a>, a free, cross-platform <a href="https://en.wikipedia.org/wiki/Integrated_development_environment">integrated development environment</a> (IDE). Every example in this post can either be run in standalone R or in the <a href="https://support.rstudio.com/hc/en-us/articles/200404846-Working-in-the-Console">R console panel</a> inside of RStudio. (See also <a href="../../post/rstudio-as-a-research-and-writing-platform/">RStudio as a Research and Writing Platform</a>). You can install a menu-driven, graphical user interface (<a href="http://www.rcommander.com/">R Commander</a>) that makes R easier to use, but the true power of R lies in its programmability.</p>
+<p><strong>There are many excellent sources</strong> of R documentation. These include <a href="http://cran.r-project.org/doc/manuals/r-release/R-intro.html">An Introduction to R</a>, the gigantic <a href="http://cran.r-project.org/doc/manuals/r-release/fullrefman.pdf">R Reference Index</a> (PDF), and my personal favorite, <a href="http://www.statmethods.net/">Quick-R</a>. There is also an <a href="http://journal.r-project.org/">R Journal</a>, an <a href="http://cran.r-project.org/doc/FAQ/R-FAQ.html">R FAQ</a> (Frequently Asked Questions), many <a href="http://www.r-project.org/doc/bib/R-books.html">books</a>, the <a href="http://cran.r-project.org/doc/contrib/Short-refcard.pdf">R Reference Card</a> (PDF), various <a href="http://web.mit.edu/hackl/www/lab/turkshop/slides/r-cheatsheet.pdf">R cheat sheets</a> (Google it), and other assorted <a href="http://www.r-project.org/other-docs.html">R websites</a>.</p>
+<p><strong>To install R</strong>, go to the <a href="http://www.r-project.org/">R website</a>. Under “Getting Started:”, click <a href="http://cran.r-project.org/mirrors.html">download R</a>. Choose a CRAN (<strong>C</strong>omprehensive <strong>R</strong> <strong>A</strong>rchive <strong>N</strong>etwork) mirror site that is closest to you. Then, under “Download and Install R,” download the installer (“Precompiled binary distribution”) for your particular computer platform. Run the downloaded installer application and you should be off and running. Extensive additional gory details can be found at <a href="http://cran.r-project.org/doc/manuals/r-release/R-admin.html">R Installation and Administration</a>.</p>
+<p><strong>R is not like other statistical software</strong>. Rather than being a “software package” in the usual sense of SPSS, SAS, Systat, etc., where the user fills in the blanks in a series of menus and dialog boxes and then has to sift through reams of canned output, R is actually a <a href="https://en.wikipedia.org/wiki/Programming_language">programming language</a> and computing environment customized for data analysis and graphics.</p>
+</div>
+<div id="getting-a-feel-for-r" class="section level1">
+<h1>Getting a feel for R</h1>
+<p>The impact of this introduction to R will be greater if you follow along in R, entering the commands as shown. You can copy and paste R commands from this introduction directly into the R console instead of typing them by hand.</p>
+<p>Readers may find the <a href="http://www.stat.berkeley.edu/~stark/SticiGui/Text/gloss.htm">Glossary of Statistical Terms</a> helpful.</p>
+<div id="the-console" class="section level2">
+<h2>The console</h2>
+<p>When you start R you will see a command console window, into which you type R commands. It looks like this on the Mac:</p>
+<div class="figure">
+<img src="../../img/IntroductionToR/RConsole.png" />
+
+</div>
+<p>The command prompt is the <code>&gt;</code> symbol.</p>
+<p>You type R statements into the console, which is a <a href="https://en.wikipedia.org/wiki/Command-line_interface">command-line interface</a>. R then evaluates the statements, and if it finds no errors, does something, like printing a result, producing graphics, or storing a value for later use. It then waits for you to type in another command. This is how computing was done in the <a href="https://en.wikipedia.org/wiki/History_of_computing">olden days</a>, and it is still <a href="https://code.tutsplus.com/tutorials/the-command-line-is-your-best-friend--net-30362">the most efficient and powerful way to do computing</a>.</p>
+<p>R commands can also be stored in a <a href="https://www.r-bloggers.com/r-scripts/">script</a>, which is simply a text file containing basically the same commands that you would enter interactively on the command line. This is one of the most powerful features of R (R is, after all, a programming language) and enables complex sequences of commands to be stored, edited, and rerun.</p>
+<p>R can evaluate expressions and manipulate variables, e.g.,</p>
+<pre><code>&gt; x &lt;- 2</code></pre>
+<p>This assigns the value of 2 to the variable <code>x</code>. In R-speak, this assignment operation is pronounced “x gets 2,” not “x equals 2.” Many other programming languages use an equals sign (<code>=</code>) for assigning values to variables (e.g., <code>x = 2</code>), but R is different. In R you type a less-than symbol immediately followed by a dash, making a left-pointing arrow that points towards the variable to which you want to assign a value. R will <em>let</em> you use an equals sign, but <a href="http://blog.revolutionanalytics.com/2008/12/use-equals-or-arrow-for-assignment.html">R purists</a> insist that using <code>&lt;-</code> is preferable. This is true both for historical reasons (explained in the previous link) and for consistency, because there is another R assignment operator that uses a <em>double</em> arrow, namely the <a href="https://stat.ethz.ch/R-manual/R-devel/library/base/html/assignOps.html">&lt;&lt;-</a> operator.</p>
+<p>To print the contents of a variable, simply type the variable’s name:</p>
+<pre><code>&gt; x
+[1] 2</code></pre>
+<p>The 1 in square brackets is part of R’s way of printing lists of numbers. This convention becomes more useful when there is a longer list of numbers to print. The number in brackets is the index of the first number on that line. So if we were to generate 15 random numbers from a normal distribution, our output display might look like:</p>
+<pre><code>&gt; rnorm(15)
+
+[1] -1.20251243 -0.93915306 -0.58314349 -0.28205304 -0.72031211 1.12303378
+[7] 1.60557581 1.30062736 1.06739881 -2.09506242 -0.04172139 -1.66868780
+[13] 0.87027623 0.43993863 -0.07720584</code></pre>
+<p>Here the <code>[7]</code> indicates that <code>1.60557581</code> is the seventh element in the list of numbers (called a <a href="https://stat.ethz.ch/R-manual/R-devel/library/base/html/vector.html">vector</a> in R parlance).</p>
+<p>The <a href="https://www.rdocumentation.org/packages/utils/versions/3.4.0/topics/View">View</a> function [NOTE: Capital V!!] provides a prettier way to view a variable, e.g.,</p>
+<pre><code>&gt; x &lt;- rnorm(100)
+&gt; View(x, &#39;This is x&#39;)</code></pre>
+<p>This will place the contents of <code>x</code> in a data viewer window, which can be scrolled using the keyboard page-up, page-down, and arrow keys.</p>
+<p>Or, alternatively, we can convert (“coerce”) <code>x</code>, which initially is a vector, into a <a href="http://www.r-tutor.com/r-introduction/data-frame">data frame</a>:</p>
+<p><code>View(as.data.frame(x), 'This is x') # More spreadsheet-like, especially in RStudio.</code></p>
+<p>Also, please note that, in R, the pound symbol (<code>#</code>) denotes a comment. Any line that starts with <code>#</code> is treated as a comment and is ignored by the R <a href="https://en.wikipedia.org/wiki/Interpreted_language">interpreter.</a></p>
+</div>
+<div id="function-calls-and-arguments" class="section level2">
+<h2>Function calls and arguments</h2>
+<p>Much of R involves function calls, arguments, and return values. Like in your high school algebra class, when you wrote <code>f(x)</code> (“the f of x”), the <code>f</code> stands for the name of the function and the <code>x</code> stands for the arguments passed into the function. In algebra and in computer programming, a function is an equation or a piece of computer code that takes in one or more values (arguments), does some sort of computation with them, and then returns a result.</p>
+<p>For example, in R we can generate a vector of 1000 random values from a normal distribution having a mean = 0 and standard deviation = 1 (the default arguments) by typing:</p>
+<p><code>&gt; y = rnorm(1000)</code></p>
+<p>Here, <code>rnorm</code> is the name of the function and 1000 is the argument that we pass into the function. The argument tells the function that we want it to generate 1000 values. The <code>rnorm</code> function generates the values and returns them for storage in the variable that we have named <code>y</code>. If you type the name of the variable <code>y</code> at the R console you will get a display of those 1000 values. Here are the first and last few lines of that output:</p>
+<pre><code>[1] 1.3395720217 -0.0115032420 -0.6823326244 0.2613036332 0.1040746632 0.0454721524 0.3640455956 0.7205450723 0.4994317717
+[10] 1.0467334635 0.0941044374 0.0470323976 1.6612519966 -1.2653165072 0.2894176277 0.2140272012 -0.1166290364 1.9260137594
+[19] -0.1623506191 0.2429738277 -0.0908777982 -1.0126380527 -1.4146009241 0.6927008684 1.5923438893 0.7920350474 -0.3419451639
+...
+[982] 0.2657230634 0.4844520987 1.9939724168 -0.3426382437 -2.6953913082 -0.7822534469 1.0135964703 0.7795363595 0.1870213245
+[991] -1.4046173709 -0.3727388529 -0.2606101406 -0.9251060911 0.1755509390 -2.5640188283 0.5750884848 0.5416196143 -0.5890929375
+[1000] -1.4114665861</code></pre>
+<p>Instead of using the default, unspecified argument values of mean = 0 and standard deviation = 1, we can invoke <code>rnorm</code> like this, specifying a particular mean and sd:</p>
+<p><code>&gt; y = rnorm(1000, mean=42, sd=2.5)</code></p>
+<p>If you type <code>help(rnorm)</code> you will get a help screen that explains the various arguments that can be used with <code>rnorm</code> and its relatives.</p>
+<p>To see if we got what we wanted, we can produce a few summary statistics of the variable y:</p>
+<p><code>&gt; summary(y)</code></p>
+<pre><code>Min. 1st Qu. Median Mean 3rd Qu. Max.
+34.09 40.29   41.91 41.91 43.63 50.73</code></pre>
+<p>We see that the mean is 41.91, which is “close enough” to 42, given that <code>rnorm</code> generates a different batch of random values each time it is invoked.</p>
+<hr />
+<div id="hint-getting-help" class="section level3">
+<h3>HINT: Getting help</h3>
+<p>You can get help on any R command by typing <code>help(command)</code>.</p>
+<p>e.g.,</p>
+<p><code>help(plot)</code></p>
+<p><code>?command</code> works the same, e.g. <code>?plot</code></p>
+<p>You can also search for all help topics that contain a particular command by typing two question marks immediately followed by the command, e.g.:</p>
+<p><code>??plot</code></p>
+<hr />
+</div>
+</div>
+<div id="some-graphics" class="section level2">
+<h2>Some graphics</h2>
+<p>To visualize the batch of numbers stored in the variable <code>y</code>, we can produce a <a href="https://stat.ethz.ch/R-manual/R-devel/library/graphics/html/hist.html">histogram</a>:</p>
+<p><code>&gt; hist(y)</code></p>
+<p><a href="../../img/IntroductionToR/hist.png"><img src="../../img/IntroductionToR/hist50.png" /></a></p>
+<p>(Click image to enlarge.)</p>
+<p>This graphic shows us the shape of the distribution of the variable <code>y</code>. The peak of the histogram is centered on the mean value of 42 and tapers off symmetrically on both sides of the mean. This is because the data we generated using <code>rnorm</code> is from a <a href="http://en.wikipedia.org/wiki/Normal_distribution">normal distribution</a>, which by definition is in the shape of the famous bell curve.</p>
+<p>The plot we just produced, with only one line of R code, can be easily saved to a graphics file in various formats for importing into other applications such as word processors and presentations. For example, to export the plot to a <a href="https://en.wikipedia.org/wiki/Portable_Document_Format">PDF</a> file, select the graphics window and then invoke the R <code>File|Save As…</code> menu option to save the file.</p>
+<p>Plots can be saved to other graphics formats as well, but you need to do it from the R console. To save as a JPEG graphics file:</p>
+<pre><code>&gt; jpeg(&#39;rplot.jpg&#39;)
+&gt; hist(y)
+&gt; dev.off()</code></pre>
+<p>Note that the plot will be saved in the current working directory (see <code>HINT: Command history and workspace</code>, below) unless otherwise specified. You also may get a “null device” message after the <code>dev.off()</code> statement; this just means that the JPEG file (the “graphics device”) has been closed.</p>
+<p>You can use similar commands to export R graphics to other popular graphics formats, such as <a href="http://en.wikipedia.org/wiki/BMP_file_format">bmp</a>, <a href="http://en.wikipedia.org/wiki/Tagged_Image_File_Format">tiff</a>, and <a href="http://en.wikipedia.org/wiki/Portable_Network_Graphics">png</a>.</p>
+<p>As is the case with many R things, graphics management is easier in <a href="https://www.rstudio.com/">RStudio</a>, which has a dedicated <code>Plots</code> panel for keeping track of graphics and exporting them in various formats, without the need for typing code into the console.</p>
+<p>To summarize thus far, <a href="http://www.statmethods.net/about/learningcurve.html">R works differently</a> than other statistical software you may have used:</p>
+<blockquote>
+<p>“Rather than setting up a complete analysis at once, the process is highly interactive. You run a command (say fit a model), take the results and process it through another command (say a set of diagnostic plots), take those results and process it through another command (say cross-validation), etc. The cycle may include transforming the data, and looping back through the whole process again. You stop when you feel that you have fully analyzed the data.”</p>
+</blockquote>
+<hr />
+<div id="hint-command-history-and-workspace" class="section level3">
+<h3>HINT: Command history and workspace</h3>
+<p>R maintains a history of all of your commands, which you can access using the up- and down-arrow keys. Use the left- and right-arrow keys to move through and edit a retrieved command, after which you can re-submit the edited command by hitting the <code>Enter</code> key.</p>
+<p>Some handy workspace commands:</p>
+<ul>
+<li><p>Print the current working directory: <code>getwd()</code></p></li>
+<li><p>Change to <code>mydirectory</code>: <code>setwd(mydirectory)</code></p></li>
+<li><p>List the objects in the current workspace: <code>ls()</code></p></li>
+<li><p>Remove one or more objects from the workspace: <code>rm()</code>, e.g., <code>rm(y)</code></p></li>
+</ul>
+<p>For more help on managing your R workspace, go <a href="http://www.statmethods.net/interface/workspace.html">here</a>.</p>
+<hr />
+</div>
+</div>
+</div>
+<div id="getting-data-into-r" class="section level1">
+<h1>Getting data into R</h1>
+<div id="data-frames" class="section level2">
+<h2>Data frames</h2>
+<p>R uses an internal structure called a data frame (one of several common R <a href="http://www.statmethods.net/input/datatypes.html">data types</a>) to store data in a row-column, spreadsheet-like format, where the rows are the objects of interest (your <a href="http://en.wikipedia.org/wiki/Unit_of_analysis">units of analysis</a>) and the columns are variables measured on each object. In R, a data frame can be created by reading in raw data <a href="http://www.statmethods.net/input/importingdata.html">from an external file</a>. A data frame can be saved by <a href="http://www.statmethods.net/input/exportingdata.html">exporting it to an external file</a> or to R’s <a href="https://stat.ethz.ch/R-manual/R-devel/library/base/html/save.html">internal data format</a>.</p>
+<p>To illustrate this process we will use a subset (males only) of a famous dataset from biology, the Bumpus <a href="http://www.allaboutbirds.org/guide/House_Sparrow/id">House Sparrow</a> data:</p>
+<ul>
+<li>Bumpus sparrow data: <a href="../../datasets/bumpus.dat.txt">bumpus.dat.txt</a></li>
+<li>Bumpus sparrow <a href="https://en.wikipedia.org/wiki/Metadata">metadata</a>: <a href="../../datasets/bumpus.met.txt">bumpus.met.txt</a></li>
+</ul>
+<p>Here is a description of the dataset, from <a href="https://www.fieldmuseum.org/science/blog/hermon-bumpus-and-house-sparrows">Hermon Bumpus and House Sparrows</a>:</p>
+<blockquote>
+<p>… on February 1 of the present year (1898), when, after an uncommonly severe storm of snow, rain, and sleet, a number of English sparrows [= House Sparrows, <em>Passer domesticus</em>] were brought to the Anatomical Laboratory of Brown University [, Providence, Rhode Island]. Seventy-two of these birds revived; sixty-four perished; … &quot; (p. 209). “… the storm was of long duration, and the birds were picked up, not in one locality, but in several localities; …” (p. 212). This event . . . described by Hermon Bumpus (1898) . . . has served as a classic example of natural selection in action. Bumpus’ paper is of special interest since he included the measurements of these 136 birds in his paper.</p>
+</blockquote>
+<p>For more information on Hermon Bumpus and House Sparrows, see <a href="../../pdf/Johnston.pdf">Hermon Bumpus and Natural Selection in the House Sparrow <em>Passer domesticus</em></a> (PDF).</p>
+</div>
+<div id="creating-data-frames" class="section level2">
+<h2>Creating data frames</h2>
+<p>To create an R data frame of the sparrow data:</p>
+<ol style="list-style-type: lower-alpha">
+<li><p>Download the plain text data file <a href="../../datasets/bumpus.dat.txt">bumpus.dat.txt</a> to a readily-accessible location on your computer.</p></li>
+<li><p>Issue the following command in R:</p></li>
+</ol>
+<p><code>&gt; bumpus = read.table(&quot;d:/empty/bumpus.dat.txt&quot;, sep = &quot;&quot;, header = TRUE)</code></p>
+<p>replacing the <code>d:/empty/bumpus.txt</code> with the path to the data file on your particular computer.</p>
+<p>In the above <code>read.table</code> command, <code>sep = &quot;&quot;</code> means that there is nothing separating the data items from each other (they are only separated by white space), and <code>header = TRUE</code> means that the first line in the data file is a header containing the names of the variables.</p>
+<p>Once your data are in a data frame, you can then begin to manipulate, analyze, and visualize the data. Typing <code>names(bumpus)</code> lists the names of the variables. Typing the name of the data frame (<code>bumpus</code>) will scroll all of the data to the console window. To display individual variables, use syntax like <code>bumpus$survive</code>. Better still, enter <code>attach(bumpus)</code>. Once a data frame is “attached” to the console window you can just type the name of a variable by itself to display the variable’s contents. Typing <code>fix(bumpus)</code> will place the data frame into an editing window.</p>
+<hr />
+<div id="hint-data-management-in-r-and-rstudio." class="section level3">
+<h3>HINT: Data management in R and RStudio.</h3>
+<p>Actually, you don’t need to download the data file to your computer. You can read it into an R data frame directly if you know the <a href="https://en.wikipedia.org/wiki/URL">URL</a> that points to the file location on a server:</p>
+<p><code>&gt; bumpus = read.table(&quot;https://richardlent.github.io/datasets/bumpus.dat.txt&quot;, sep = &quot;&quot;, header = TRUE)</code></p>
+<p>This will create the bumpus data frame exactly as if you had first downloaded the source data to your computer.</p>
+<p>Importing data from a local file or URL is even easier in RStudio. From RStudio’s File menu, or from the Environment tab, choose <code>Import Dataset|From CSV...</code>, and then enter the URL. If instead you choose to import data from a local file, you will be given a dialog box from which you can choose the file from your computer’s filesystem. RStudio can usually figure out the structure of your data as long as you follow standard practice, such as organizing your data into a <a href="https://en.wikipedia.org/wiki/Comma-separated_values">comma-separated values</a> (CSV) file. However, RStudio also presents you with various Import Options that you can tweak until the Data Preview indicates that all is well. You then hit the <code>Import</code> button and a data frame will be created.</p>
+<p>A CSV file might look like this, in a <a href="https://en.wikipedia.org/wiki/Plain_text">plain-text</a> file we could call <code>cars.csv</code>:</p>
+<pre><code>Year,Make,Model,Length
+1997,Ford,E350,2.34
+2000,Mercury,Cougar,2.38</code></pre>
+<p>In the CSV format, the first line of the data file contains field names, and subsequent lines contain the actual data, with all values separated by commas.</p>
+<p>Once imported, you can open the data frame in a Data Viewer window from the RStudio <code>Environment</code> pane. (See <a href="https://support.rstudio.com/hc/en-us/articles/205175388-Using-the-Data-Viewer">Using the Data Viewer</a>.) You can’t edit data directly in the Data Viewer; it’s just a viewer. To edit an R data frame, type, for example, <code>fix(bumpus)</code> into the console window. This places the data frame into an editor pane in which you can change values. When you quit the editor, the changes will be saved into the data frame. You can then save the modified data frame using the save command, e.g.,</p>
+<p><code>save(bumpus, file=&quot;bumpus.rdata&quot;)</code></p>
+<p>This creates a data file in R’s own binary format, which can later be re-loaded into your workspace with the <code>load</code> command:</p>
+<p><code>load(&quot;bumpus.rdata&quot;)</code></p>
+<p>In RStudio you can also load an R data file by choosing it from the <code>Files</code> pane.</p>
+<p>An R data frame can be exported to a plain-text CSV file using the <code>write.table()</code> function:</p>
+<p><code>write.table(bumpus, &quot;bumpus.csv&quot;, sep=&quot;,&quot;)</code></p>
+<p>Here the three parameters passed to <code>write.table()</code> are (1) the name of the R data frame to export, (2) the name of the exported file, and (3) the data separator.</p>
+<hr />
+<p>If we had an <a href="https://en.wikipedia.org/wiki/SPSS">SPSS</a> file, we could read the data into an R data frame like this:</p>
+<p><code>&gt; cars = read.spss(&quot;d:/empty/cars.sav&quot;, to.data.frame = TRUE)</code></p>
+<p>As with CSV files, you can import SPSS, <a href="https://en.wikipedia.org/wiki/SAS_Institute">SAS</a>, and <a href="https://en.wikipedia.org/wiki/Stata">Stata</a> files from the <code>Import Dataset</code> menus in RStudio.</p>
+<p>Go <a href="http://www.statmethods.net/input/importingdata.html">here</a> to see how to import other popular data formats.</p>
+<p>The following sequence of commands creates a new data frame from scratch:</p>
+<pre><code>age = c(25, 30, 56)
+gender = c(&quot;male&quot;, &quot;female&quot;, &quot;male&quot;)
+weight = c(160, 110, 220)
+mydata = data.frame(age, gender, weight)</code></pre>
+<p>The <code>c()</code> function combines values into a vector, and the <code>data.frame()</code> function packages the vectors as columns into a data frame.</p>
+</div>
+</div>
+</div>
+<div id="exploratory-data-analysis" class="section level1">
+<h1>Exploratory data analysis</h1>
+<p>The principles of <a href="http://en.wikipedia.org/wiki/Exploratory_data_analysis">exploratory data analysis</a> (EDA) were pioneered by one of my favorite statisticians, <a href="http://en.wikipedia.org/wiki/John_Tukey">John Tukey</a>. An important tenet of EDA is that, before you statistically analyze your data, you should actually look at it.</p>
+<p>Tukey stressed the contrasting approaches of <a href="http://www.geog.ucsb.edu/~joel/g210_w07/lecture_notes/lect01/oh07_01_2.html">exploratory versus confirmatory data analysis</a>. Classical <a href="http://en.wikipedia.org/wiki/Parametric_statistics">parametric</a> statistical techniques like <a href="http://en.wikipedia.org/wiki/Analysis_of_variance">analysis of variance</a> and <a href="http://en.wikipedia.org/wiki/Linear_regression">linear regression</a> are confirmatory techniques requiring that the data adhere to some fairly rigid assumptions, such as <a href="http://en.wikipedia.org/wiki/Normal_distribution">normality</a> and <a href="http://en.wikipedia.org/wiki/Linearity">linearity</a>. Modern software makes it easy to crank out sophisticated statistical analyses with a couple of mouse clicks, but it also makes it easy to ignore the underlying assumptions. Performing some exploratory analysis of your data will allow you to assess those assumptions, and will also allow you to detect things like outliers and errors in data entry. (See Tukey’s classic 1980 American Statistician paper <a href="../../pdf/Tukey1980.pdf">We Need Both Exploratory and Confirmatory</a>).</p>
+<p>What follows is an EDA session in R using the Bumpus dataset.</p>
+<div id="scatterplot-matrix" class="section level2">
+<h2>Scatterplot matrix</h2>
+<p>A handy graphical tool for EDA is the <em>scatterplot matrix</em>. This is simple to produce in R: Just give the <code>plot</code> function the name of a data frame:</p>
+<p><code>&gt; plot(bumpus)</code></p>
+<p><a href="../../img/IntroductionToR/splom.png"><img src="../../img/IntroductionToR/splom50.png" /></a></p>
+<p>(Click image to enlarge.)</p>
+<p>A scatterplot matrix shows individual scatterplots of all pairwise combinations of variables in the data frame and is an excellent way to search for odd patterns in your data, such as groupings of data points, nonlinearities, etc.</p>
+<hr />
+<div id="hint-r-packages" class="section level3">
+<h3>HINT: R packages</h3>
+<p>R organizes all of its routines into <em>packages</em>. For example, the <code>plot</code> routine is part of R’s <a href="https://stat.ethz.ch/R-manual/R-patched/library/graphics/html/00Index.html">graphics</a> package. The packages that are installed by default can be listed as follows:</p>
+<pre><code>&gt; getOption(&quot;defaultPackages&quot;)
+
+[1] &quot;datasets&quot; &quot;utils&quot; &quot;grDevices&quot; &quot;graphics&quot; &quot;stats&quot; &quot;methods&quot;</code></pre>
+<p>And as you may have noticed by now, R commands are case-sensitive.</p>
+<p>The <a href="https://stat.ethz.ch/R-manual/R-patched/library/datasets/html/00Index.html">datasets</a> package contains example datasets. The <a href="http://cran.r-project.org/web/packages/R.utils/index.html">utils</a> package contains functions used for programming and developing other packages. The <a href="https://stat.ethz.ch/R-manual/R-devel/library/grDevices/html/grDevices-package.html">grDevices</a> package provides support for graphics hardware and software. Common statistical routines are found in R’s <a href="http://stat.ethz.ch/R-manual/R-devel/library/stats/html/00Index.html">stats</a> package. The <a href="https://stat.ethz.ch/R-manual/R-devel/library/methods/html/Methods.html">methods</a> package supports R functions.</p>
+<p>Users of R will probably interact most with the graphics and stats packages. There are many other R <a href="http://www.statmethods.net/interface/packages.html">packages</a> that provide a way to expand the functionality of the base software. <a href="http://lib.stat.cmu.edu/R/CRAN/web/packages/">Contributed packages</a> are written by members of the R user community. <a href="http://lib.stat.cmu.edu/R/CRAN/web/views/">CRAN Task Views</a> present collections of packages organized by topic and provide tools to automatically install all packages for particular areas of interest. Another way to find R packages is to do a Google search, e.g. <a href="https://www.google.com/search?q=how+to+do+principal+coordinates+analysis+in+r&amp;oq=how+to+do+principal+coordinates+analysis+in+r&amp;aqs=chrome.0.69i57j69i62l3.11220j0&amp;sourceid=chrome&amp;ie=UTF-8#safe=off&amp;q=How+do+I+do+principal+coordinates+analysis+in+R">How do I do principal coordinates analysis in R</a>?</p>
+<p>If you want to use an R function that is not part of the base packages, you must first install that function’s package before you can use it. A Package Installer is included as part of the R GUI and can be used to download and install contributed packages. In RStudio, the Packages pane and Tools menu (<code>Install Packages</code>) can be used to facilitate installation and management of packages.</p>
+<hr />
+</div>
+</div>
+<div id="summary-statistics-and-data-screening" class="section level2">
+<h2>Summary statistics and data screening</h2>
+<p>To produce summary statistics for all variables in data frame <code>bumpus</code>, type:</p>
+<p><code>&gt; summary(bumpus)</code></p>
+<pre><code>    survive           length           alar           weight           lbh             lhum             lfem            ltibio          wskull           lkeel       
+ Min.   :0.0000   Min.   :153.0   Min.   :39.00   Min.   :3.000   Min.   :30.00   Min.   :0.6590   Min.   :0.6580   Min.   :1.000   Min.   :0.5700   Min.   :0.7880  
+ 1st Qu.:0.0000   1st Qu.:158.8   1st Qu.:44.75   1st Qu.:4.875   1st Qu.:30.30   1st Qu.:0.7080   1st Qu.:0.7000   1st Qu.:1.103   1st Qu.:0.5940   1st Qu.:0.8300  
+ Median :1.0000   Median :160.0   Median :47.00   Median :5.750   Median :31.00   Median :0.7360   Median :0.7090   Median :1.117   Median :0.6000   Median :0.8500  
+ Mean   :0.5893   Mean   :160.0   Mean   :46.98   Mean   :5.764   Mean   :30.96   Mean   :0.7291   Mean   :0.7105   Mean   :1.123   Mean   :0.6012   Mean   :0.8506  
+ 3rd Qu.:1.0000   3rd Qu.:161.0   3rd Qu.:50.00   3rd Qu.:6.500   3rd Qu.:31.50   3rd Qu.:0.7460   3rd Qu.:0.7180   3rd Qu.:1.150   3rd Qu.:0.6082   3rd Qu.:0.8795  
+ Max.   :1.0000   Max.   :166.0   Max.   :53.00   Max.   :8.300   Max.   :31.90   Max.   :0.7800   Max.   :0.7650   Max.   :1.197   Max.   :0.6330   Max.   :0.9160</code></pre>
+<p>Previously we used the <code>summary</code> function for a single variable. Here we give <code>summary</code> the name of our data frame and get summary statistics for all of the variables. <code>survive</code> is a binary variable, taking on only two values: 1 for survived, 0 for dead. With a binary variable the mean is not very useful: A bird can’t be 0.58 dead. However, the other variables are morphological measures that vary continuously along their scale of measurement (see <a href="../../datasets/bumpus.met.txt">bumpus.met.txt</a>), and therefore the summary statistics can be very informative. Look at the minimum and maximum values carefully for errors, such as a misplaced decimal point. Would a House Sparrow really weigh 3000 grams (6.61 pounds)? Many researchers skip this elementary data-screening step, which is especially important if humans are typing in the data from mud-splattered field notebooks. Also, laboratory instruments can go out of calibration, batteries can become weak, power surges can fry delicate circuitry, etc., etc. Check your data!</p>
+<p>The mean and median both measure <a href="http://en.wikipedia.org/wiki/Central_tendency">central tendency</a>, but in very different ways. Most people are familiar with the mean, or arithmetic average, calculated by summing the values and dividing the sum by the number of observations. The median, however, is the middle value of ranked data. In other words, if you sorted the values from low to high, the median would be the one in the middle. The mean is very sensitive to <a href="https://en.wikipedia.org/wiki/Outlier">outliers</a> (extreme values), whereas the median is not. The following R experiment will illustrate this.</p>
+<pre><code>&gt; x = c(1, 2, 3, 4, 5)
+&gt; summary(x)</code></pre>
+<pre><code>   Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+      1       2       3       3       4       5 </code></pre>
+<p>Note that the median and mean are equal. But if we add an extreme value (outlier):</p>
+<pre><code>&gt; x = c(1, 2, 3, 4, 3000)
+&gt; summary(x)</code></pre>
+<pre><code>   Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+      1       2       3     602       4    3000 </code></pre>
+<p>The median is unchanged by the huge outlier (the median is still the middle value, 3) but the mean has increased enormously. When the data are normally distributed the mean and median are equal (see <a href="https://statistics.laerd.com/statistical-guides/measures-central-tendency-mean-mode-median.php">Measures of Central Tendency</a>). So another exploratory diagnostic is to compare the mean and the median. If they are very different, you may have some outliers that are skewing the distribution.</p>
+</div>
+<div id="box-plots" class="section level2">
+<h2>Box plots</h2>
+<p>The summary statistics <code>1st Qu.</code> and <code>3rd Qu.</code> are the first and third <a href="http://en.wikipedia.org/wiki/Quartile">quartiles</a>. Along with the median, the quartiles divide the dataset into four equal groups, each group comprising a quarter of the observations.</p>
+<p>This <a href="http://en.wikipedia.org/wiki/Five-number_summary">five-number summary</a> (minimum, maximum, median, first quartile, third quartile) is better visualised using another invention of John Tukey: the <a href="http://en.wikipedia.org/wiki/Box_plot">box plot</a>:</p>
+<p><code>&gt; boxplot(length)</code></p>
+<p><a href="../../img/IntroductionToR/boxplot.png"><img src="../../img/IntroductionToR/boxplot50.png" /></a></p>
+<p>(Click image to enlarge.)</p>
+<p>The line running through the central rectangle is the median. The distances from the median to the top and bottom of the rectangle span the third and first quartiles respectively. The central rectangle itself spans the distance from the first to third quartiles (the <em>interquartile range</em>, or IQR). Above and below the rectangle are dotted lines (called “whiskers”) that usually terminate in the minimum and maximum values. However, if outliers are present (as in this example) the whiskers terminate at 1.5 times the IQR and the outlying values are shown as dots.</p>
+<p>A box plot is a nice way to visually assess the distribution of your data. For example, if the distribution deviates from a smooth bell-shaped curve, a box plot will make this obvious. Let’s make a skewed set of numbers using the <a href="http://en.wikipedia.org/wiki/Log-normal_distribution">log-normal</a> distribution:</p>
+<pre><code>&gt; q = rlnorm(1000)
+&gt; hist(q)</code></pre>
+<p><a href="../../img/IntroductionToR/lognormal.png"><img src="../../img/IntroductionToR/lognormal50.png" /></a></p>
+<p>(Click image to enlarge.)</p>
+<p><code>&gt; boxplot(q)</code></p>
+<p><a href="../../img/IntroductionToR/squished.png"><img src="../../img/IntroductionToR/squished50.png" /></a></p>
+<p>(Click image to enlarge.)</p>
+<p>The severely squished box plot instantly reveals the highly skewed nature of the data.</p>
+</div>
+<div id="stem-and-leaf-display" class="section level2">
+<h2>Stem-and-leaf display</h2>
+<p>Yet another exploratory tool popularized by Tukey is the <a href="https://en.wikipedia.org/wiki/Stem-and-leaf_display">stem-and-leaf display</a>:</p>
+<p><code>&gt; stem(weight)</code></p>
+<pre><code>  The decimal point is at the |
+  3 | 089
+  4 | 0133566677899
+  5 | 001456667777899
+  6 | 00000013555567799
+  7 | 01569
+  8 | 033</code></pre>
+<p>The stem-and-leaf plot is best explained by looking at the variable <code>weight</code> as a sorted vector from low to high:</p>
+<p><code>sort(weight)</code></p>
+<pre><code>[1] 3.0 3.8 3.9 4.0 4.1 4.3 4.3 4.5 4.6 4.6 4.6 4.7 4.7 4.8 4.9 4.9 5.0 5.0 5.1 5.4 5.5 5.6 5.6
+[24] 5.6 5.7 5.7 5.7 5.7 5.8 5.9 5.9 6.0 6.0 6.0 6.0 6.0 6.0 6.1 6.3 6.5 6.5 6.5 6.5 6.6 6.7 6.7
+[47] 6.9 6.9 7.0 7.1 7.5 7.6 7.9 8.0 8.3 8.3</code></pre>
+<p>The vertical line in the stem-leaf plot separates the “stems” from the “leaves,” with the stems to the left of the line. The vertical line itself is interpreted as the decimal point. So, in our sorted vector of <code>weight</code>, the first value is 3.0. The 3 is the stem, to the left of the vertical line, the line is the decimal point, and then the first leaf to the right of the vertical line is the zero. The next two values are 3.8 and 3.9, filling out the first row of the stem-and-leaf plot. A stem-and-leaf plot is like a histogram lying on its side, with the bars made up of the actual data values. This gives you a much more detailed view of the distribution, right down to individual values, unlike a traditional histogram in which the individual values are thrown into “bins” that are the bars of the histogram. A histogram is based on frequencies, whereas a stem-leaf plot is based on individual values. A histogram obscures the original data by summarizing it, while a stem-leaf plot displays each and every value.</p>
+</div>
+<div id="categorical-variables-factors" class="section level2">
+<h2>Categorical variables: factors</h2>
+<p>In our <code>bumpus</code> data frame we have the variable survive, a <a href="http://en.wikipedia.org/wiki/Categorical_variable">categorical variable</a> taking on only two values, a 1 indicating that the bird survived the storm and a 0 indicating that it did not survive. R calls such categorical variables <a href="http://www.stat.berkeley.edu/~s133/factors.html">factors</a>. We can generate multiple box plots according to factor levels, such as:</p>
+<p><code>&gt; boxplot(length~survive)</code></p>
+<p><a href="../../img/IntroductionToR/boxplot2.png"><img src="../../img/IntroductionToR/boxplot2_50.png" /></a></p>
+<p>(Click image to enlarge.)</p>
+<p>The <a href="https://stat.ethz.ch/R-manual/R-devel/library/base/html/tilde.html">tilde</a> symbol is used to separate the left and right sides in a formula. The formula <code>length~survive</code> is telling the <code>boxplot</code> function that we want a separate box plot of the continuous variable <code>length</code> for each level of the factor <code>survive</code>.</p>
+<p>A variant of the box plot, and one of my favorite statistical graphics, is the <em>notched</em> box plot:</p>
+<p><code>&gt; boxplot(length~survive, notch=TRUE)</code></p>
+<p><a href="../../img/IntroductionToR/notched.png"><img src="../../img/IntroductionToR/notched50.png" /></a></p>
+<p>(Click image to enlarge.)</p>
+<p>The notches show a 95% <a href="https://en.wikipedia.org/wiki/Confidence_interval">confidence interval</a> around the medians. If the notches do not overlap, there is “strong evidence” that the medians differ. Our notched box plot indicates that larger birds (males in this subset of Bumpus’ data) did not survive the storm, potential evidence for <a href="https://en.wikipedia.org/wiki/Natural_selection">natural selection</a>. [Note, however, that the Bumpus dataset has been subjected to multiple analyses and interpretations over the years. See, for example, <a href="../../pdf/Johnston.pdf">Hermon Bumpus and Natural Selection in the House Sparrow <em>Passer domesticus</em></a> (PDF) and <a href="../../pdf/p0944-p0954.pdf">Differential overnight survival by Bumpus’ House Sparrows: An alternate interpretation</a> (PDF)].</p>
+</div>
+<div id="some-confirmatory-analysis" class="section level2">
+<h2>Some confirmatory analysis</h2>
+<p>At this point we are beginning to stray into confirmatory analysis. A couple of more examples will suffice.</p>
+<p>The classical <a href="http://en.wikipedia.org/wiki/Student%27s_t-test">t-test</a> of the difference in mean body length between surviving and non-surviving male sparrows is as follows:</p>
+<p><code>&gt; t.test(length~survive)</code></p>
+<pre><code>    Welch Two Sample t-test
+
+data:  length by survive
+t = 3.2576, df = 50.852, p-value = 0.002005
+alternative hypothesis: true difference in means is not equal to 0
+95 percent confidence interval:
+ 0.9007984 3.7948537
+sample estimates:
+mean in group 0 mean in group 1 
+       161.3478        159.0000 </code></pre>
+<p>And your basic one-way <a href="http://en.wikipedia.org/wiki/Analysis_of_variance">analysis of variance</a> (ANOVA) for the same data is:</p>
+<p><code>&gt; summary(aov(length~survive))</code></p>
+<p>Note that, in the above R command, we are nesting the ANOVA function (<code>aov</code>) inside of the <code>summary</code> function. This is common practice in R, and in fact in many other programming languages, where the result returned by a function is used as the input of another function. The <code>summary</code> function, like many functions in R, can modify its output according to what kind of input it receives.</p>
+<p>Here are the ANOVA results:</p>
+<pre><code>            Df Sum Sq Mean Sq F value  Pr(&gt;F)   
+survive      1   74.7   74.71   10.16 0.00239 **
+Residuals   54  397.2    7.36                   
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1</code></pre>
+<p>Both tests seem to indicate that there is a significant difference between the two means, with survivors being smaller than non-survivors.</p>
+<p>However, before you believe this, read Jacob Cohen’s <a href="../../pdf/Cohen_1990.pdf">Things I Have Learned (So Far)</a>.</p>
+</div>
+</div>
+<div id="more-graphics" class="section level1">
+<h1>More graphics</h1>
+<p>To somewhat control the length of this post, I am not including images for all of the graphics produced by the following code. Thus, as before, the examples will be more instructive if you follow along and execute them in R.</p>
+<p>The R language makes it possible to create impressive graphics with only a few lines of code. To make a scatterplot of humerus versus femur length using the Bumpus data:</p>
+<p><code>&gt; plot(lhum, lfem)</code></p>
+<p>This yields a simple plot of the data points. However, if we instead enter:</p>
+<p><code>&gt; scatter.smooth(lhum, lfem)</code></p>
+<p>we get the same scatterplot of points but with a smoothed line fit to the data.</p>
+<p>Another way. This needs a prior call to <code>plot(lhum,lfem)</code>:</p>
+<p><code>&gt; lines(loess.smooth(lhum, lfem))</code></p>
+<p>Next, a linear instead of a lowess/loess smooth (lowess stands for <a href="https://en.wikipedia.org/wiki/Local_regression">LOcally WEighted Scatterplot Smoothing</a>). Note that variables are reversed in the call to <code>abline</code>. This also needs a prior call to <code>plot(lhum,lfem)</code>.</p>
+<p><code>&gt; abline(lm(lfem~lhum))</code></p>
+<p>[<code>lines()</code> connects dots to produce a curve; <code>abline()</code> plots a single straight line.]</p>
+<p>This works because the <a href="https://stat.ethz.ch/R-manual/R-devel/library/graphics/html/00Index.html">base graphics package</a> in R will keep drawing a sequence of graphic statements to the same graphics window until the window is closed or a new graphics window is created. Issuing a new <code>plot</code> command or <a href="https://stat.ethz.ch/R-manual/R-devel/library/graphics/html/frame.html">plot.new()</a> will create a new graphics window; the <a href="https://stat.ethz.ch/R-manual/R-devel/library/grDevices/html/dev.html">dev.off()</a> function will close the current graphics window. The statement <code>plot(lhum,lfem)</code> creates the scatterplot of points, and then the <code>abline(lm(lfem~lhum))</code> statement overlays the smoothed line onto the same graphics window, producing a plot that contains both the data points and the smoothed line.</p>
+<p>Change the line color and thickness (again, a prior call to <code>plot(lhum,lfem)</code> is needed here:</p>
+<p><code>&gt; abline(lm(lfem~lhum), col='blue', lwd=10)</code></p>
+<p>Here again is our notched box plot, but we now add a title and some axis labels:</p>
+<p><code>&gt; boxplot(length~survive, notch=TRUE, main=&quot;Bumpus' Sparrows&quot;, xlab=&quot;Survival&quot;, ylab=&quot;Body length&quot;)</code></p>
+<p>And now for something a little fancier:</p>
+<p>Invoke the <a href="https://cran.r-project.org/web/packages/rgl/index.html">rgl</a> 3D graphics package.</p>
+<p><code>&gt; library(rgl)</code></p>
+<p>Rotate your data in 3D! Drag your mouse cursor over the plot to rotate. (It’s much more fun when you are doing it in real time instead of looking at a 2D picture.)</p>
+<p><code>&gt; plot3d(length, alar, lfem, col=&quot;red&quot;, size=6)</code></p>
+<p><a href="../../img/IntroductionToR/rotate.png"><img src="../../img/IntroductionToR/rotate50.png" /></a></p>
+<p>(Click image to enlarge.)</p>
+<p>Create a new variable for labeling points:</p>
+<p><code>&gt; bumpus$survcat = ifelse(bumpus$survive == 0, c('N'), c('Y'))</code></p>
+<p>If you now type <code>names(bumpus)</code> you will see that the categorical variable <code>survcat</code> has been added to the data frame.</p>
+<p>Next, re-plot with smaller plotting symbols:</p>
+<p><code>&gt; plot3d(length, alar, lfem, size=2)</code></p>
+<p>and then add text labels to the plotted data points. Rotate your data interactively with the mouse and ponder the effects of body size on survival:</p>
+<p><code>&gt; text3d(length, alar, lfem, texts=bumpus$survcat)</code></p>
+<p>You can even skip creating a separate labeling variable by inserting the recoding statement inside of the call to <code>text3d()</code>:</p>
+<p><code>text3d(length, alar, lfem, texts=ifelse(bumpus$survive == 0, c('N'), c('Y')))</code></p>
+</div>
+<div id="r-scripts-command-files" class="section level1">
+<h1>R scripts (command files)</h1>
+<p>As mentioned earlier, R statements can be stored in a text file and submitted together as a batch. Thus we could produce our 3D rotating scatterplot by storing the following R commands in a plain text file:</p>
+<pre><code>library(rgl)
+bumpus = read.table(&quot;https://richardlent.github.io/datasets/bumpus.dat.txt&quot;, sep = &quot;&quot;, header = TRUE)
+attach(bumpus)
+plot3d(length, alar, lfem, size=2)
+text3d(length, alar, lfem, texts=ifelse(bumpus$survive == 0, c(&#39;N&#39;), c(&#39;Y&#39;)))</code></pre>
+<p>To create R scripts, also known as command files, use whatever plain text editor you like as long as it produces nothing more than <a href="http://en.wikipedia.org/wiki/Plain_text">plain text</a>. DO NOT use a word processor, because word processors insert invisible formatting symbols that will mess up your R commands. Plain text editors include <a href="http://en.wikipedia.org/wiki/TextEdit">TextEdit</a> for the Mac (just be sure you use plain text, not rich text), <a href="http://en.wikipedia.org/wiki/Notepad_%28software%29">Notepad</a> for Windows, <a href="http://en.wikipedia.org/wiki/Emacs">Emacs</a> for Unix, etc. RStudio has a plain text editor built in; access it from the <code>File</code> menu (choose <code>New File</code>, then <code>R Script</code>). You can also create scripts using standalone R, from the <code>File</code> menu (<code>File|New Document</code>).</p>
+<p>A script contains R commands written exactly as you would have entered them interactively at the R console. If we named our script <code>plot.R</code> (the R suffix is standard practice for R command files), we could then submit this script to R with the following statement:</p>
+<p><code>source(&quot;plot.R&quot;)</code></p>
+<p>You can also submit command files using the R GUI (<code>File|Source File...</code>). And the RStudio text editor has built-in tools for editing and running scripts from inside of RStudio. See <a href="https://support.rstudio.com/hc/en-us/articles/200484448-Editing-and-Executing-Code">Editing and Executing Code</a> for more information.</p>
+<p>Scripts are an excellent way to maintain complicated batches of R statements without having to constantly retype them.</p>
+</div>
+<div id="an-r-menu-system-r-commander" class="section level1">
+<h1>An R menu system: R-commander</h1>
+<p>If you really, really want a menu-driven system in R, an R package called <a href="http://socserv.mcmaster.ca/jfox/Misc/Rcmdr/">R Commander</a> runs on top of R and enables users to access a selection of commonly-used R commands with a simple, menu-driven interface. R Commander is a <a href="http://cran.r-project.org/web/packages/Rcmdr/index.html">standard R package</a> and can be installed using the R Package Installer that is part of the standard R GUI, or from the RStudio <code>Packages</code> pane. R Commander depends on a number of other contributed packages, which must be present in order for it to work correctly. (Be sure to click the <code>Install Dependencies</code> checkbox in the Package Installer when you are installing R Commander.) If you are getting error messages when you try to load R Commander, see <a href="http://socserv.mcmaster.ca/jfox/Misc/Rcmdr/installation-notes.html">R Commander Installation Notes</a>.</p>
+<p>After installing the <a href="http://cran.r-project.org/web/packages/Rcmdr/index.html">Rcmdr</a> package, enter <code>library(Rcmdr)</code> at the R prompt and R Commander should appear. It looks like this:</p>
+<p><a href="../../img/IntroductionToR/rcommander.png"><img src="../../img/IntroductionToR/rcommander50.png" /></a></p>
+<p>(Click image to enlarge.)</p>
+<p>The beauty of R Commander is that it generates the R code that corresponds to your various menu selections, which makes it a great tool for learning the R language. You can interactively change the code and resubmit it. This is often necessary because no point-and-click menu system could possibly cover all of the options in a system as powerful and complex as R.</p>
+<p>For more information on using R Commander, see <a href="https://socserv.mcmaster.ca/jfox/Misc/Rcmdr/Getting-Started-with-the-Rcmdr.pdf">Getting Started With the R Commander</a> (PDF).</p>
+</div>
+<div id="epilogue" class="section level1">
+<h1>Epilogue</h1>
+<p>This introduction has only scratched the proverbial surface of what can be done with R. I firmly believe that R is well worth the effort involved in learning it. To quote Robert I. Kabacoff, Ph.D., author of <a href="http://www.statmethods.net">Quick-R</a>, speaking about <a href="http://www.statmethods.net/about/learningcurve.html">Why R has A Steep Learning Curve</a>:</p>
+<blockquote>
+<p>“[In the end] I believe that you will feel much more intimately in touch with your data and in control of your work. And it’s fun!”</p>
+</blockquote>
+<p>Yes. You <em>will</em> have fun.</p>
+</div>
+
+
+  
+<div class="prev-next-post pure-g">
+  <div class="pure-u-1-24" style="text-align: left;">
+    
+    <a href="https://richardlent.github.io/post/in-christ-there-is-no-east-or-west/"><i class="fa fa-chevron-left"></i></a>
+    
+  </div>
+  <div class="pure-u-10-24">
+    
+    <nav class="prev">
+      <a href="https://richardlent.github.io/post/in-christ-there-is-no-east-or-west/">In Christ There Is No East Or West</a>
+    </nav>
+    
+  </div>
+  <div class="pure-u-2-24">
+    &nbsp;
+  </div>
+  <div class="pure-u-10-24">
+    
+  </div>
+  <div class="pure-u-1-24" style="text-align: right;">
+    
+  </div>
+</div>
+
+
+
+  
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+
+(function() {
+    
+    
+    if (window.location.hostname == "localhost")
+        return;
+
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+    var disqus_shortname = 'richardlent';
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com/" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+</div>
+
+</div>
+</div>
+<script src="https://richardlent.github.io/js/ui.js"></script>
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-48234901-2', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+
+
+</body>
+</html>
+
