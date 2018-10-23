@@ -35,12 +35,12 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
     weight = 1
     identifier = "home"
     url = "/"
-  # [[menu.main]]
-    # name = "Archive"
-    # pre = "<i class='fa fa-list fa-fw'></i>"
-    # weight = 3
-    # identifier = "post"
-    # url = "/post/"
+   [[menu.main]]
+     name = "Archive"
+     pre = "<i class='fa fa-list fa-fw'></i>"
+     weight = 3
+     identifier = "post"
+     url = "/post/"
   [[menu.main]]
     name = "About"
     pre = "<i class='fa fa-user fa-fw'></i>"
