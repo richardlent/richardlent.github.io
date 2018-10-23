@@ -1,0 +1,101 @@
+baseurl = "https://richardlent.github.io/"
+languageCode = "en-us"
+title = "Richard A. Lent, Ph.D."
+theme = "blackburn"
+author = "Richard A. Lent"
+copyright = "&copy; 2017 and beyond by Richard A. Lent. All rights reserved."
+canonifyurls = true
+relativeURLs = true
+paginate = 7
+publishDir = "../richardlent.github.io"
+buildDrafts = false
+rssLimit = 100
+ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
+
+[taxonomies]
+  tag = "tags"
+  topic = "topics"
+
+[params]
+  # Shown in the home page
+  # subtitle = "Data Scientist. Biologist. Schmetterlingsliebhaber."
+  subtitle = "All generalizations are false."
+  brand = "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;^(;,;)^"
+  googleAnalytics = "UA-48234901-2"
+  disqus = "richardlent"
+  # CSS name for highlight.js
+  # highlightjs = "androidstudio"
+  dateFormat = "02 Jan 2006, 15:04"
+
+[menu]
+  # Shown in the side menu.
+   [[menu.main]]
+    name = "Home"
+    pre = "<i class='fa fa-home fa-fw'></i>"
+    weight = 1
+    identifier = "home"
+    url = "/"
+  # [[menu.main]]
+    # name = "Archive"
+    # pre = "<i class='fa fa-list fa-fw'></i>"
+    # weight = 3
+    # identifier = "post"
+    # url = "/post/"
+  [[menu.main]]
+    name = "About"
+    pre = "<i class='fa fa-user fa-fw'></i>"
+    weight = 2
+    identifier = "about"
+    url = "/misc/about/"
+  [[menu.main]]
+    name = "Contact"
+    pre = "<i class='fa fa-envelope-o fa-fw'></i>"
+    weight = 9
+    identifier = "contact"
+    # url = "/contact/"
+    url = "mailto:richardlent@gmail.com"
+  # [[menu.main]]
+    # name = "Photography"
+    # pre = "<i class='fa fa-camera fa-fw'></i>"
+    # weight = 6
+    # identifier = "photography"
+    # url = "http://richard-lent.pixels.com"
+  # [[menu.main]]
+    # name = "Guitar"
+    # pre = "<i class='fa fa-music fa-fw'></i>"
+    # weight = 7
+    # identifier = "guitar"
+    # url = "/topics/guitar/"  
+  [[menu.main]]
+    name = "Tags"
+    pre = "<i class='fa fa-tag fa-fw'></i>"
+    weight = 5
+    identifier = "tags"
+    url = "/tags/"
+  [[menu.main]]
+    name = "Topics"
+    pre = "<i class='fa fa-folder fa-fw'></i>"
+    weight = 4
+    identifier = "topics"
+    url = "/topics/" 
+  [[menu.main]]
+    name = "Publications"
+    pre = "<i class='fa fa-list fa-fw'></i>"
+    weight = 8
+    identifier = "publications"
+    url = "/misc/publications/"
+  [[menu.main]]
+    name = "Search"
+    pre = "<i class='fa fa-search fa-fw'></i>"
+    weight = 10
+    identifier = "search"
+    url = "/misc/search/"
+
+[social]
+  # Link your social networking accounts to the side menu
+  # by entering your username or ID.
+  twitter = "lentrichard"
+  instagram = "richardlent3710"
+  github = "richardlent"
+  linkedin = "richard-lent"
+  
