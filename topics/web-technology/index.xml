@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Web Technology on Richard A. Lent, Ph.D.</title>
+    <link>https://richardlent.github.io/topics/web-technology/</link>
+    <description>Recent content in Web Technology on Richard A. Lent, Ph.D.</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; 2017 and beyond by Richard A. Lent. All rights reserved.</copyright>
+    <lastBuildDate>Wed, 24 Jan 2018 14:49:00 -0400</lastBuildDate>
+    
+	<atom:link href="https://richardlent.github.io/topics/web-technology/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Web Mapping with Free Software Tools</title>
+      <link>https://richardlent.github.io/post/web-mapping/</link>
+      <pubDate>Wed, 24 Jan 2018 14:49:00 -0400</pubDate>
+      
+      <guid>https://richardlent.github.io/post/web-mapping/</guid>
+      <description>Introduction GIS in a nutshell Desirable features of a web mapping platform Set up your data for mapping Google Maps QGIS and the qgis2web plugin [IN PROGRESS] RStudio, r-leaflet, and Shiny [IN PROGRESS] In conclusion [IN PROGRESS]   Reading time: 12 minute(s) @ 200 WPM.
+   Introduction Web mapping is an application of geographic information systems (GIS) that involves the creation of interactive digital maps displayed and manipulated through a web browser.</description>
+    </item>
+    
+    <item>
+      <title>A Comment About Comments</title>
+      <link>https://richardlent.github.io/post/a-comment-about-comments/</link>
+      <pubDate>Fri, 19 May 2017 14:32:00 -0400</pubDate>
+      
+      <guid>https://richardlent.github.io/post/a-comment-about-comments/</guid>
+      <description>Reading time: 1 minute(s) @ 200 WPM.
+Readers of this website (if any) may have noticed that I recently implemented Disqus comments. This is very easy to do in a Hugo-generated website. Sign up for a free Disqus account, put your Disqus shortname (basically your account ID) into your Hugo configuration file, and Hugo takes care of generating all the necessary code when it creates your static website. Disqus sends you email notifications whenever somebody writes a comment, and you can moderate comments, write replies, delete comments, mark comments as spam, and yada yada yada.</description>
+    </item>
+    
+    <item>
+      <title>How I Deploy My Website to GitHub Using RStudio, blogdown, and Hugo</title>
+      <link>https://richardlent.github.io/post/how-i-deploy-my-website-to-github-using-rstudio-blogdown-and-hugo/</link>
+      <pubDate>Wed, 17 May 2017 12:02:00 -0400</pubDate>
+      
+      <guid>https://richardlent.github.io/post/how-i-deploy-my-website-to-github-using-rstudio-blogdown-and-hugo/</guid>
+      <description>Reading time: 3 minute(s) @ 200 WPM.
+I have worked for days trying to get this website up and running on GitHub Pages. I think I finally have gotten it to work.
+This is that story.
+I have studied the following sources of punditage:
+ Making a Website Using Blogdown, Hugo, and GitHub pages Update: Deploying Hugo-generated websites on personal GitHub Pages How to make a GitHub pages blog with RStudio and Hugo Including image using blogdown Building a Blog with Blogdown and GitHub The Hugo documentation Create Blogs and Websites with R Markdown Hosting on GitHub Pages Build_Site and Serve_Site Output Issues Create a Free Personal Academic Website with Hugo  All of the articles and discussions were enlightening, and helped me arrive at what I believe to be the simplest way to deploy a Hugo-generated website on GitHub Pages, at least for me.</description>
+    </item>
+    
+    <item>
+      <title>Musings on blogdown and Hugo</title>
+      <link>https://richardlent.github.io/post/musings-on-blogdown-and-hugo/</link>
+      <pubDate>Mon, 15 May 2017 11:56:48 -0400</pubDate>
+      
+      <guid>https://richardlent.github.io/post/musings-on-blogdown-and-hugo/</guid>
+      <description>Reading time: 4 minute(s) @ 200 WPM.
+I am a huge fan of R and RStudio, especially relative to their use in creating reproducible research (see RStudio as a Research and Writing Platform). I was thus thrilled to learn that a new R package, blogdown, was being developed for producing websites from R Markdown files using RStudio and the static website generator, Hugo.
+This website was built and is maintained using blogdown and Hugo running inside of RStudio, and is hosted on GitHub Pages.</description>
+    </item>
+    
+    <item>
+      <title>Google Search</title>
+      <link>https://richardlent.github.io/post/google-search/</link>
+      <pubDate>Mon, 08 May 2017 14:54:00 -0400</pubDate>
+      
+      <guid>https://richardlent.github.io/post/google-search/</guid>
+      <description>Reading time: 2 minute(s) @ 200 WPM.
+Following the directions for Google’s Custom Search Engine, with additional help from How I added search to my static blog, I have added a local search function to this website. It’s on the sidebar menu, with an adorable magnifying glass icon from Font Awesome Icons, and it basically works.
+This search function will, in all likelihood, probably search only the specific content of richardlent.</description>
+    </item>
+    
+    <item>
+      <title>Video test</title>
+      <link>https://richardlent.github.io/post/video-test/</link>
+      <pubDate>Fri, 05 May 2017 14:37:00 -0400</pubDate>
+      
+      <guid>https://richardlent.github.io/post/video-test/</guid>
+      <description>Reading time: 1 minute(s) @ 200 WPM.
+We now attempt to insert into our R Markdown file, which Hugo then renders into HTML, an mp4 video of dragonflies (insect order Odonata, in case you’re wondering) that were congregating in my front yard a few summers ago.
+So I’m thinking, just insert it using a regular Markdown image tag, yes?
+Like this:
+![](/mp4/Dragonflies.mp4).
+  And so, that worked.
+To center this video on the page I am using the deprecated HTML &amp;lt;center&amp;gt; tag inside of my R Markdown.</description>
+    </item>
+    
+    <item>
+      <title>Getting images to work</title>
+      <link>https://richardlent.github.io/post/getting-images-to-work/</link>
+      <pubDate>Tue, 02 May 2017 11:00:00 -0400</pubDate>
+      
+      <guid>https://richardlent.github.io/post/getting-images-to-work/</guid>
+      <description>Reading time: 3 minute(s) @ 200 WPM.
+I was until very recently involved in an epic struggle to get the system described in Making a Website Using Blogdown, Hugo, and GitHub pages to work for me. (See also Building a Blog with Blogdown and GitHub.) I really want it to work, because it has produced the current website that you are now reading, and I’m sure you’ll agree that it is very, very beautiful, in a stark, post-apocalyptic, Mordor-esque sort of way.</description>
+    </item>
+    
+    <item>
+      <title>Time stamp issue</title>
+      <link>https://richardlent.github.io/post/time-stamp-issue/</link>
+      <pubDate>Wed, 26 Apr 2017 14:52:42 -0400</pubDate>
+      
+      <guid>https://richardlent.github.io/post/time-stamp-issue/</guid>
+      <description>There seems to be a bug in blogdown in which time stamps for posts are all 00:00.
+Either that or there is something in some setting somewheres that I am missing.
+If we use the blogdown “New Post” RStudio addin, the time stamp for the post is 00:00.
+However, if we create a post using the blogdown new_post() function, the time stamp is correct.
+This either needs to be fixed or I need to be re-educated.</description>
+    </item>
+    
+    <item>
+      <title>First post</title>
+      <link>https://richardlent.github.io/post/2017-04-26-first-post/</link>
+      <pubDate>Wed, 26 Apr 2017 14:49:48 -0400</pubDate>
+      
+      <guid>https://richardlent.github.io/post/2017-04-26-first-post/</guid>
+      <description>This site is written, built, and maintained in RStudio using the R blogdown package and the Hugo static website generator. See Making a Website Using Blogdown, Hugo, and GitHub.
+An apparent quirk (or maybe it’s a feature) of this system is that hyperlinks are not displayed in the short summary displayed by default for each post. The summary consists simply of the first n lines of the posts’s text, where the variable n has a value that is unknown to me.</description>
+    </item>
+    
+  </channel>
+</rss>
