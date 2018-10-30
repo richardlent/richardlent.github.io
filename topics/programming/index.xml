@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Programming on Richard A. Lent, Ph.D.</title>
+    <link>https://richardlent.github.io/topics/programming/</link>
+    <description>Recent content in Programming on Richard A. Lent, Ph.D.</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; 2017 and beyond by Richard A. Lent. All rights reserved.</copyright>
+    <lastBuildDate>Mon, 29 Oct 2018 09:19:00 -0400</lastBuildDate>
+    
+	<atom:link href="https://richardlent.github.io/topics/programming/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Web Mapping with Free Software Tools</title>
+      <link>https://richardlent.github.io/post/web-mapping/</link>
+      <pubDate>Mon, 29 Oct 2018 09:19:00 -0400</pubDate>
+      
+      <guid>https://richardlent.github.io/post/web-mapping/</guid>
+      <description>Introduction GIS in a nutshell Desirable features of a web mapping platform Set up your data for mapping Google Maps QGIS and the qgis2web plugin RStudio and the R leaflet Package In conclusion   Reading time: 22 minute(s) @ 200 WPM.
+   Introduction Web mapping is an application of geographic information systems (GIS) that involves the creation of interactive digital maps displayed and manipulated through a web browser.</description>
+    </item>
+    
+    <item>
+      <title>Multivariate Analysis with R</title>
+      <link>https://richardlent.github.io/post/multivariate-analysis-with-r/</link>
+      <pubDate>Thu, 22 Jun 2017 09:21:00 -0400</pubDate>
+      
+      <guid>https://richardlent.github.io/post/multivariate-analysis-with-r/</guid>
+      <description>Preliminaries Multivariate data A map Distance matrices Cluster analysis Mantel test Multidimensional scaling Principal components analysis Discriminant function analysis Epilogue      Reading time: 32 minute(s) @ 200 WPM.
+Preliminaries  At some time or another, most users of statistics find themselves sitting in front of a large pile of computer output with the realization that it tells them nothing that they really want to know. — Multivariate Statistical Methods: A Primer, fourth edition (2017)</description>
+    </item>
+    
+    <item>
+      <title>An Introduction to R</title>
+      <link>https://richardlent.github.io/post/introduction-to-r/</link>
+      <pubDate>Fri, 02 Jun 2017 16:14:00 -0400</pubDate>
+      
+      <guid>https://richardlent.github.io/post/introduction-to-r/</guid>
+      <description>Prologue Getting a feel for R The console Function calls and arguments HINT: Getting help  Some graphics HINT: Command history and workspace   Getting data into R Data frames Creating data frames HINT: Data management in R and RStudio.   Exploratory data analysis Scatterplot matrix HINT: R packages  Summary statistics and data screening Box plots Stem-and-leaf display Categorical variables: factors Some confirmatory analysis  More graphics R scripts (command files) An R menu system: R-commander Epilogue      Reading time: 23 minute(s) @ 200 WPM.</description>
+    </item>
+    
+    <item>
+      <title>An R script for calculating the reading time of an R Markdown file</title>
+      <link>https://richardlent.github.io/post/an-r-script-for-calculating-reading-time-of-an-article/</link>
+      <pubDate>Mon, 15 May 2017 13:00:00 -0400</pubDate>
+      
+      <guid>https://richardlent.github.io/post/an-r-script-for-calculating-reading-time-of-an-article/</guid>
+      <description>Reading time: 2 minute(s) @ 200 WPM.
+To see how we just did that, read on.
+Because psychological research tells us that including estimated reading times can increase reader engagement with digital content, I decided to include reading times for my riveting posts.
+So I wrote a simple R script. Here it is, as an R code chunk:
+```{r echo=FALSE} bytes  The script is very simple, such that even I could program it.</description>
+    </item>
+    
+    <item>
+      <title>R Notebook Example with R, Python, and BibTeX</title>
+      <link>https://richardlent.github.io/post/r-notebook-example-with-r-python-and-bibtex/</link>
+      <pubDate>Mon, 08 May 2017 12:20:00 -0400</pubDate>
+      
+      <guid>https://richardlent.github.io/post/r-notebook-example-with-r-python-and-bibtex/</guid>
+      <description>The accompanying R Notebook is a simple example that combines R code chunks, Python code chunks, and BibTeX literature citations in one R Markdown document.
+For additional information please see RStudio as a Research and Writing Platform.
+Click here to read the notebook.</description>
+    </item>
+    
+  </channel>
+</rss>
