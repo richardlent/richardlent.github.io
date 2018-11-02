@@ -1,0 +1,6 @@
+Bumpus survival and morphological data for adult male house sparrows
+
+The variables are: survived (variable survive, 1=yes, 0=no), total length (length, mm), 
+alar extent (alar, tip to tip of extended wings, mm), weight (g), length of beak and 
+head (lbh, mm), length of humerus (lhum, in), length of femur (lfem, in), length of 
+tibiotarsus (ltibio, in), width of skull (wskull, in), and length of keel of sternum (lkeel, in).
