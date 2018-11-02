@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Simplify, simplify.">
+  <meta name="generator" content="Hugo 0.48" />
+
+  <title>How I Deploy My Website to GitHub Using RStudio, blogdown, and Hugo &middot; Richard A. Lent, Ph.D.</title>
+
+  
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/pure-min.css">
+
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-old-ie-min.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-min.css">
+  <!--<![endif]-->
+
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="../../css/side-menu-old-ie.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+  <link rel="stylesheet" href="../../css/side-menu.css">
+  <!--<![endif]-->
+
+  <link rel="stylesheet" href="../../css/blackburn.css">
+
+  
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  
+  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet" type="text/css">
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+ 
+  
+
+  
+
+  <link rel="shortcut icon" href="../../img/favicon.ico" type="image/x-icon" />
+
+  
+  
+
+</head>
+
+
+<body>
+<div id="layout">
+
+  
+<a href="#menu" id="menuLink" class="menu-link">
+  
+  <span></span>
+</a>
+<div id="menu">
+
+  
+  <a class="pure-menu-heading brand" href="../../">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;^(;,;)^</a>
+
+
+  <div class="pure-menu">
+    <ul class="pure-menu-list">
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="../../"><i class='fa fa-home fa-fw'></i>Home</a>
+      
+        </li>
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="../../misc/about/"><i class='fa fa-user fa-fw'></i>About</a>
+      
+        </li>
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="../../post/"><i class='fa fa-list fa-fw'></i>Archive</a>
+      
+        </li>
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="../../topics/"><i class='fa fa-folder fa-fw'></i>Topics</a>
+      
+        </li>
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="../../tags/"><i class='fa fa-tag fa-fw'></i>Tags</a>
+      
+        </li>
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="../../misc/publications/"><i class='fa fa-list fa-fw'></i>Publications</a>
+      
+        </li>
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="mailto:richardlent@gmail.com"><i class='fa fa-envelope-o fa-fw'></i>Contact</a>
+      
+        </li>
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="../../misc/search/"><i class='fa fa-search fa-fw'></i>Search</a>
+      
+        </li>
+      
+    </ul>
+  </div>
+
+  <div class="pure-menu social">
+  <ul class="pure-menu-list">
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://twitter.com/lentrichard" target="_blank"><i class="fa fa-twitter-square fa-fw"></i>Twitter</a>
+    </li>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://instagram.com/richardlent3710" target="_blank"><i class="fa fa-instagram fa-fw"></i>Instagram</a>
+    </li>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://linkedin.com/in/richard-lent" target="_blank"><i class="fa fa-linkedin-square fa-fw"></i>LinkedIn</a>
+    </li>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://github.com/richardlent" target="_blank"><i class="fa fa-github-square fa-fw"></i>GitHub</a>
+    </li>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+  </ul>
+</div>
+
+
+  <div>
+  <div class="small-print">
+    <small>&copy; 2017 and beyond by Richard A. Lent. All rights reserved.</small>
+  </div>
+  <div class="small-print">
+    <small>Built with&nbsp;<a href="https://gohugo.io/" target="_blank">Hugo</a></small>
+    <small>Theme&nbsp;<a href="https://github.com/yoshiharuyamashita/blackburn" target="_blank">Blackburn</a></small>
+  </div>
+</div>
+
+</div>
+
+
+  <div id="main">
+
+
+<div class="header">
+  <h1>How I Deploy My Website to GitHub Using RStudio, blogdown, and Hugo</h1>
+  <h2>Simplify, simplify.</h2>
+</div>
+<div class="content">
+
+  <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>17 May 2017, 12:02</time>
+  </div>
+
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-folder fa-fw"></i>
+    
+      <a class="post-taxonomy-topic" href="../../topics/web-technology">Web Technology</a>
+    
+  </div>
+  
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="../../tags/r">R</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="../../tags/rstudio">RStudio</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="../../tags/github">GitHub</a>
+    
+  </div>
+  
+  
+
+</div>
+
+  <p>Reading time: 3 minute(s) @ 200 WPM.</p>
+<p>I have worked for days trying to get <a href="../../misc/about/">this website</a> up and running on <a href="https://pages.github.com">GitHub Pages</a>. I think I finally have gotten it to work.</p>
+<p>This is that story.</p>
+<p>I have studied the following sources of punditage:</p>
+<ul>
+<li><a href="https://proquestionasker.github.io/blog/Making_Site/">Making a Website Using Blogdown, Hugo, and GitHub pages</a></li>
+<li><a href="https://hjdskes.github.io/blog/update-deploying-hugo-on-personal-gh-pages/">Update: Deploying Hugo-generated websites on personal GitHub Pages</a></li>
+<li><a href="http://robertmyles.github.io/2017/02/01/how-to-make-a-github-pages-blog-with-rstudio-and-hugo/">How to make a GitHub pages blog with RStudio and Hugo</a></li>
+<li><a href="https://github.com/rstudio/blogdown/issues/45">Including image using blogdown</a></li>
+<li><a href="https://tclavelle.github.io/blog/blogdown_github/">Building a Blog with Blogdown and GitHub</a></li>
+<li><a href="https://gohugo.io/overview/introduction/">The Hugo documentation</a></li>
+<li><a href="https://github.com/rstudio/blogdown">Create Blogs and Websites with R Markdown</a></li>
+<li><a href="http://hugodocs.netlify.com/tutorials/github-pages-blog/">Hosting on GitHub Pages</a></li>
+<li><a href="https://github.com/rstudio/blogdown/issues/56">Build_Site and Serve_Site Output Issues</a></li>
+<li><a href="https://georgecushen.com/create-your-website-with-hugo/">Create a Free Personal Academic Website with Hugo</a></li>
+</ul>
+<p>All of the articles and discussions were enlightening, and helped me arrive at what I believe to be the simplest way to deploy a Hugo-generated website on GitHub Pages, at least for me.</p>
+<p>I have one GitHub repository for this website, <code>richardlent.github.io</code>, under GitHub Pages. I have an RStudio project in a local working folder of the same name, maintained on <a href="https://www.dropbox.com">Dropbox</a>. That folder was cloned from my remote GitHub repository, namely <a href="https://github.com/richardlent/richardlent.github.io">richardlent.github.io</a>. So when I revise the website, using <a href="https://github.com/rstudio/blogdown">blogdown</a> and <a href="https://www.rstudio.com">RStudio</a>, <a href="https://gohugo.io">Hugo</a> writes the static site files to the root of that folder. To accomplish this, I have the line:</p>
+<p><code>publishDir = &quot;../richardlent.github.io&quot;</code></p>
+<p>in my <a href="https://gohugo.io/overview/configuration/">config.toml</a> file. This overrides Hugo’s default output folder, <code>/public/</code>.</p>
+<p>Before I rebuild a newly-revised website for pushing up to GitHub, I first purge my working folder of all files and folders previously generated by Hugo, because, as <a href="http://gohugo.io/overview/usage/">Hugo hath spake</a>:</p>
+<blockquote>
+<p>Running hugo does <em>not</em> remove generated files before building. This means that you should delete your public/ directory (or the directory you specified with -d/–destination) before running the hugo command, or you run the risk of the wrong files (e.g. drafts and/or future posts) being left in the generated site.</p>
+</blockquote>
+<p>Because I have Hugo write its website files to the root of my working folder, <code>richardlent.github.io</code>, instead of to a <code>/public/</code> folder, it’s a little more work for me to purge old files. Instead of simply deleting the <code>/public/</code> folder, I have to manually go through my project’s directory tree, deleting everything except the <a href="https://gohugo.io/overview/source-directory/">core Hugo file structure</a>. In particular, I am careful NOT to delete the <code>/content/</code>, <code>/static/</code>, and <code>/themes/</code> directories, which contain the source materials used by Hugo to build the website. Also, I have a directory called <code>/datasets/</code> that contains various data files used in various posts. That directory is always left up on GitHub and never deleted, only updated, because deleting it would break vital connections and cause <code>.Rmd</code> files that use those datasets to fail to render. I also do not want the contents of those directories to be pushed to GitHub. My <a href="https://git-scm.com/docs/gitignore">.gitignore</a> file helps accomplish this:</p>
+<p><code>.gitignore</code>:</p>
+<pre><code>.Rproj.user
+.Rhistory
+.RData
+.Ruserdata
+.gitignore
+.gitkeep
+/**/*.Rmd
+config.toml
+richardlent.github.io.Rproj
+content/
+static/
+themes/</code></pre>
+<p>Here are some critical fragments of my <code>config.toml</code> file:</p>
+<pre><code>baseurl = &quot;https://richardlent.github.io/&quot;
+canonifyurls = true
+relativeURLs = true
+publishDir = &quot;../richardlent.github.io&quot;</code></pre>
+<p>The above settings were arrived at by a combination of reading the articles referenced above plus a massive amount of trial and error.</p>
+<p>And so here is my procedure for revising this website using RStudio:</p>
+<ol style="list-style-type: decimal">
+<li><p>After adding new material via <a href="http://rmarkdown.rstudio.com">R Markdown files</a>, and verifying that the site is working locally using the <code>blogdown::serve_site()</code> function, I terminate the local server and delete all Hugo-generated files from my working directory (<code>richardlent.github.io</code>).</p></li>
+<li><p>Using the <a href="https://git-scm.com">git</a> <a href="https://en.wikipedia.org/wiki/Version_control">version control</a> tool <a href="https://support.rstudio.com/hc/en-us/articles/200532077-Version-Control-with-Git-and-SVN">built into RStudio</a>, I commit the file deletions to the local repository and then push the file deletions to my remote <code>richardlent.github.io</code> repository. (Thus my website is briefly unavailable.)</p></li>
+<li><p>I then rebuild the site using <code>blogdown</code>’s <code>build_site()</code> function.</p></li>
+<li><p>The newly-created website files are then committed to my local git repository and then pushed to GitHub. The revised site is now live.</p></li>
+</ol>
+<p>At least, I hope it is.</p>
+
+
+  
+<div class="prev-next-post pure-g">
+  <div class="pure-u-1-24" style="text-align: left;">
+    
+    <a href="../../post/an-r-script-for-calculating-reading-time-of-an-article/"><i class="fa fa-chevron-left"></i></a>
+    
+  </div>
+  <div class="pure-u-10-24">
+    
+    <nav class="prev">
+      <a href="../../post/an-r-script-for-calculating-reading-time-of-an-article/">An R script for calculating the reading time of an R Markdown file</a>
+    </nav>
+    
+  </div>
+  <div class="pure-u-2-24">
+    &nbsp;
+  </div>
+  <div class="pure-u-10-24">
+    
+    <nav class="next">
+      <a href="../../post/a-comment-about-comments/">A Comment About Comments</a>
+    </nav>
+    
+  </div>
+  <div class="pure-u-1-24" style="text-align: right;">
+    
+    <a href="../../post/a-comment-about-comments/"><i class="fa fa-chevron-right"></i></a>
+    
+  </div>
+</div>
+
+
+
+  
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+
+(function() {
+    
+    
+    if (window.location.hostname == "localhost")
+        return;
+
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+    var disqus_shortname = 'richardlent';
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com/" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+</div>
+
+</div>
+</div>
+<script src="../../js/ui.js"></script>
+
+
+<script>
+  
+  if (window.location.hostname != "localhost") {
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-48234901-2', 'auto');
+    ga('send', 'pageview');
+  }
+</script>
+
+
+
+
+
+</body>
+</html>
+
