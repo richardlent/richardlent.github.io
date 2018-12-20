@@ -50,16 +50,17 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
   [[menu.main]]
     name = "Contact"
     pre = "<i class='fa fa-envelope-o fa-fw'></i>"
-    weight = 9
+    weight = 6
     identifier = "contact"
     # url = "/contact/"
     url = "mailto:richardlent@gmail.com"
-  # [[menu.main]]
-    # name = "Photography"
-    # pre = "<i class='fa fa-camera fa-fw'></i>"
-    # weight = 6
-    # identifier = "photography"
+  [[menu.main]]
+    name = "Photography"
+    pre = "<i class='fa fa-camera fa-fw'></i>"
+    weight = 8
+    identifier = "photography"
     # url = "http://richard-lent.pixels.com"
+    url = "https://500px.com/richardlent"
   # [[menu.main]]
     # name = "Guitar"
     # pre = "<i class='fa fa-music fa-fw'></i>"
@@ -81,13 +82,13 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
   [[menu.main]]
     name = "Publications"
     pre = "<i class='fa fa-list fa-fw'></i>"
-    weight = 8
+    weight = 7
     identifier = "publications"
     url = "/misc/publications/"
   [[menu.main]]
     name = "Search"
     pre = "<i class='fa fa-search fa-fw'></i>"
-    weight = 10
+    weight = 9
     identifier = "search"
     url = "/misc/search/"
 
