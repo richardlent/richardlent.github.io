@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="I did not understand /static/.">
+  <meta name="generator" content="Hugo 0.48" />
+
+  <title>Getting images to work &middot; Richard A. Lent, Ph.D.</title>
+
+  
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/pure-min.css">
+
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-old-ie-min.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-min.css">
+  <!--<![endif]-->
+
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="../../css/side-menu-old-ie.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+  <link rel="stylesheet" href="../../css/side-menu.css">
+  <!--<![endif]-->
+
+  <link rel="stylesheet" href="../../css/blackburn.css">
+
+  
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  
+  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet" type="text/css">
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+ 
+  
+
+  
+
+  <link rel="shortcut icon" href="https://richardlent.github.io/img/favicon.ico" type="image/x-icon" />
+
+  
+  
+
+</head>
+
+
+<body>
+<div id="layout">
+
+  
+<a href="#menu" id="menuLink" class="menu-link">
+  
+  <span></span>
+</a>
+<div id="menu">
+
+  
+  <a class="pure-menu-heading brand" href="../../">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;^(;,;)^</a>
+
+
+  <div class="pure-menu">
+    <ul class="pure-menu-list">
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="../../"><i class='fa fa-home fa-fw'></i>Home</a>
+      
+        </li>
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="../../misc/about/"><i class='fa fa-user fa-fw'></i>About</a>
+      
+        </li>
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="../../post/"><i class='fa fa-list fa-fw'></i>Archive</a>
+      
+        </li>
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="../../topics/"><i class='fa fa-folder fa-fw'></i>Topics</a>
+      
+        </li>
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="../../tags/"><i class='fa fa-tag fa-fw'></i>Tags</a>
+      
+        </li>
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="mailto:richardlent@gmail.com"><i class='fa fa-envelope-o fa-fw'></i>Contact</a>
+      
+        </li>
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="../../misc/publications/"><i class='fa fa-list fa-fw'></i>Publications</a>
+      
+        </li>
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="https://500px.com/richardlent"><i class='fa fa-camera fa-fw'></i>Photography</a>
+      
+        </li>
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="../../topics/guitar/"><i class='fa fa-music fa-fw'></i>Guitar</a>
+      
+        </li>
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="../../misc/search/"><i class='fa fa-search fa-fw'></i>Search</a>
+      
+        </li>
+      
+    </ul>
+  </div>
+
+  <div class="pure-menu social">
+  <ul class="pure-menu-list">
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://twitter.com/lentrichard" target="_blank"><i class="fa fa-twitter-square fa-fw"></i>Twitter</a>
+    </li>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://instagram.com/richardlent3710" target="_blank"><i class="fa fa-instagram fa-fw"></i>Instagram</a>
+    </li>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://linkedin.com/in/richard-lent" target="_blank"><i class="fa fa-linkedin-square fa-fw"></i>LinkedIn</a>
+    </li>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://github.com/richardlent" target="_blank"><i class="fa fa-github-square fa-fw"></i>GitHub</a>
+    </li>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+  </ul>
+</div>
+
+
+  <div>
+  <div class="small-print">
+    <small>&copy; 2017 and beyond by Richard A. Lent. All rights reserved.</small>
+  </div>
+  <div class="small-print">
+    <small>Built with&nbsp;<a href="https://gohugo.io/" target="_blank">Hugo</a></small>
+    <small>Theme&nbsp;<a href="https://github.com/yoshiharuyamashita/blackburn" target="_blank">Blackburn</a></small>
+  </div>
+</div>
+
+</div>
+
+
+  <div id="main">
+
+
+<div class="header">
+  <h1>Getting images to work</h1>
+  <h2>I did not understand /static/.</h2>
+</div>
+<div class="content">
+
+  <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>02 May 2017, 11:00</time>
+  </div>
+
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-folder fa-fw"></i>
+    
+      <a class="post-taxonomy-topic" href="https://richardlent.github.io/topics/data-science">Data Science</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-topic" href="https://richardlent.github.io/topics/web-technology">Web Technology</a>
+    
+  </div>
+  
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="https://richardlent.github.io/tags/r">R</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://richardlent.github.io/tags/rstudio">RStudio</a>
+    
+  </div>
+  
+  
+
+</div>
+
+  <p>Reading time: 3 minute(s) @ 200 WPM.</p>
+<p>I was until very recently involved in an epic struggle to get the system described in <a href="https://proquestionasker.github.io/blog/Making_Site/">Making a Website Using Blogdown, Hugo, and GitHub pages</a> to work for me. (See also <a href="https://tclavelle.github.io/blog/blogdown_github/">Building a Blog with Blogdown and GitHub</a>.) I really want it to work, because it has produced the current website that you are now reading, and I’m sure you’ll agree that it is very, very beautiful, in a stark, post-apocalyptic, Mordor-esque sort of way.</p>
+<p>My problems all hinged on the fact that I misunderstood the <a href="https://hugodocs.info/getting-started/directory-structure/#new-site-scaffolding">static</a> folder.</p>
+<p>The conundrum was in trying to get external images, i.e., those that aren’t generated by <a href="http://rmarkdown.rstudio.com/authoring_rcodechunks.html">R code chunks</a>, to work. That is, to get external images into the <a href="http://rmarkdown.rstudio.com">R Markdown</a> file, get them to show up in preview in the RStudio text editor [spoiler: they never do], and to continue to show up when uploaded to GitHub, to produce my website located at <a href="https://richardlent.github.io/">richardlent.github.io</a>. [Don’t click, you’re already there.]</p>
+<p>To make sense of the following you may need to refer to Hugo’s <a href="https://hugodocs.info/getting-started/directory-structure/#new-site-scaffolding">Directory Structure</a>.</p>
+<p>In a post created in this R <a href="https://github.com/rstudio/blogdown">blogdown</a>-<a href="https://gohugo.io">Hugo</a>-<a href="https://en.wikipedia.org/wiki/Static_web_page">static website</a>-generated universe, images created by R graphics code work as follows.</p>
+<p>Here is an R <a href="http://rmarkdown.rstudio.com/authoring_rcodechunks.html">code chunk</a> that generates an image.</p>
+<pre><code>```{r echo=FALSE, fig.align="center"}
+plot(cars)
+```</code></pre>
+<p><img src="../../post/2017-05-02-getting-images-to-work_files/figure-html/unnamed-chunk-2-1.png" width="672" style="display: block; margin: auto;" /></p>
+<p>I can preview this post while writing it in the RStudio text editor, and the R-generated images show up nicely. They also appear nicely, as you can see above, when I upload the material rendered by the <a href="https://gohugo.io">Hugo static website generator</a> to GitHub, where you are now reading it.</p>
+<p>To get this to happen, I don’t have to do anything other than write the R code. The code chunk that produces the image triggers <code>blogdown</code> and Hugo to create a folder for this post to contain the image file. The image folder for this post, stored in the <code>static</code> folder, is named <code>2017-05-02-getting-images-to-work_files</code>, with a subfolder named <code>figure-html</code> that contains an image file named <code>unnamed-chunk-1-1.png</code>. The image is regarded as <code>unnamed</code>, I guess, because I have not given the image a name up in the code chunk.</p>
+<p>This all works because anything put into Hugo’s <code>static</code> folder is copied up to GitHub unchanged. Where I screwed up was in not understanding what this actually means.</p>
+<p>And so in the local directory structure of this website I have the following folder:</p>
+<p><code>/static/img/</code></p>
+<p>Following the advice of <a href="https://github.com/rstudio/blogdown/issues/45">various pundits</a>, I put images that I want to use in posts in the <code>img</code> subfolder. From there, we insert them into our R Markdown documents.</p>
+<p>And thus we try this, with an image of my cat:</p>
+<div class="figure">
+<img src="../../img/willie.png" alt="Willie" />
+<p class="caption">Willie</p>
+</div>
+<p>And it works, as you can see.</p>
+<p>That is, now it’s working. It didn’t before.</p>
+<p>Here’s why.</p>
+<p>The <a href="https://daringfireball.net/projects/markdown/syntax">Markdown</a> tag used to insert this image is:</p>
+<p><code>![Willie](/img/willie.png)</code></p>
+<p>Instead of the above, I thought it should be this:</p>
+<p><code>![Willie](/static/img/willie.png)</code></p>
+<p>That is, I put in the <code>static</code> folder. That was wrong. Very wrong.</p>
+<p>Because whilst the <a href="https://gohugo.io/themes/creation/#static">Hugo documentation</a> states that “Everything in the static directory will be copied directly into the final site when rendered,” the <code>static</code> folder itself does NOT get copied to the final site. It’s the CONTENTS of the <code>static</code> folder that get copied to the final site, which is then uploaded to GitHub to yield the URL for this website, <a href="https://richardlent.github.io/">richardlent.github.io</a>.</p>
+<p><a href="https://hugodocs.info/getting-started/directory-structure/#directory-structure-explained">Elsewhere</a>, Hugo hath spake:</p>
+<blockquote>
+<p>“When Hugo builds your site, all assets <strong><em>INSIDE</em></strong> your static directory are copied over as-is.”</p>
+</blockquote>
+<p>The emphasis above is mine and mine alone. That is, emphasis on the “inside.” What’s <u>inside</u> the <code>static</code> folder gets uploaded, not the <code>static</code> folder itself. Get it? No <code>static</code> folder. Nope. Just what’s inside of it. The contents. They get uploaded. Not the <code>static</code> folder.</p>
+<p>So I’m glad we figured that out.</p>
+<p>A final note. When external images are inserted into R Markdown files in the manner just described, they will not show up in the RStudio text editor as do R-generated graphics. You’ll instead get a little message saying something like <code>No image at path /img/willie.png</code>. However, when you use the <code>blogdown</code> RStudio addin <code>Serve Site</code>, the image will be correctly rendered in the RStudio Viewer pane (or in its own window if you have RStudio set up that way). When in <code>Serve Site</code>, you can edit the R Markdown document in the RStudio text editor, and the site preview will be automagically updated in real time. This is a groovy bit of technology called <a href="https://bookdown.org/yihui/blogdown/rstudio-ide.html">LiveReload</a>.</p>
+
+
+  
+<div class="prev-next-post pure-g">
+  <div class="pure-u-1-24" style="text-align: left;">
+    
+    <a href="https://richardlent.github.io/post/time-stamp-issue/"><i class="fa fa-chevron-left"></i></a>
+    
+  </div>
+  <div class="pure-u-10-24">
+    
+    <nav class="prev">
+      <a href="https://richardlent.github.io/post/time-stamp-issue/">Time stamp issue</a>
+    </nav>
+    
+  </div>
+  <div class="pure-u-2-24">
+    &nbsp;
+  </div>
+  <div class="pure-u-10-24">
+    
+    <nav class="next">
+      <a href="https://richardlent.github.io/post/rstudio-as-a-research-and-writing-platform/">RStudio as a Research and Writing Platform</a>
+    </nav>
+    
+  </div>
+  <div class="pure-u-1-24" style="text-align: right;">
+    
+    <a href="https://richardlent.github.io/post/rstudio-as-a-research-and-writing-platform/"><i class="fa fa-chevron-right"></i></a>
+    
+  </div>
+</div>
+
+
+
+  
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+
+(function() {
+    
+    
+    if (window.location.hostname == "localhost")
+        return;
+
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+    var disqus_shortname = 'richardlent';
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com/" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+</div>
+
+</div>
+</div>
+<script src="https://richardlent.github.io/js/ui.js"></script>
+
+
+<script>
+  
+  if (window.location.hostname != "localhost") {
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-48234901-2', 'auto');
+    ga('send', 'pageview');
+  }
+</script>
+
+
+
+
+
+</body>
+</html>
+
