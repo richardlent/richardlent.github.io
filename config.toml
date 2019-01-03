@@ -61,12 +61,12 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
     identifier = "photography"
     # url = "http://richard-lent.pixels.com"
     url = "https://500px.com/richardlent"
-  [[menu.main]]
-    name = "Guitar"
-    pre = "<i class='fa fa-music fa-fw'></i>"
-    weight = 9
-    identifier = "guitar"
-    url = "/topics/guitar/"  
+  # [[menu.main]]
+    # name = "Guitar"
+    # pre = "<i class='fa fa-music fa-fw'></i>"
+    # weight = 9
+    # identifier = "guitar"
+    # url = "/topics/guitar/"  
   [[menu.main]]
     name = "Tags"
     pre = "<i class='fa fa-tag fa-fw'></i>"
