@@ -61,6 +61,18 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
     identifier = "photography"
     # url = "http://richard-lent.pixels.com"
     url = "https://500px.com/richardlent"
+  [[menu.main]]
+    name = "Github"
+    pre = "<i class='fa fa-github fa-fw'></i>"
+    weight = 9
+    identifier = "github"
+    url = "https://github.com/richardlent"    
+  [[menu.main]]
+    name = "Gists"
+    pre = "<i class='fa fa-github fa-fw'></i>"
+    weight = 10
+    identifier = "gists"
+    url = "https://gist.github.com/richardlent"
   # [[menu.main]]
     # name = "Guitar"
     # pre = "<i class='fa fa-music fa-fw'></i>"
@@ -97,6 +109,8 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
   # by entering your username or ID.
   twitter = "lentrichard"
   instagram = "richardlent3710"
-  github = "richardlent"
+  # github = "richardlent"
   linkedin = "richard-lent"
+
+
   
