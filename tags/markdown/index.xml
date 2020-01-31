@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Markdown on Richard A. Lent, Ph.D.</title>
+    <link>https://richardlent.github.io/tags/markdown/</link>
+    <description>Recent content in Markdown on Richard A. Lent, Ph.D.</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; 2017 and beyond by Richard A. Lent. All rights reserved.</copyright>
+    <lastBuildDate>Mon, 15 May 2017 13:00:00 -0400</lastBuildDate>
+    
+	<atom:link href="https://richardlent.github.io/tags/markdown/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>An R script for calculating the reading time of an R Markdown file</title>
+      <link>https://richardlent.github.io/post/an-r-script-for-calculating-reading-time-of-an-article/</link>
+      <pubDate>Mon, 15 May 2017 13:00:00 -0400</pubDate>
+      
+      <guid>https://richardlent.github.io/post/an-r-script-for-calculating-reading-time-of-an-article/</guid>
+      <description>Reading time: 2 minute(s) @ 200 WPM.
+To see how we just did that, read on.
+Because psychological research tells us that including estimated reading times can increase reader engagement with digital content, I decided to include reading times for my riveting posts.
+So I wrote a simple R script. Here it is, as an R code chunk:
+```{r echo=FALSE} bytes  The script is very simple, such that even I could program it.</description>
+    </item>
+    
+    <item>
+      <title>The Plain Text Workflow</title>
+      <link>https://richardlent.github.io/post/the-plain-text-workflow/</link>
+      <pubDate>Thu, 11 May 2017 15:38:00 -0400</pubDate>
+      
+      <guid>https://richardlent.github.io/post/the-plain-text-workflow/</guid>
+      <description>Introduction What is Plain Text? Why Plain Text? An Example of the Plain Text Workflow Parting Thoughts      Reading time: 10 minute(s) @ 200 WPM.
+Introduction The Plain Text Workflow is an alternative to writing with a word processor. Mind you, I said writing, not typesetting or formatting, which is a major part of what word processors do. The idea of the plain text workflow is that you separate the act of writing from that of producing a formatted, typeset final document.</description>
+    </item>
+    
+    <item>
+      <title>R Markdown Test</title>
+      <link>https://richardlent.github.io/post/r-markdown-test/</link>
+      <pubDate>Wed, 10 May 2017 14:20:08 -0400</pubDate>
+      
+      <guid>https://richardlent.github.io/post/r-markdown-test/</guid>
+      <description>Reading time: 2 minute(s) @ 200 WPM.
+Yes, it doth work. The blogdown package can nicely deal with R Markdown containing embedded R code for production of statistical analyses and graphics.
+But.
+It cannot deal with R Notebooks, which contain a special flavor of R Markdown allowing for interactive display of R code alongside the results they produce. R Notebooks, when rendered into HTML, produce a special file named *.nb.html to signify that they are an HTML notebook.</description>
+    </item>
+    
+    <item>
+      <title>Video test</title>
+      <link>https://richardlent.github.io/post/video-test/</link>
+      <pubDate>Fri, 05 May 2017 14:37:00 -0400</pubDate>
+      
+      <guid>https://richardlent.github.io/post/video-test/</guid>
+      <description>Reading time: 1 minute(s) @ 200 WPM.
+We now attempt to insert into our R Markdown file, which Hugo then renders into HTML, an mp4 video of dragonflies (insect order Odonata, in case you’re wondering) that were congregating in my front yard a few summers ago.
+So I’m thinking, just insert it using a regular Markdown image tag, yes?
+Like this:
+![](/mp4/Dragonflies.mp4).
+  And so, that worked.
+To center this video on the page I am using the deprecated HTML &amp;lt;center&amp;gt; tag inside of my R Markdown.</description>
+    </item>
+    
+  </channel>
+</rss>
