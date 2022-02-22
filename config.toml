@@ -1,7 +1,7 @@
 baseurl = "https://richardlent.github.io/"
 languageCode = "en-us"
 title = "Richard A. Lent, Ph.D."
-theme = "blackburn"
+theme = "blackburn-master"
 author = "Richard A. Lent"
 copyright = "&copy; 2017 and beyond by Richard A. Lent. All rights reserved."
 canonifyurls = true
@@ -107,10 +107,13 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
 [social]
   # Link your social networking accounts to the side menu
   # by entering your username or ID.
-  twitter = "lentrichard"
-  instagram = "richardlent3710"
   # github = "richardlent"
   linkedin = "richard-lent"
 
 
   
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
