@@ -11,6 +11,7 @@ publishDir = "../richardlent.github.io"
 buildDrafts = false
 rssLimit = 100
 ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
+ignoreErrors = ["error-remote-getjson"]
 
 [taxonomies]
   tag = "tags"
@@ -109,9 +110,6 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
   # by entering your username or ID.
   # github = "richardlent"
   linkedin = "richard-lent"
-
-
-  
 
 [markup]
   [markup.goldmark]
