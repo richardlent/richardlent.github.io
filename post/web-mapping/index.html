@@ -1,0 +1,858 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Maps codify the miracle of existence. ― Nicholas Crane">
+  <meta name="generator" content="Hugo 0.82.0" />
+
+  <title>Web Mapping with Free Software Tools &middot; Richard A. Lent, Ph.D.</title>
+
+    
+
+  
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/pure-min.css">
+
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-old-ie-min.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-min.css">
+  <!--<![endif]-->
+
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="../../css/side-menu-old-ie.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+  <link rel="stylesheet" href="../../css/side-menu.css">
+  <!--<![endif]-->
+
+  <link rel="stylesheet" href="../../css/blackburn.css">
+
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet" type="text/css">
+
+  
+  <script async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+ 
+  
+
+  
+
+  <link rel="shortcut icon" href="../../img/favicon.ico" type="image/x-icon" />
+
+  
+  
+
+</head>
+
+
+<body>
+<div id="layout">
+
+  
+<a href="#menu" id="menuLink" class="menu-link">
+  
+  <span></span>
+</a>
+<div id="menu">
+
+  
+  <a class="pure-menu-heading brand" href="../../">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;^(;,;)^</a>
+
+
+  <div class="pure-menu">
+    <ul class="pure-menu-list">
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="../../"><i class='fas fa-home fa-fw'></i>Home</a>
+      
+        </li>
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="../../misc/about/"><i class='fas fa-user fa-fw'></i>About</a>
+      
+        </li>
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="../../post/"><i class='fas fa-list fa-fw'></i>Archive</a>
+      
+        </li>
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="../../topics/"><i class='fas fa-folder fa-fw'></i>Topics</a>
+      
+        </li>
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="../../tags/"><i class='fas fa-tag fa-fw'></i>Tags</a>
+      
+        </li>
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="mailto:richardlent@gmail.com"><i class='far fa-envelope'></i> Contact</a>
+      
+        </li>
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="../../misc/publications/"><i class='fas fa-list fa-fw'></i>Publications</a>
+      
+        </li>
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="https://500px.com/richardlent"><i class='fas fa-camera fa-fw'></i>Photography</a>
+      
+        </li>
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="https://github.com/richardlent"><i class='fab fa-github fa-fw'></i>GitHub</a>
+      
+        </li>
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="https://gist.github.com/richardlent"><i class='fab fa-github fa-fw'></i>Gists</a>
+      
+        </li>
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="../../misc/search/"><i class='fas fa-search fa-fw'></i>Search</a>
+      
+        </li>
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="https://mastodon.social/@lentrichard"><i class='fab fa-mastodon'></i> Mastodon</a>
+      
+        </li>
+      
+    </ul>
+  </div>
+
+  <div class="pure-menu social">
+  <ul class="pure-menu-list">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://linkedin.com/in/richard-lent" rel="me" target="_blank"><i class="fab fa-linkedin fa-fw"></i>LinkedIn</a>
+    </li>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+  </ul>
+</div>
+
+
+  <div>
+  <div class="small-print">
+    <small>&copy; 2017 and beyond by Richard A. Lent. All rights reserved.</small>
+  </div>
+  <div class="small-print">
+    <small>Built with&nbsp;<a href="https://gohugo.io/" target="_blank">Hugo</a></small>
+    <small>Theme&nbsp;<a href="https://github.com/yoshiharuyamashita/blackburn" target="_blank">Blackburn</a></small>
+  </div>
+</div>
+
+</div>
+
+
+  <div id="main">
+
+
+<div class="header">
+  <h1>Web Mapping with Free Software Tools</h1>
+  <h2>Maps codify the miracle of existence. ― Nicholas Crane</h2>
+</div>
+<div class="content">
+
+  <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>29 Oct 2018, 09:19</time>
+  </div>
+
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-folder fa-fw"></i>
+    
+      <a class="post-taxonomy-topic" href="../../topics/web-technology">Web Technology</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-topic" href="../../topics/programming">Programming</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-topic" href="../../topics/gis">GIS</a>
+    
+  </div>
+  
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="../../tags/maps">Maps</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="../../tags/graphics">Graphics</a>
+    
+  </div>
+  
+  
+
+</div>
+
+  
+
+<div id="TOC">
+<ul>
+<li><a href="#introduction">Introduction</a></li>
+<li><a href="#gis-in-a-nutshell">GIS in a nutshell</a></li>
+<li><a href="#desirable-features-of-a-web-mapping-platform">Desirable features of a web mapping platform</a></li>
+<li><a href="#set-up-your-data-for-mapping">Set up your data for mapping</a></li>
+<li><a href="#google-maps">Google Maps</a></li>
+<li><a href="#qgis-and-the-qgis2web-plugin">QGIS and the <code>qgis2web</code> plugin</a></li>
+<li><a href="#rstudio-and-the-r-leaflet-package">RStudio and the R <code>Leaflet</code> Package</a></li>
+<li><a href="#in-conclusion">In conclusion</a></li>
+</ul>
+</div>
+
+<p>Reading time: 36 minute(s) @ 200 WPM.</p>
+<center>
+<a href="https://en.wikipedia.org/wiki/Web_mapping"><img src="../../img/WebMapping/OldMapLineDrawing20.png" /></a>
+</center>
+<div id="introduction" class="section level1">
+<h1>Introduction</h1>
+<p><a href="https://en.wikipedia.org/wiki/Web_mapping">Web mapping</a> is an application of <a href="https://en.wikipedia.org/wiki/Geographic_information_system">geographic information systems</a> (GIS) that involves the creation of interactive digital maps displayed and manipulated through a web browser. To quote from <a href="https://en.wikipedia.org/wiki/Web_mapping">Wikipedia</a>:</p>
+<blockquote>
+<p>The advent of web mapping can be regarded as a major new trend in cartography. Until recently cartography was restricted to a few companies, institutes and mapping agencies, requiring relatively expensive and complex hardware and software as well as skilled cartographers and geomatics engineers.</p>
+</blockquote>
+<blockquote>
+<p>Web mapping has brought many geographical datasets, including free ones generated by OpenStreetMap and proprietary datasets owned by Navteq, Google, Waze, and others. A range of free software to generate maps has also been conceived and implemented alongside proprietary tools like ArcGIS. As a result, the barrier to entry for serving maps on the web has been lowered.</p>
+</blockquote>
+<p>Some examples of web maps include:</p>
+<ul>
+<li><a href="http://www.nytimes.com/projects/elections/2013/nyc-primary/mayor/map.html">The Mayoral Primaries</a></li>
+<li><a href="https://www.washingtonpost.com/sf/local/2013/11/09/washington-a-world-apart/?utm_term=.6601e441eb16">Washington: A world apart</a></li>
+<li><a href="https://www.flickr.com/map">Flickr</a></li>
+<li><a href="http://donutholes.ch/">Donut holes in international waters</a></li>
+<li><a href="http://www.triprisk.com.au/">Trip Risk</a></li>
+<li><a href="https://whynotthebest.org/maps#measure=10031&amp;lat=39&amp;long=-96&amp;z=4&amp;unit=hrr&amp;n=5&amp;colors=YlGnBu">Why not the best?</a></li>
+</ul>
+<p>This post examines several approaches to creating and serving<a href="#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a> interactive web maps, focusing on free and open-source software tools. Some technologies involve desktop GIS software or programming environments as part of the workflow leading to a web map, while others are completely <a href="https://en.wikipedia.org/wiki/Cloud_computing">cloud-based</a> and do not require installation of local software. Examples range from point-and-click, drag-and-drop interactive mapping environments, to mapping applications that write the code for you, to those where you need to have some coding skills (but are then rewarded by being able to do pretty much whatever you want).<a href="#fn2" class="footnote-ref" id="fnref2"><sup>2</sup></a></p>
+</div>
+<div id="gis-in-a-nutshell" class="section level1">
+<h1>GIS in a nutshell</h1>
+<p>A GIS is a computerized system that links graphical map displays with data. The data are usually in a spreadsheet-like format, with a one-to-one correspondence between rows of the data table and features on the map.</p>
+<p><img src="../../img/WebMapping/AttributeTable.gif" /></p>
+<p>For example, a GIS map of the United States might have a data table (usually called an “attribute table” in GIS parlance) with 50 rows, one row for each of the 50 states. The attributes in the table (or columns, also called “variables” by the statistically-inclined) might be measurements of population size, median income, number of Subarus, political affiliation, and basically any item of interest that can be related to the map features (states in this example). The map itself would display the geographic boundaries of the states.</p>
+<p>If we wanted to create a <a href="https://en.wikipedia.org/wiki/Choropleth_map">chloropleth map</a> showing the population of each state, we would tell the GIS software to apply the <code>population</code> column of the attribute table to the map of state boundaries. The GIS would then read the data corresponding to the population of each state, apply a color scale to the data, and display the map with each state colored according to its population.</p>
+<p><img src="../../img/WebMapping/USPopulation30.png" /></p>
+<p><a href="https://en.wikipedia.org/wiki/Geographic_coordinate_system">Coordinate systems</a> are a critical feature of all GIS software, whether it be a desktop application running on a personal computer or a web-based mapping application like <a href="https://www.google.com/maps/">Google Maps</a>. Coordinates (longitude and latitude) allow any feature to be precisely located on the surface of the earth. In terms of your high school geometry class, think of a graph. The X-direction, longitude, is west to east, or horizontal. The Y-direction, latitude, is north to south, oriented 90 degrees from the X-direction. The only difference between your high school graph and the earth is that the earth is a three-dimensional, roughly spherical planet instead of a flat piece of paper. Longitude and latitude are measured within some agreed-upon reference system, called a <a href="https://gisgeography.com/geodetic-datums-nad27-nad83-wgs84/">datum</a>. In web mapping the units of measurement for longitude and latitude are usually <a href="https://en.wikipedia.org/wiki/Decimal_degrees">decimal degrees</a>.</p>
+<p>Coordinates are what put the “geographical” in a geographical information system. Without a coordinate system, a GIS is just a regular <a href="https://en.wikipedia.org/wiki/Database">database</a>. In the geographic coordinate systems used for web mapping, longitude is measured from the Greenwich meridian, and latitude is measured from the equator.<a href="#fn3" class="footnote-ref" id="fnref3"><sup>3</sup></a></p>
+<p><img src="../../img/WebMapping/LatLon.png" /></p>
+<p>Having a common coordinate system allows GIS software to overlay multiple layers of information on the map, and to analyze relationships between the layers.</p>
+<p><img src="../../img/WebMapping/GISlayers.jpg" /></p>
+<p>Map features fundamentally are either points (e.g., houses), lines (e.g., rivers), or enclosed areas or polygons (e.g., state boundaries). All maps, as most people know them, are composed of combinations of these three basic feature types. For example, if you wanted to make a GIS map showing rivers, lakes, and locations of wells, you could use three layers: one for rivers (lines), one for lakes (areas), and one for well locations (points).</p>
+<p><img src="../../img/WebMapping/PointLinePolygon.svg" height="500" width="500"></p>
+<p>Each layer would need to have the same geographic coordinate system (e.g., latitude and longitude in decimal degrees), which would then allow the GIS software to correctly overlay the three layers so that everything lined up correctly. An advantage of organizing digital map layers in this way is that you are then able to turn layers on and off, which is helpful in displaying and interpreting the mapped data.</p>
+<p>While attribute data are usually in the traditional row-column format of a spreadsheet table, the map data can be in any of <a href="https://gisgeography.com/gis-formats/">numerous formats</a>. Two broad classes of GIS data are <a href="https://www.gislounge.com/geodatabases-explored-vector-and-raster-data/">raster and vector</a>.</p>
+<p>Vector data comprise the three types of map features mentioned above: point, line, and polygon. Vector features are made up of one or more coordinate pairs (latitude and longitude). A point feature is represented by a single coordinate pair, a line feature is a series of coordinate pairs, and an enclosed polygon is basically a line feature in which the starting and ending points are the same. The GIS software then “connects the dots” to draw the map features. The greater the number of coordinate pairs that make up a vector feature, the greater the resolution that can be produced (e.g., smoother lines).</p>
+<p><img src="../../img/WebMapping/RasterVector.gif" /></p>
+<p>In contrast, raster data are rectangular (usually) arrays of pixels, in a row-column format. The geographic location of each pixel is established by its row and column designation, which is also attached to a corresponding latitude-longitude coordinate pair. In addition to its coordinates, a raster pixel also has one or more attribute values, such as an elevation or land-use type. Thus the value of a raster pixel could be a number (e.g., elevation) or a category (land-use type, political affiliation, etc.).</p>
+<p><img src="../../img/WebMapping/TERRA_satellite.png" /></p>
+<p>Images of the earth’s surface, obtained from satellites or aircraft, are a common type of raster data used in GIS.</p>
+<p>When creating a web map, one starts by obtaining a <a href="https://www.gislounge.com/basemaps-defined/">base map</a>, which is often composed of a mosaic of individual raster images, called <a href="https://en.wikipedia.org/wiki/Tiled_web_map">tiles</a>. Online mapping applications such as Google Maps and <a href="https://www.openstreetmap.org">OpenStreetMap</a> provide base maps composed of raster tiles streamed and assembled from a server.<a href="#fn4" class="footnote-ref" id="fnref4"><sup>4</sup></a> Additional features are then added to the base map, either interactively within a web mapping application or by providing data files that contain series of geographic coordinate pairs that produce points, lines, or polygons. Attribute data can also be associated with vector features so that the web map can be styled according to the map maker’s needs.</p>
+</div>
+<div id="desirable-features-of-a-web-mapping-platform" class="section level1">
+<h1>Desirable features of a web mapping platform</h1>
+<p>Given the foregoing, we list some of the desirable features of a web mapping system:</p>
+<ol style="list-style-type: decimal">
+<li>A variety of readily-available base maps (e.g., standard map, satellite imagery, topography).</li>
+<li>Ability to accept user data in common formats (e.g., plain-text CSV,<a href="#fn5" class="footnote-ref" id="fnref5"><sup>5</sup></a> Google Sheets, Excel).</li>
+<li>Ability to import GIS vector layers in a variety of formats (such as <a href="https://en.wikipedia.org/wiki/Shapefile">shapefiles</a> and <a href="https://developers.google.com/kml/documentation/kml_tut">KML</a> files).</li>
+<li>Ability to create multiple map layers, to turn them on and off, zoom and pan, etc.</li>
+<li>Ability to customize the map with no limits.</li>
+<li>Free web hosting (because a web map has to be on the web).</li>
+</ol>
+<p>As we will see, it is entirely possible to accomplish all of the above without spending any money, although you will have to invest some time in learning a bit of technology.</p>
+</div>
+<div id="set-up-your-data-for-mapping" class="section level1">
+<h1>Set up your data for mapping</h1>
+<p><img src="../../img/WebMapping/data-entry40.jpg" /></p>
+<p>A common format for computer data files is <a href="https://en.wikipedia.org/wiki/Comma-separated_values">comma-separated values</a>, or CSV for short. A CSV file contains only <a href="https://en.wikipedia.org/wiki/Plain_text">plain text</a> and can be created manually using a <a href="https://en.wikipedia.org/wiki/List_of_text_editors">plain-text editor</a>. DO NOT attempt to create a CSV file with a word processor (Microsoft Word, LibreOffice, etc.) because word processors insert invisible formatting characters into the file that will prevent the data file from being read by your mapping software. Many spreadsheet, database, and statistical applications can create CSV files as an option of their export function. An advantage of plain-text CSV files is that they are universal and can be created, read, and written by any computer in the known universe, without the need for proprietary software such as Microsoft Excel.</p>
+<p>In a CSV file the first line contains column names (variable names), all separated by commas. Subsequent lines contain the data values, in the same order as the variable names, again with everything separated by commas (hence the name). Tradition dictates that CSV files are named with <code>.csv</code> as the file name extension, e.g. <code>TheData.csv</code>. When a CSV file is read into a spreadsheet or statistical application it produces the familiar row-column tabular format:</p>
+<p><img src="../../img/WebMapping/spreadsheet60.png" /></p>
+<p>In the examples that follow we will use a CSV file to bring external data into the web mapping environment for the purpose of plotting locations on the base map and for associating additional data with those locations. Any type of numerical or character data can be stored in a CSV file, but for web mapping there also must be two variables that contain the latitude and longitude of the point locations. The latitudes and longitudes need to be in decimal degrees, and it is a good idea to name the variables something easily recognizable as coordinates, such as <code>latitude</code> and <code>longitude</code>, <code>lat</code> and <code>lon</code>, and so on.</p>
+<p>The following is our map-ready CSV file, from a study in field ecology that is described in <a href="https://richardlent.github.io/rnotebooks/sites.nb.html">Habitat structure and phenotypic variation in the invading butterfly Coenonympha tullia</a>. The structure of this data file (the <a href="https://en.wikipedia.org/wiki/Metadata">metadata</a>) is described <a href="http://college.holycross.edu/faculty/rlent/sites/sites.metadata.txt">here</a>.</p>
+<pre><code>locality,code,grass,moss,sedge,forb,fern,bare,woody,shrub,lon_utm,lat_utm,lon_dd,lat_dd,fwlength,thorax,spotting,rfray,rhray,n
+Bellows Falls,BF,46,3.5,0,34,.5,4,10,0,703877,4784632,-72.49113,43.18695,15.8,3.6,1.6,1.6,1.4,62
+Springfield,SP,49,0,0,24,1,.5,14.4,0,707151,4793906,-72.44740,43.26949,16.0,3.7,1.1,2.0,1.5,51
+Mount Ascutney,MA,49,0,4,17,5,0,0,0,708310,4806931,-72.42819,43.38634,16.2,3.8,1.2,1.9,1.6,58
+Bernardston,BE,49,1,0,29,0,0,11,7,696647,4725212,-72.60087,42.65425,16.7,3.7,1.4,1.8,1.6,27
+Lyme,LY,50,0,0,14,4,0,0,0,729474,4856926,-72.14600,43.82977,15.6,3.6,1.1,1.8,1.3,52
+Fairlee,FA,50,5,0,12,0,2,0,0,729045,4868779,-72.14624,43.93649,15.9,3.8,1.0,1.8,1.5,25
+Newport,NW,49,0,0,35,0,0,0,0,724169,4977885,-72.15977,44.91907,16.7,3.7,1.1,1.8,1.3,21
+Orleans,OR,49,0,0,41,0,0,19,0,723193,4960641,-72.17970,44.76433,16.1,3.8,1.4,1.9,1.7,41
+Lyndonville,LN,50,0,0,9,0,0,3,0,734359,4935471,-72.05029,44.53447,16.0,3.7,1.4,1.9,1.7,52
+St. Johnsbury,SJ,49,0,0,42,0,0,0,0,734215,4925655,-72.05655,44.44626,15.7,3.6,1.2,1.9,1.7,56
+Hanover,HA,49,0,0,38,5,0,5,0,715984,4843575,-72.31896,43.71376,16.0,3.6,1.2,1.8,1.8,65</code></pre>
+<p>The above data can be <a href="https://richardlent.github.io/rnotebooks/sites.csv">downloaded as a CSV file</a>. The plain-text file (<code>sites.csv</code>) can be opened directly in Microsoft Excel, LibreOffice Calc, and other spreadsheet-like applications, and can also be imported into most (if not all) statistical and graphical software packages.</p>
+</div>
+<div id="google-maps" class="section level1">
+<h1>Google Maps</h1>
+<p>When you say “web mapping,” usually everyone thinks “Google Maps.” While not as flexible as the other web mapping tools that we will examine, Google Maps does provide a decent, cloud-based, interactive platform for putting your data onto a web map.</p>
+<p>If you point your web browser to <a href="https://www.google.com/maps/">maps.google.com</a>,<a href="#fn6" class="footnote-ref" id="fnref6"><sup>6</sup></a> you will see the usual Google Maps interface, where you can search for places, get directions, etc. But the key to creating your own customized web map in Google Maps is “Your places,” found by clicking the Menu icon in the upper-left corner of the Google Maps page:</p>
+<p><img src="../../img/WebMapping/GoogleMapsMenu50.png" /></p>
+<p>In the expanded menu that appears, click <code>Your places</code>, then click <code>Maps</code>, and then click <code>See All Your Maps</code>. You will then be brought, finally, into <code>My Maps</code>. Click the large button that says <code>CREATE A NEW MAP</code>. You should then see something like this:</p>
+<p><img src="../../img/WebMapping/UntitledMap.png" /></p>
+<p>This is the canvas upon which you can create your web map. You should immediately give your map a name by clicking on <code>Untitled map</code> and typing in a name for the map plus an optional description.</p>
+<p>You can choose among nine different base maps, including a standard map, satellite, and topography, by dropping down the <code>Base map</code> menu and selecting the base map that you want. Google Maps lets you choose two different base maps (although this does not seem to be documented), and gives the user the option to alternate between the two while viewing the map. You choose base maps by simply clicking on two different base maps in succession, and Google Maps remembers the ones you have selected.</p>
+<p><img src="../../img/WebMapping/BaseMaps75.png" /></p>
+<p>Google Maps automatically creates a map layer overlain onto the base map, called <code>Untitled layer</code>. You can rename the layer by clicking the three-dots menu to the right of the layer name. You can add features (points, lines, polygons) to your layers either by drawing them interactively, or by importing data (discussed shortly).</p>
+<p>Use the toolbar, located beneath the search bar, to draw new features.</p>
+<p><img src="../../img/WebMapping/GoogleMapsToolbar70.png" /></p>
+<p>To add a point, click the <code>Add marker</code> tool, and to create a line, click the <code>Draw a line tool</code>. There is no separate drawing tool for adding a polygon; instead, use the line tool and just connect the two ends to create an enclosed polygon. After creating a feature you have the opportunity to add information to a popup window that appears when the user clicks the feature. You can also edit this information, adding an image, styling, and other annotations.</p>
+<p><img src="../../img/WebMapping/Point1_70.png" /></p>
+<p>You can add additional layers by clicking the <code>Add layer</code> button and adding features as just described. Users of your map will see a map legend that shows all layers, each with a checkbox for turning the layer on or off. Clicking the <code>Preview</code> button will show you what your map will look like to a user.</p>
+<p>Besides drawing features manually, you can add features to your Google Maps layers by importing GIS data stored in a file (see <a href="https://support.google.com/mymaps/answer/3024836?hl=en&amp;ref_topic=3024924">Import map features from a file</a>). Google Maps can accept feature data contained in CSV files, Excel files, Google Sheets, <a href="https://developers.google.com/kml/documentation/kml_tut">KML files</a>, and <a href="https://en.wikipedia.org/wiki/GPS_Exchange_Format">GPX files</a> (a file format produced by <a href="https://en.wikipedia.org/wiki/Global_Positioning_System">GPS</a> devices such as route trackers and mobile phone apps).</p>
+<p>We will add features from (1) our <code>sites.csv</code> file, and (2) a KML file containing polygon boundaries of Massachusetts, Vermont, and New Hampshire, which can be downloaded <a href="../../datasets/vtnhma.kml">here</a>. To do this, first create a new Google Map by clicking the <code>CREATE A NEW MAP</code> button. Rename the <code>Untitled layer</code> to <code>Sites</code>. Then, in the <code>Sites</code> layer, click the <code>Import</code> link. Using the <code>Choose a file to import</code> dialog that appears, drag in (or select) the <code>sites.csv</code> file that you have previously downloaded from <a href="https://richardlent.github.io/rnotebooks/sites.csv">here</a>.</p>
+<p><img src="../../img/WebMapping/GoogleMapsImport35.png" /></p>
+<p>After the file is uploaded, you have to choose the columns (variables) containing your geographic coordinates. Choose <code>lon_dd</code> for longitude and <code>lat_dd</code> for latitude. (Both variables are in decimal degrees.)</p>
+<p><img src="../../img/WebMapping/GoogleMapsImportLatLon50.png" /></p>
+<p>You then have to choose a variable to use as the label for the locations; choose the <code>locality</code> variable. Click <code>Finish</code>, and you should then see 11 point locations arranged in a line running south to north along the Vermont-New Hampshire border. Next, click the <code>Preview</code> button, and you will see what the map would look like to a user. There is a legend entry for <code>Sites</code>, with a checkbox that you can use to turn the layer on and off. If you click one of the markers, the side panel will display the name of the site (variable <code>locality</code>) along with all of the other data values for that site, from the <code>sites.csv</code> data file.</p>
+<p>Back in edit mode (click the EDIT link in your map preview), click the 3-dot menu for <code>Layer options</code> in the <code>Sites</code> layer, and then click <code>Open data table</code>. You will see a spreadsheet containing all of the data that you uploaded. This is the attribute table for your point feature layer.</p>
+<p><a href="../../img/WebMapping/GoogleMapsDataTable.png"><img src="../../img/WebMapping/GoogleMapsDataTable30.png" /></a></p>
+<p>(Click image to enlarge.)</p>
+<p>Each row of this table corresponds to one of the point locations in the <code>Sites</code> layer. If you select a row by clicking the left-most cell, containing the row number, the corresponding site will be selected on the map. This demonstrates the one-to-one correspondence between rows of the attribute table and features on the map. To the right of each column name is an arrow that will open a drop-down menu containing various options for manipulating the data. These options include deleting the column (which is not allowed for your latitude and longitude columns). Columns that you delete are gone forever, so use care. But you can use the ability to delete columns to control what data are displayed in the popup that appears when a marker is clicked.</p>
+<p><img src="../../img/WebMapping/StJPopup50.png" /></p>
+<p>It would be nice to highlight the outlines of the three states that surround the point locations. State boundaries are contained in the KML file <code>vtnhma.kml</code>, which can be downloaded using the link provided above. Go back into Edit mode and add a new map layer named <code>States</code>. Click the Import link and add the KML file as we did for the <code>sites.csv</code> file. When the file finishes uploading you should then see the outlines of Massachusetts, Vermont, and New Hampshire overlain onto the base map, with a new legend entry that shows the names of the three features (the individual state boundaries).</p>
+<p>Your map should now look something like this:</p>
+<p><img src="../../img/WebMapping/mavtnh50.png" /></p>
+<p>The KML file was created using data layers provided for free by the U. S. Census Bureau (<a href="https://www.census.gov/geo/maps-data/data/kml/kml_state.html">Cartographic Boundary KML Files - States</a>). The layer <code>cb_2017_us_state_500k.zip</code> was downloaded, unzipped, and brought into <a href="https://qgis.org">QGIS</a>, a free desktop GIS application that we will explore shortly. The three state boundary polygons were extracted from the country-wide state layer and exported into their own KML file, the <code>vtnhma.kml</code> that we brought into Google Maps. Desktop GIS applications can thus be used to obtain and prepare data layers that can then be used in web maps, something we will do in the next section.</p>
+<p>A powerful feature of Google Maps is that they can be shared just like any other Google document type (Google Docs, Google Sheets, Google Slides, etc.). In Edit mode of your map, click the <code>Share</code> link.</p>
+<p><img src="../../img/WebMapping/GoogleMapsShare60.png" /></p>
+<p>You can then either share your map with the entire internet, within your institution, or only share it with specific people. You can give specific people editing rights for the map, or you can restrict them to just being able to view the map. This is a great collaboration tool for creating a team-built map.</p>
+<p>Google Maps is probably one of the easiest ways to create a web map, because it is readily available, free to anyone with a Google account, and it does not require any coding. It accepts a decent range of data types, and as long as you stay within its limits, provides a very serviceable web mapping platform.</p>
+<p>Speaking of limits, Google My Maps limits you to 2,000 features per layer, and 10,000 features per map, with a maximum of 10 layers per map. Additionally you can import a maximum of 2,000 data rows, and there are also some file size restrictions; see <a href="https://support.google.com/mymaps/bin/answer.py?hl=en&amp;answer=3370982">this link</a> for more details. Furthermore, you can only import data once per layer. So if you have already added features to a layer, either by hand or by file import, you can no longer import data to that layer; you will have to create a new layer in order to import more data. As yet another limitation, it is not possible to export your layer data tables out of Google Maps and into Google Spreadsheets, Excel, or a delimited text file. However, you can export your map to a <a href="https://en.wikipedia.org/wiki/Keyhole_Markup_Language">KML or KMZ file</a>, which can then be opened and viewed in <a href="https://www.google.com/earth/">Google Earth</a>.</p>
+<p>A very nice Google Maps Cheat Sheet (PDF) can be found <a href="https://historytech.files.wordpress.com/2015/08/googlemymapscheatsheet.pdf">here</a>.</p>
+<p>St. Olaf College has an excellent tutorial on <a href="https://wp.stolaf.edu/it/googlemymaps/">Google My Maps</a>, that shows a few more details and map tricks than we have discussed here (such as using place names to position map markers instead of having to provide latitudes and longitudes). They also show how to generate HTML code to allow you to embed your Google Map in Moodle, WordPress, and other HTML pages.</p>
+</div>
+<div id="qgis-and-the-qgis2web-plugin" class="section level1">
+<h1>QGIS and the <code>qgis2web</code> plugin</h1>
+<p>Our next example of creating a web map uses the <a href="https://qgis.org">QGIS</a> desktop GIS application with the <a href="https://github.com/tomchadwin/qgis2web">qgis2web</a> plugin. QGIS is a free, <a href="https://en.wikipedia.org/wiki/Open-source_software">open source</a> geographical information system and runs under macOS, Microsoft Windows, Linux, or Unix. To install QGIS on your computer, visit the QGIS website, using the above link. Click the <code>Download Now</code> button and follow the instructions for your particular computer operating system. You will download an installer program or package, which you will then run to install QGIS on your machine. The installer application presents you with a series of instructions to follow. Depending on your computer platform, there may be several required packages that must be installed first before you run the final package that installs QGIS. Be sure to read any <code>Readme</code> files before you start the install procedure.</p>
+<p><a href="../../img/WebMapping/qgis.png"><img src="../../img/WebMapping/qgis50.png" /></a><br>
+(Click image to enlarge.)</p>
+<p>The QGIS interface looks basically the same regardless of what computer platform it is running on. There is a large main window, or “canvas,” where the map is drawn. The left-hand window by default contains a Browser Panel that shows your computer’s filesystem, and a Layers Panel for the various data sources that comprise the layers of your map. Along the left edge of the Browser Panel is a series of icons for adding common data sources. The top of the QGIS application window is occupied by an additional series of menus, toolbars, and icons.</p>
+<p>QGIS is a comprehensive GIS application for creating, editing, visualizing, analyzing, and publishing geospatial information. Here we are focusing specifically on how to use QGIS to create a web map. The complete documentation for QGIS can be found <a href="https://docs.qgis.org/testing/en/docs/user_manual/">here</a>.</p>
+<p>To use QGIS for web mapping you must also install the <code>qgis2web</code> plugin. A “plugin” is a chunk of software code that can be installed into a main application to add functionality. QGIS has many plugins, which can be viewed and installed from the Plugins menu:</p>
+<p><img src="../../img/WebMapping/qgisPlugins50.png" /></p>
+<p>To install the <code>qgis2web</code> plugin, first click <code>Manage and Install Plugins...</code>. In the Plugins dialog box that appears, search for <code>qgis2web</code>. Click on the plugin name to select it, then press the <code>Install plugin</code> button. When you see the <code>Plugin installed successfully</code> message, close the Plugins dialog box. Then, click the <code>Web</code> menu, and you should see a menu item called <code>qgis2web</code>:</p>
+<p><img src="../../img/WebMapping/CreateWebMap50.png" /></p>
+<p>We will use the <code>Create web map</code> option of this tool to create a web map from data layers that we assemble using QGIS.</p>
+<p>First, to create base map layers for our web map, we will use several <a href="https://en.wikipedia.org/wiki/Tiled_web_map">XYZ tile servers</a>, which provide raster image tiles that QGIS then assembles into a base map. To gain access to the tile servers, we will run a <a href="https://www.python.org/">Python</a> script inside of QGIS. Python is a programming language that is embedded in QGIS. Python allows you to extend the core functionality of QGIS as well as write <a href="https://en.wikipedia.org/wiki/Scripting_language">scripts</a> to automate your tasks. A Python script is a computer program that runs inside of QGIS, essentially a program running inside of another program.</p>
+<p>The Python script that we will run is found <a href="https://raw.githubusercontent.com/klakar/QGIS_resources/master/collections/Geosupportsystem/python/qgis_basemaps.py">here</a>. When you click the link, the Python script will open in your web browser. Select and copy all of the code to your computer’s clipboard. Then, start QGIS. From the Plugins menu, click <code>Python Console</code>, which will open up QGIS’s Python language interpreter.</p>
+<p><img src="../../img/WebMapping/QGIS%20PythonWindow50.png" /></p>
+<p>Place your cursor inside of the lower window and paste the Python code into the window. When the code finishes scrolling, your cursor should be positioned at the end of the last line of code. Then, press the Enter key to run the code. Assuming that the code runs successfully (e.g., no error messages are displayed), you should now see a series of tile servers listed under <code>XYZ Tiles</code> in your QGIS browser panel:</p>
+<p><img src="../../img/WebMapping/XYZTileServers50.png" /></p>
+<p>We will use three of these tile servers to provide our web map with three different base maps that can be turned on and off by the user. The <code>OpenStreetMap Standard</code> server will provide a standard map, similar to Google Maps but completely free and open-source. <code>CartoDb Positron</code> is a simplified, grey-scale map, and <code>ESRI Satellite</code> is a layer of satellite imagery. Simply click and drag these three servers, one at a time, onto the main map canvas of QGIS. It may take several seconds for the maps to appear, depending on the speed of your internet connection.</p>
+<p>When the three base layers have been added, click the <code>Zoom Full</code> icon in the QGIS Map Navigation Toolbar to zoom the map canvas out to the full extent of the layers.</p>
+<p><img src="../../img/WebMapping/QGISZoomFull65.png" /></p>
+<p>You will find that the Layers Panel now has three entries, one for each base map:</p>
+<p><img src="../../img/WebMapping/QGISLayersPanel75.png" /></p>
+<p>You can turn the layers on and off by checking and unchecking the check boxes to the left of each layer. Also note the checkerboard-ish icon to the left of each layer name, which indicates that the layers are raster data sources.</p>
+<p>Next we will add our point location features contained in the <code>sites.csv</code> file, and the boundaries of Massachusetts, Vermont, and New Hampshire contained in the <code>vtnhma.kml</code> file. (You will recall that we used both of these files in Google My Maps.)</p>
+<p>To add the <code>sites.csv</code> file to the map, use the <code>Layer</code> menu. Select <code>Add Layer</code>, then <code>Add Delimited Text Layer</code>.</p>
+<p><img src="../../img/WebMapping/QGISAddDelimitedTextLayer50.png" /></p>
+<p>In the dialog box that appears, click the button to select a file:</p>
+<p><img src="../../img/WebMapping/QGISDelimitedText50.png" /></p>
+<p>Navigate to the location of the <code>sites.csv</code> file, and select it. Next you will have to choose the two attribute table fields that contain the latitude and longitude coordinates in decimal degrees, under <code>Geometry Definition</code>. We will use the <code>lat_dd</code> and <code>lon_dd</code> fields, like we did for Google My Maps:</p>
+<p><img src="../../img/WebMapping/QGISDelimitedTextTwo50.png" /></p>
+<p><code>Geometry CRS</code> is the coordinate reference system, and refers to the <a href="https://gisgeography.com/geodetic-datums-nad27-nad83-wgs84/">geodetic datum</a> being used for the map. When we added the three base map layers from the on-line tile servers, our map assumed the datum being used by those base maps, which is <code>WGS 84</code> (also known as <code>EPSG:4326</code>).</p>
+<p>Under <code>Sample Data</code> you see a preview of what the attribute table will look like when it is imported; you can scroll through the data to check that it will be imported correctly. Then click the <code>Add</code> button, then <code>Close</code>.</p>
+<p>You should now see a blob of data points clustered in the New England region of North America. . .</p>
+<p><img src="../../img/WebMapping/QGISDataPoints50.png" /></p>
+<p>. . . and the <code>Layers</code> panel should now show a new legend entry for the <code>sites</code> layer:</p>
+<p><img src="../../img/WebMapping/QGISLayersPanelTwo50.png" /></p>
+<p>Note that the icon to the left of the <code>sites</code> layer name in the Layers panel indicates that <code>sites</code> is a point vector layer.</p>
+<p>There are a couple of things to note about the <code>Layers</code> panel. The layers listed in the <code>Layers</code> panel are drawn from the bottom layer up. You can rearrange the order of the layers by dragging them around in the <code>Layers</code> panel and thus change the order in which the layers are drawn. So in the above layers panel I have rearranged the layers so that the <code>ESRI Satellite</code> layer is drawn first, then <code>CartoDb Positron</code>, next <code>OpenStreetMap Standard</code>, and finally the <code>sites</code> point layer is drawn on top of the previous layers. The effect of this arrangement is that, regardless of which base map layer is active, the <code>sites</code> layer will always be drawn on top. If <code>sites</code> was not the last layer to be drawn, it would be covered up by base map layers being drawn after it. So when using a GIS application like QGIS you have to think about the order in which you want your layers to be rendered. This will also be important for the web map that we will ultimately produce from QGIS.</p>
+<p>Another feature of the <code>Layers</code> panel is that you can right-click a layer to produce a popup menu of additional options:</p>
+<p><img src="../../img/WebMapping/QGISLayersOptions50.png" /></p>
+<p>Right-click the <code>sites</code> layer, and choose <code>Zoom to Layer</code>. The map will zoom in to the full extent of the <code>sites</code> layer, so that all of the 11 sites fill the map canvas. Now that the map is zoomed in to our area of interest, we will add the three state boundaries contained in the <code>vtnhma.kml</code> file. Again using the <code>Layer</code> menu, select <code>Add layer</code>, then <code>Add Vector Layer</code>. In the dialog box that appears, under <code>Source</code>, navigate to the location of the <code>vtnhma.kml</code> file, and select it. Add the layer, then close the dialog. In the <code>Layers</code> panel, right-click the <code>vtnhma</code> layer and select <code>Zoom to Layer</code> so that the entire extent of the study area fits in the map canvas.</p>
+<p>When you add a new layer to QGIS, the layer is added to the top of the list of layers in the <code>Layers</code> panel, such that it is drawn last. Therefore the <code>vtnhma</code> layer currently obscures the <code>sites</code> layer. To fix this, drag the <code>vtnhma</code> layer so that it comes immediately after the <code>sites</code> layer. Now the point locations of our study sites are visible on top of the state boundary polygons. However, by default QGIS has filled in the state polygons with a solid color. We will change this so that we just see the boundaries, without them being filled in.</p>
+<p>To do this, right-click the <code>vtnhma</code> layer and choose <code>Properties</code>. This produces a large dialog box with a range of options for styling the map.</p>
+<p><img src="../../img/WebMapping/QGISSymbology40.png" /></p>
+<p>In the left-hand menu, click <code>Symbology</code>. This series of options controls how data are presented, or symbolized, on the map. Near the top of the dialog box, click <code>Simple fill</code>. The options in the rest of the dialog box will change to reflect the current settings for <code>Simple fill</code>, meaning how you want to fill the state polygons with a color. Where it says <code>Symbol layer type</code>, change this to <code>Outline: Simple line</code>. At the bottom of the dialog box is a button labeled <code>Apply</code>. You can click the <code>Apply</code> button to apply your changes to the map. Click <code>Apply</code>, and you will see that the state polygons change from being filled with solid color to being just the outlines of the state boundaries.</p>
+<p>Next, click in the <code>Color</code> field and choose a blue-ish color for the state boundaries. Change <code>Stroke width</code> to 1.0. Click <code>Apply</code> to see your changes. The state boundaries should now be outlined with a fatter, blue line. Click <code>OK</code> to finish this series of changes to the <code>vtnhma</code> layer.</p>
+<p>Your Layers panel should now be looking something like this:</p>
+<p><img src="../../img/WebMapping/QGISLayersPanelThree75.png" /></p>
+<p>Note that the icon to the left of the <code>vtnhma</code> layer indicates that it is a polygon vector data source.</p>
+<p>Now right-click the <code>sites</code> layer and again choose <code>Properties</code>. You will see the same <code>Symbology</code> dialog box, but this time it’s for the point locations. Near the top of the box, click <code>Simple marker</code> to choose the options for how you want the locations to appear on the map. Change the <code>Size</code> setting to 3.5, to make the point symbols a little bit larger.</p>
+<p>Then, in the left-hand menu, click <code>Labels</code>. Change <code>No labels</code> to <code>Single labels</code>, and a whole bunch of labeling options will appear. Near the top of the box, where it says <code>Labels with</code>, choose the <code>locality</code> field. Click <code>Apply</code> and observe that the names of the sites now appear next to the point symbols. Click <code>OK</code> to close the <code>Layer Properties</code> box.</p>
+<p>We are now finally ready to create our web map. But before proceeding, right click the <code>vtnhma</code> layer and choose <code>Zoom to Layer</code>. Your map should look something like this:</p>
+<p><a href="../../img/WebMapping/QGISFinishedMap.png"><img src="../../img/WebMapping/QGISFinishedMap25.png" /></a></p>
+<p>(Click image to enlarge.)</p>
+<p>We will use the <code>qgis2web</code> plugin to convert the map layers we have assembled into an interactive web map, using the <a href="https://Leafletjs.com/">Leaflet</a> web mapping library. By “library” we mean a collection of ready-to-use software functions that can be assembled into an interactive web map using a programming language. The <code>Leaflet</code> library is written in <a href="https://en.wikipedia.org/wiki/JavaScript">JavaScript</a>, which is a core internet programming language. The <code>qgis2web</code> plugin generates the JavaScript code to create an interactive web map incorporating the GIS layers assembled in QGIS. So all of the QGIS work we have been doing up to now has been to prepare data layers to give to the <code>qgis2web</code> plugin. But <code>qgis2web</code> will do the work of generating the program code for us.</p>
+<p>Using the <code>Web</code> menu, click the <code>Create web map</code> option of the <code>qgis2web</code> plugin:</p>
+<p><img src="../../img/WebMapping/CreateWebMap50.png" /></p>
+<p>At the bottom left of the <code>Export to web map</code> dialog box that appears, choose the <code>Leaflet</code> radio button:</p>
+<p><img src="../../img/WebMapping/QGISCreateWebMap50.png" /></p>
+<p>The right-hand panel shows the data layers that we have assembled, and how they will appear as a Leaflet web map. Click the <code>Appearance</code> button near the top left of the dialog box. In the left-hand panel, under <code>Appearance</code>, change <code>Add layers list</code> from <code>None</code> to <code>Expanded</code>. This will create a control in the Leaflet web map that lists all of the map layers and gives the user the ability to turn layers on and off. It essentially replicates the <code>Layers</code> panel of QGIS.</p>
+<p>After you have changed <code>Add layers list</code> to <code>Expanded</code>, click <code>Update preview</code> at the bottom left of the <code>Export to web map</code> dialog, and you should see the right-hand map preview panel change to reflect your changes. The map layer control should now appear in the upper right-hand corner of the map. You can turn the layers on and off by checking and unchecking the check boxes next to each layer. Note also that there is a zoom control in the upper left-hand corner of the map. The map can also be zoomed by use of your mouse wheel, and you can also hold down the shift key and drag a zoom rectangle with the left button of your mouse.</p>
+<p>While still in the <code>Appearance</code> settings, under <code>Scale/Zoom</code>, change <code>Extent</code> to <code>Fit to layers extent</code>, and then click <code>Update preview</code>. The preview map should zoom in to match the zoom level of the QGIS map canvas.</p>
+<p>Your <code>Export to web map</code> dialog box should now look something like this:</p>
+<p><a href="../../img/WebMapping/QGISExportToWebMap.png"><img src="../../img/WebMapping/QGISExportToWebMap30.png" /></a></p>
+<p>(Click image to enlarge.)</p>
+<p>We can now export this map composition to a standalone Leaflet web map that can be viewed in a web browser. While still in the <code>Export to web map</code> dialog, click the <code>Export</code> button. Under <code>Data export</code>, change <code>Exporter</code> to <code>Export to folder</code>, and then click the button with three dots to choose the export location on your computer’s filesystem. (The other <code>Export</code> option, <code>Export to FTP site</code>, allows you to place your Leaflet map directly on a web server. You need a web server account and valid login credentials in order to do this.) Once you have chosen an export location, click the <code>Export</code> button at the bottom left of the dialog box.</p>
+<p>A folder will be created in the location that you specified, and the folder contents will look something like this:</p>
+<p><img src="../../img/WebMapping/QGISLeafletFolder.png" /></p>
+<p>This folder, created by the <code>qgis2web</code> QGIS plugin, contains all of the HTML code, JavaScript code, fonts, data, images, and other resources needed to produce the web map. You can open the <code>index.html</code> file in a web browser, and your Leaflet web map will appear. You can give this folder to others and they can view the web map locally in their own web browsers. If you had instead exported the web map via <a href="https://en.wikipedia.org/wiki/File_Transfer_Protocol">FTP</a> to a <a href="https://en.wikipedia.org/wiki/Web_server">web server</a>, you would then have a <a href="https://en.wikipedia.org/wiki/URL">URL</a> that you could distribute so that others could view the map.</p>
+<p>To view this map running live from a web server, click <a href="../../leafletTest/">here</a>.</p>
+<p>Note that when you click one of the site points in the web map, a popup appears containing the corresponding fields of the attribute table:</p>
+<p><img src="../../img/WebMapping/QGISPopup50.png" /></p>
+<p>The fields that appear in the popup, along with other features of web map behavior, can be controlled within QGIS and the <code>qgis2web</code> plugin.</p>
+<p>For more information on this and other aspects of using the <code>qgis2web</code> plugin, see <a href="http://www.qgistutorials.com/en/docs/web_mapping_with_qgis2web.html">Web Mapping with QGIS2Web</a>.</p>
+</div>
+<div id="rstudio-and-the-r-leaflet-package" class="section level1">
+<h1>RStudio and the R <code>Leaflet</code> Package</h1>
+<p>Our final web mapping example differs from the previous two because it requires coding in the <a href="https://www.r-project.org/">R programming language</a>. R is a free, open-source, cross-platform computing environment that is widely used in academia and industry, and is a leading programming language in the field of <a href="https://en.wikipedia.org/wiki/Data_science">data science</a>.</p>
+<p>In this example we will learn enough R to produce a web map. For a more detailed discussion of R, see <a href="https://richardlent.github.io/post/introduction-to-r/">An Introduction to R</a>. We will build our web map using <a href="https://www.rstudio.com/">RStudio</a>, which is an <a href="https://en.wikipedia.org/wiki/Integrated_development_environment">integrated development environment</a> for R that greatly facilitates working with R. The combination of R and RStudio is a very powerful computing platform for accomplishing a wide range of tasks (see, for example, <a href="https://richardlent.github.io/post/rstudio-as-a-research-and-writing-platform/">RStudio as a Research and Writing Platform</a>). Both of these tools are completely free.</p>
+<p>The tradeoff of this approach when compared to that of other web mapping platforms is that you have to invest some time in learning how to write program code in R. But the reward for such effort is that you have complete control over the final product, with great freedom as to how much data you can map, number of map layers, etc. In addition, the use of R in conjunction with <a href="https://www.rstudio.com/">RStudio</a> gives you access to free web hosting for your web maps, on a platform known as <a href="https://rpubs.com/">RPubs</a>.</p>
+<p>In the previous example we used QGIS with the <code>qgis2web</code> plugin to produce a web map using the Leaflet JavaScript library. The <code>qgis2web</code> plugin wrote the mapping code for us, but this time we will write it ourselves, using an R <a href="https://www.datacamp.com/community/tutorials/r-packages-guide">package</a> that allows us to access the Leaflet JavaScript library using R instead of programming Leaflet directly using JavaScript. An R package is a modular chunk of code that can be installed in RStudio to give the system more functionality (like plugins with QGIS). The Leaflet package we will use with R is called, logically enough, <a href="https://rstudio.github.io/leaflet/">Leaflet for R</a>. Some advantages of this approach include:</p>
+<ol style="list-style-type: decimal">
+<li>You don’t have to know JavaScript (but you do have to know a bit of R).</li>
+<li>You have all the power of R’s vast library of <a href="https://en.wikipedia.org/wiki/Data_wrangling">data wrangling</a>, statistical, and graphical analysis routines to bring to bear on your web map.</li>
+<li>You have access to free web hosting, via <a href="https://rpubs.com/">RPubs</a>, for your completed map (more on that later).</li>
+</ol>
+<p>Instructions for downloading and installing R and RStudio can be found in the <code>Software Installation</code> section of <a href="https://richardlent.github.io/post/rstudio-as-a-research-and-writing-platform/">RStudio as a Research and Writing Platform</a>. To save time here, I will assume that you have successfully installed R and RStudio on your computer. Start RStudio, and you should see something like this:</p>
+<p><a href="../../img/rstudio2.png"><img src="../../img/rstudio2_small.png" /></a></p>
+<p>(Click image to enlarge.)</p>
+<p>The above screenshot is from an iMac, but Windows and Linux users should find it comparable to RStudio running on their systems. The <code>Console</code> window contains the R <a href="https://en.wikipedia.org/wiki/Interpreted_language">interpreter</a> and is where you can enter and run R commands directly. Results of R computations are written to the console, and graphical results appear in the <code>Plots</code> or <code>Viewer</code> tabs.</p>
+<p>However, instead of typing R programming statements into the console by hand and getting results interactively, the usual way to run R programs is to type the code into a text file, and then tell RStudio to run the file. We will create an interactive Leaflet web map completely from the following R code, all of which appears between the two horizontal lines.</p>
+<hr>
+<pre><code># sitesmap2.R
+# An interactive web map using the R leaflet package.
+
+library(leaflet)
+library(maps)
+library(htmlwidgets) # To save the map as a web page.
+
+# The data to map.
+sites &lt;- read.csv(&quot;https://richardlent.github.io/rnotebooks/sites.csv&quot;)
+
+# State boundaries from the maps package. The fill option must be TRUE.
+bounds &lt;- map(&#39;state&#39;, c(&#39;Massachusetts&#39;, &#39;Vermont&#39;, &#39;New Hampshire&#39;), fill=TRUE)
+
+# A custom icon.
+icons &lt;- awesomeIcons(
+    icon = &#39;disc&#39;,
+    iconColor = &#39;black&#39;,
+    library = &#39;ion&#39;, # Options are &#39;glyphicon&#39;, &#39;fa&#39;, &#39;ion&#39;.
+    markerColor = &#39;blue&#39;,
+    squareMarker = FALSE
+)
+
+map &lt;- leaflet(data = sites) %&gt;%
+    addTiles(group = &quot;OpenStreetMap&quot;) %&gt;% # Adds default OpenStreetMap base map.
+    addProviderTiles(&quot;CartoDB.Positron&quot;, group = &quot;Grey Scale&quot;) %&gt;%
+    addProviderTiles(&quot;Esri.WorldImagery&quot;, group = &quot;Satellite&quot;) %&gt;% 
+    addProviderTiles(&quot;Esri.WorldShadedRelief&quot;, group = &quot;Relief&quot;) %&gt;%
+    addProviderTiles(&quot;Stamen.Watercolor&quot;, group = &quot;Other&quot;) %&gt;%
+    addMarkers(~lon_dd, ~lat_dd, label = ~locality,
+             popup = &quot;&lt;img src=&#39;https://richardlent.github.io/img/willie.png&#39; height=&#39;149&#39; width=&#39;112&#39;&gt;&quot;,
+             group = &quot;Sites&quot;) %&gt;%
+    # addAwesomeMarkers(~lon_dd, ~lat_dd, label = ~locality, 
+    #          popup = &quot;&lt;a href=&#39;https://www.rstudio.com/&#39;&gt;RStudio&lt;/a&gt;&quot;, 
+    #          group = &quot;Sites&quot;, icon=icons) %&gt;%
+    addPolygons(data=bounds, group=&quot;States&quot;, weight=3.5, fillOpacity = 0) %&gt;%
+    addLayersControl(
+        baseGroups = c(&quot;OpenStreetMap&quot;, &quot;Grey Scale&quot;, &quot;Satellite&quot;, &quot;Relief&quot;, &quot;Other&quot;),
+        overlayGroups = c(&quot;Sites&quot;, &quot;States&quot;),
+        options = layersControlOptions(collapsed = FALSE)
+    )
+
+print(map)
+saveWidget(map, file=&quot;sitesmap2.html&quot;, selfcontained=TRUE)</code></pre>
+<hr>
+<p>If you are not used to working with program code, the above may seem daunting at first. But do not be afraid. We will first run the code in RStudio to produce the map, and then dissect the code line by line.</p>
+<p>Download the code from <a href="https://richardlent.github.io/code/sitesmap2.R">here</a> and save it to a place where you can find it easily on the computer where you have installed R and RStudio.</p>
+<p>Start RStudio, then click the <code>Files</code> tab. This shows the filesystem of your computer. Navigate to the location where you have downloaded the R file (the name of which is <code>sitesmap2.R</code>). By convention, text files containing R programming code are named with <code>.R</code> as the <a href="https://en.wikipedia.org/wiki/Filename_extension">filename extension</a>.</p>
+<p><img src="../../img/WebMapping/RStudioFiles50.png" /></p>
+<p>Click <code>More</code> next to the gear icon, and then click <code>Set As Working Directory</code>. This setting will make it such that any files created when we run our <code>sitesmap2.R</code> code will be placed in the same directory as the code file. This just makes things easier to keep track of. In the above image I have downloaded the <code>sitesmap2.R</code> file to my <code>Downloads</code> directory, which I have set to be the RStudio working directory.</p>
+<p>Next, while still in the <code>Files</code> tab, click the <code>sitesmap2.R</code> file. This will open the file in the RStudio text editor. From the editor window we can modify and run the code. But before we do that, we have to install some R packages.</p>
+<p>The first five lines (not counting blank lines) of R code look like this:</p>
+<pre><code># sitesmap2.R
+# An interactive web map using the R leaflet package.
+
+library(leaflet)
+library(maps)
+library(htmlwidgets) # To save the map as a web page.</code></pre>
+<p>The first two lines begin with the <code>#</code> symbol; they are comments. Comments are ignored by the R language interpreter and are handy for writing material that documents the code. Comments can either be on their own line or on the same line as executable code, as long as the comment begins with the <code>#</code> symbol. (There is a whole science to <a href="https://medium.freecodecamp.org/code-comments-the-good-the-bad-and-the-ugly-be9cc65fbf83">writing programming comments</a>, which we will not address here.)</p>
+<p>The three lines that begin with <code>library</code> specify three R packages (a.k.a. “libraries”) that we want to access. The first package is the R <code>leaflet</code> package for creating our web map. The second package, <code>maps</code>, contains map boundary files. We will obtain the boundaries of Massachusetts, New Hampshire, and Vermont from the <code>maps</code> package, and thus do not need the <code>vtnhma.kml</code> file that we used in previous examples. Finally, the <code>htmlwidgets</code> package contains a function that will allow us to save our Leaflet web map to a map <a href="https://en.wikipedia.org/wiki/Software_widget">widget</a> that is packaged into a standalone web page that we can then place on a web server.</p>
+<p>Before we can use these three packages in our program, we have to install them. Click on the RStudio <code>Packages</code> tab. This will list all of the R packages that are currently installed. Click on the <code>Install</code> button of the <code>Packages</code> tab, and type in the name of each of the three packages in succession (<code>leaflet</code>, <code>maps</code>, <code>htmlwidgets</code>). Install each of them, one at a time, making sure that <code>Install dependencies</code> is checked. This will ensure that any other required packages are installed. (R packages often depend on other packages in order to function properly.)</p>
+<p><img src="../../img/WebMapping/RStudioInstallPackages60.png" /></p>
+<p>Now that the three packages are installed, we can run the code. In the RStudio editor, click the <code>Source</code> button. This will “source” the <code>sitesmap2.R</code> file, meaning that the file is being provided to R to run as <a href="https://en.wikipedia.org/wiki/Source_code">source code</a>. The R interpreter reads the code line by line and executes it. The Leaflet map should appear in the <code>Viewer</code> pane. RStudio should now look something like this:</p>
+<p><a href="../../img/WebMapping/RStudioTheMap.png"><img src="../../img/WebMapping/RStudioTheMap30.png" /></a></p>
+<p>(Click image to enlarge.)</p>
+<p>You should also see another file, <code>sitesmap2.html</code>, that has appeared in your working directory:</p>
+<p><img src="../../img/WebMapping/RStudioTwoFiles75.png" /></p>
+<p>This is an HTML file that contains the Leaflet map. You can open this file in a web browser and view the same map that is displayed in the RStudio Viewer panel. You can also upload this file to a web server so that others can view your map. (Later we will see how you can upload the map directly from RStudio to the free web hosting platform <a href="https://rpubs.com/">RPubs</a> that is provided by RStudio.)</p>
+<p>This process for creating a web map is fundamentally different from that of either Google Maps or QGIS/<code>qgis2web</code>. The map was created completely from code that brought together the map layers, data, map controls, and map styling. We now will examine how this code functions. (Ha ha, a funny programming joke. Get it? Never mind.)</p>
+<p>Wait, that was funny because of <a href="https://en.wikipedia.org/wiki/Subroutine">functions</a>. The R language is built on functions, as are many other programming languages. A function is a chunk of program code that takes zero or more values, processes them, and returns a result.</p>
+<p>Remember high school algebra class, in which we learned the basic formula for a function:</p>
+<p><span class="math display">\[\huge f(x)\]</span></p>
+<p>This is the (in)famous “<a href="https://en.wikipedia.org/wiki/Function_(mathematics)">f of x</a>” function notation. Here, <code>f</code> is the name of the function and the parentheses contain the function <a href="https://en.wikipedia.org/wiki/Parameter_(computer_programming)">parameter</a> <code>x</code>. The <a href="https://en.wikipedia.org/wiki/Variable_(computer_science)">variable</a> <code>x</code> represents a piece of data that is given to the function <code>f</code>, which then processes the data and returns a result.</p>
+<p>The first non-comment line of our program is a function:</p>
+<pre><code>library(leaflet)</code></pre>
+<p>The <code>library</code> function takes a single parameter, the name of the R package that we want to access. In this case the value of the parameter is the <a href="https://en.wikipedia.org/wiki/String_(computer_science)">string</a> “leaflet”. The <code>library</code> function will generate an error message if the requested package is not installed in RStudio. Otherwise the <code>library</code> function will return a value that indicates to RStudio that the requested package is available for use.</p>
+<p>In fact, every non-comment line of the R program <code>sitesmap2.R</code> is a function call. To “call” a function within a program means that we write the function’s name, thereby calling or invoking it, and in the set of parentheses that follows the name we write the values of any parameters that are required.</p>
+<p>Next in the program we have:</p>
+<pre><code># The data to map.
+sites &lt;- read.csv(&quot;https://richardlent.github.io/rnotebooks/sites.csv&quot;)</code></pre>
+<p>This reads the data contained in the file <code>sites.csv</code> into an R <a href="https://www.tutorialspoint.com/r/r_data_frames.htm">data frame</a>, a spreadsheet-like data structure used extensively in R. The <a href="https://www.rdocumentation.org/packages/utils/versions/3.5.1/topics/read.table">read.csv</a> function returns a data frame assigned to the <code>sites</code> variable through use of the R <a href="https://www.rdocumentation.org/packages/base/versions/3.5.1/topics/assignOps">assignment operator</a> <code>&lt;-</code>. Recall that we used <code>sites.csv</code> with Google Maps and QGIS to map the locations of our 11 study sites. But this time we are reading a copy of the file that resides on a web server, as indicated by the <a href="https://en.wikipedia.org/wiki/URL">URL</a> <code>https://richardlent.github.io/rnotebooks/sites.csv</code>. Click the <code>Environment</code> tab of RStudio, and you will see the <code>sites</code> data frame listed as having 11 observations and 20 variables. To open the data frame for viewing, click the data frame icon. . .</p>
+<p><img src="../../img/WebMapping/RStudioEnvironment60.png" /></p>
+<p>. . . and the data will open up in R’s data viewer:</p>
+<p><a href="../../img/WebMapping/RStudioDataFrame.png"><img src="../../img/WebMapping/RStudioDataFrame30.png" /></a></p>
+<p>(Click image to enlarge.)</p>
+<p>This illustrates the versatility of the <a href="https://en.wikipedia.org/wiki/Comma-separated_values">CSV</a> data format. We have imported the same file into a data table in Google My Maps, into a QGIS attribute table, and now into an R data frame, and the data look exactly the same each time (which is a good thing).</p>
+<p>Next, we bring in our state boundaries:</p>
+<pre><code># State boundaries from the maps package. The fill option must be TRUE.
+bounds &lt;- map(&#39;state&#39;, c(&#39;Massachusetts&#39;, &#39;Vermont&#39;, &#39;New Hampshire&#39;), fill=TRUE)</code></pre>
+<p>The R <a href="https://cran.r-project.org/web/packages/maps/index.html">maps</a> package lets us access boundary polygons of Massachusetts, Vermont, and New Hampshire from inside of R, instead of having to import the KML file <code>vtnhma.kml</code> as we did with Google Maps and QGIS. Three parameters are passed to the <code>map</code> function. The first, <code>state</code>, specifies that we want U. S. state boundaries. The second parameter lists the three states that we want, using the <a href="https://www.rdocumentation.org/packages/base/versions/3.5.1/topics/c">c function</a>, which assembles or “collects” (hence the <code>c</code>) lists of things. The final parameter, <code>fill=TRUE</code>, is required so that the state boundaries are drawn correctly. (There are two <a href="https://en.wikipedia.org/wiki/Boolean_data_type">Boolean</a> values in R, <code>TRUE</code> and <code>FALSE</code>, that can function like switches to turn things on and off.)</p>
+<p>We will later use the <code>bounds</code> variable, which contains the boundaries, as a layer in our Leaflet map.</p>
+<p>The next block of R code creates a custom icon for mapping our site locations, and stores it in the variable <code>icons</code>:</p>
+<pre><code># A custom icon.
+icons &lt;- awesomeIcons(
+    icon = &#39;disc&#39;,
+    iconColor = &#39;black&#39;,
+    library = &#39;ion&#39;, # Options are &#39;glyphicon&#39;, &#39;fa&#39;, &#39;ion&#39;.
+    markerColor = &#39;blue&#39;,
+    squareMarker = FALSE
+)</code></pre>
+<p>The <code>awesomeIcons</code> function is part of the <a href="https://rstudio.github.io/leaflet/markers.html">leaflet package</a> and uses icons from the <a href="https://fontawesome.com/icons?from=io">Font Awesome</a> icon library. A series of parameters is passed to the <code>awesomeIcons</code> function to specify how we want the icon to look. We will use the custom <code>icons</code> variable shortly when we create the Leaflet map.</p>
+<p>The next, larger block of code creates the Leaflet map and stores it in the variable <code>map</code>:</p>
+<pre><code>map &lt;- leaflet(data = sites) %&gt;%
+    addTiles(group = &quot;OpenStreetMap&quot;) %&gt;% # Adds default OpenStreetMap base map.
+    addProviderTiles(&quot;CartoDB.Positron&quot;, group = &quot;Grey Scale&quot;) %&gt;%
+    addProviderTiles(&quot;Esri.WorldImagery&quot;, group = &quot;Satellite&quot;) %&gt;% 
+    addProviderTiles(&quot;Esri.WorldShadedRelief&quot;, group = &quot;Relief&quot;) %&gt;%
+    addProviderTiles(&quot;Stamen.Watercolor&quot;, group = &quot;Other&quot;) %&gt;%
+    addMarkers(~lon_dd, ~lat_dd, label = ~locality,
+             popup = &quot;&lt;img src=&#39;https://richardlent.github.io/img/willie.png&#39; height=&#39;149&#39; width=&#39;112&#39;&gt;&quot;,
+             group = &quot;Sites&quot;) %&gt;%
+    # addAwesomeMarkers(~lon_dd, ~lat_dd, label = ~locality, 
+    #          popup = &quot;&lt;a href=&#39;https://www.rstudio.com/&#39;&gt;RStudio&lt;/a&gt;&quot;, 
+    #          group = &quot;Sites&quot;, icon=icons) %&gt;%
+    addPolygons(data=bounds, group=&quot;States&quot;, weight=3.5, fillOpacity = 0) %&gt;%
+    addLayersControl(
+        baseGroups = c(&quot;OpenStreetMap&quot;, &quot;Grey Scale&quot;, &quot;Satellite&quot;, &quot;Relief&quot;, &quot;Other&quot;),
+        overlayGroups = c(&quot;Sites&quot;, &quot;States&quot;),
+        options = layersControlOptions(collapsed = FALSE)
+    )
+    </code></pre>
+<p>The first thing that we should note about this block of R code is the odd-looking <code>%&gt;%</code> symbol. This is the <a href="https://blog.revolutionanalytics.com/2014/07/magrittr-simplifying-r-code-with-pipes.html">pipe operator</a>, part of the <a href="https://cran.r-project.org/web/packages/magrittr/vignettes/magrittr.html">magrittr</a> package (which is automatically imported by the <code>leaflet</code> package). It allows you to figuratively create “pipes” in your code, whereby the results of function calls are fed, or piped, into the input of other calls.</p>
+<p>So in the above code block, we create a Leaflet map in the variable <code>map</code> by piping the results returned by a whole series of function calls back up into the <code>map</code> variable. The cumulative effect of this piping activity is to say “Create a Leaflet map, then add some base maps, then some markers, then some state boundaries, then a layers control.” The pipe operator allows us to write R code that is more streamlined and easier to read, in a manner of speaking.</p>
+<p>There are two Leaflet functions that let us <a href="https://rstudio.github.io/leaflet/basemaps.html">add base maps</a> from tile servers, as we did in QGIS. The <code>addTiles</code> function adds the standard <a href="https://www.openstreetmap.org">OpenStreetMap</a> layer. The other function, <code>addProviderTiles</code>, adds basemaps other than the standard OpenStreetMap layer. Thus the following lines:</p>
+<pre><code>addTiles(group = &quot;OpenStreetMap&quot;) %&gt;% # Adds default OpenStreetMap base map.
+addProviderTiles(&quot;CartoDB.Positron&quot;, group = &quot;Grey Scale&quot;) %&gt;%
+addProviderTiles(&quot;Esri.WorldImagery&quot;, group = &quot;Satellite&quot;) %&gt;% 
+addProviderTiles(&quot;Esri.WorldShadedRelief&quot;, group = &quot;Relief&quot;) %&gt;%
+addProviderTiles(&quot;Stamen.Watercolor&quot;, group = &quot;Other&quot;) %&gt;%</code></pre>
+<p>add a total of five base map layers to our Leaflet map. The layers can be turned on and off by the user through use of the layers control added by the <code>addLayersControl</code> function. In each of these function calls we specify a <code>group</code> parameter, which is the name we want to give to the layer in the layer control. The first parameter of the <code>addProviderTiles</code> function is the name of the base layer, obtained from a much larger <a href="http://leaflet-extras.github.io/leaflet-providers/preview/index.html">list of available base maps</a>. (The <code>addTiles</code> function only provides the OpenStreetMap base map, so we don’t need to specify one.)</p>
+<p>Next, we add our site locations:</p>
+<pre><code>addMarkers(~lon_dd, ~lat_dd, label = ~locality,
+   popup = &quot;&lt;img src=&#39;https://richardlent.github.io/img/willie.png&#39; 
+   height=&#39;149&#39; width=&#39;112&#39;&gt;&quot;, group = &quot;Sites&quot;) %&gt;%</code></pre>
+<p>The call to the <code>addMarkers</code> function depends on our previous call to the <code>leaflet</code> function:</p>
+<pre><code>map &lt;- leaflet(data = sites) %&gt;%</code></pre>
+<p>in which we specify that we want to use the <code>sites</code> data frame as a data source for the map (<code>data = sites</code>). This lets us specify the variables <code>lon_dd</code>, <code>lat_dd</code>, and <code>locality</code> by prefacing each with the tilde symbol (<code>~</code>). Thus the first two parameters passed to <code>addMarkers</code> specify which variables we want to use as the latitude and longitude of each marker. As with our previous web mapping examples, the coordinates must be in decimal degrees.</p>
+<p>The next two parameters, <code>label</code> and <code>popup</code>, specify what happens when we hover and click each marker using a mouse cursor. The <code>label = ~locality</code> parameter specifies that we want to use the name of each site, which is stored in the <code>locality</code> variable, to display when we hover our mouse cursor over the marker. The <code>popup</code> parameter specifies a chunk of HTML code that will be run when the user clicks the marker (instead of just hovering and not clicking). In this example I have written an <a href="https://www.w3schools.com/tags/tag_img.asp">HTML image tag</a> that shows a picture of my cat Willie (may he rest in peace). Finally, the <code>group = &quot;Sites&quot;</code> parameter provides a name for the marker layer to use in the layers control.</p>
+<p>The <code>addMarkers</code> function adds generic markers to the Leaflet map, that look like this:</p>
+<p><img src="../../img/WebMapping/RStudioMarkers75.png" /></p>
+<p>As mentioned previously, we can also add custom markers, that look like this, with a custom icon and color:</p>
+<p><img src="../../img/WebMapping/RStudioAwesomeMarkers75.png" /></p>
+<p>The following block of code does just that, using the Leaflet function <a href="https://rstudio.github.io/leaflet/markers.html">addAwesomeMarkers</a>:</p>
+<pre><code># addAwesomeMarkers(~lon_dd, ~lat_dd, label = ~locality, 
+#    popup = &quot;&lt;a href=&#39;https://www.rstudio.com/&#39;&gt;RStudio&lt;/a&gt;&quot;, 
+#    group = &quot;Sites&quot;, icon=icons) %&gt;%</code></pre>
+<p>Notice that the above code has comment symbols at the start of each line. This block of code is “commented out,” which means that we have made each line of code into a comment to turn it off. This happens because comment lines are ignored by the R interpreter, and is another handy use of the <code>#</code> symbol in R. You can use the Code Tools icon (the magic wand) in the RStudio text editor to facilitate turning code off and on using comments:</p>
+<p><img src="../../img/WebMapping/RStudioCodeTools50.png" /></p>
+<p>The last parameter of the <code>addAwesomeMarkers</code> function call, <code>icon=icons</code>, uses the <code>icons</code> variable that we created previously with the <code>awesomeIcons</code> function. So if instead of the standard Leaflet markers, you want to use custom markers, then comment out the <code>addMarkers</code> function call and un-comment the <code>addAwesomeMarkers</code> call. Save your changes in the <code>sitesmap2.R</code> file and re-source the code.</p>
+<p>The next line of code adds our state boundaries as a polygon layer:</p>
+<pre><code>addPolygons(data=bounds, group=&quot;States&quot;, weight=3.5, fillOpacity = 0) %&gt;%</code></pre>
+<p>Here we pass in the <code>bounds</code> variable that we created previously with the <code>map</code> function. We give the layer the name “States” that will appear in the layers control, give the polygon features a weight of 3.5 (which makes the lines thicker), and use <code>fillOpacity = 0</code> so that we get just the boundary lines without filling the state polygons with a color.</p>
+<p>Finally, we add the layers control to the Leaflet map:</p>
+<pre><code>addLayersControl(
+   baseGroups = c(&quot;OpenStreetMap&quot;, &quot;Grey Scale&quot;, &quot;Satellite&quot;, &quot;Relief&quot;, &quot;Other&quot;),
+   overlayGroups = c(&quot;Sites&quot;, &quot;States&quot;),
+   options = layersControlOptions(collapsed = FALSE)
+)</code></pre>
+<p>In the <code>baseGroups</code> parameter to the <a href="https://www.rdocumentation.org/packages/leaflet/versions/2.0.2/topics/addLayersControl">addLayersControl</a> of the <code>leaflet</code> package, we list the group names that we have previously assigned to each of the five base map layers. The <code>overlayGroups</code> parameter lists the names that we gave to our site point layer and the state boundaries, both of which are layers that are overlain onto the base map layers. The final parameter, <code>options = layersControlOptions(collapsed = FALSE)</code>, makes it such that all of the layers in the layers control are visible, versus being collapsed into an icon that has to be clicked to see the layers.</p>
+<p>We finally come to the final two lines of code:</p>
+<pre><code>print(map)
+saveWidget(map, file=&quot;sitesmap2.html&quot;, selfcontained=TRUE)</code></pre>
+<p>The statement <code>print(map)</code> displays the finished Leaflet map to RStudio’s Viewer panel. Without this line, the map would be created in the variable <code>map</code>, but nothing would appear in the Viewer panel, unless you manually typed <code>print(map)</code> into the R console.</p>
+<p>The last line of code calls the <code>saveWidget</code> function of the <a href="https://www.htmlwidgets.org/">htmlwidgets</a> package to create the file <code>sitesmap2.html</code> (or whatever file name you specify), which is a web page containing the Leaflet map. The first parameter passed to the <code>saveWidget</code> function is the name of the variable, <code>map</code>, in which we have created the Leaflet map. The second parameter is the name of HTML file we wish to create. The third parameter, <code>selfcontained=TRUE</code>, specifies that we want all HTML code, JavaScript code, and other resources to be encoded and packaged into one file, in this case <code>sitesmap1.html</code>. This streamlines the process of publishing the Leaflet map, because we then only have one file to upload.</p>
+<p>Speaking of publishing: It’s easy, and free, to publish your R Leaflet web maps on RPubs, a web hosting platform provided by RStudio. You first need to sign up for a free account on <a href="https://rpubs.com/">RPubs.com</a>:</p>
+<p><img src="../../img/WebMapping/RStudio.RPubs50.png" /></p>
+<p>Click the <code>Register</code> button, fill out the brief form, including a user name and password, click <code>Register Now</code>, and you’re set to go.</p>
+<p>Then, in RStudio, source the <code>sitesmap2.R</code> file to display the map in the RStudio Viewer pane. In the Viewer pane, click the <code>Publish</code> button:</p>
+<p><img src="../../img/WebMapping/RStudioPublish50.png" /></p>
+<p>In the box that appears, select to publish the map to RPubs:</p>
+<p><img src="../../img/WebMapping/RStudioPublishTwo50.png" /></p>
+<p>Click the <code>Publish</code> button in the next box that appears, and you will then be brought to the sign-in screen of RPubs. Sign in with the login credentials that you created previously.</p>
+<p>Fill in the details of your map:</p>
+<p><img src="../../img/WebMapping/RStudioRpubsDetails50.png" /></p>
+<p>Then click <code>Continue</code>, and your map is published! You can link to the map using the URL that is displayed in the web browser.</p>
+<p>To see a finished version of this map running on RPubs, click <a href="http://rpubs.com/rlent/436761">here</a>.</p>
+<p>Some additional Leaflet-for-R links:</p>
+<p><a href="https://www.creativebloq.com/web-design/leaflet-google-maps-121413738">Is Leaflet a better tool than Google Maps?</a> [Verdict: “Need directions? Use Google Maps. Need to develop an application? Use Leaflet.”]</p>
+<p><a href="https://www.codementor.io/victorgerardtemprano/google-maps-api-or-Leaflet--what-s-best-for-your-project-faaev60vm">Google Maps API or Leaflet: What’s Best for your Project?</a></p>
+<p>See <a href="https://richardlent.github.io/rnotebooks/maps.nb.html">Making Maps with R</a> for more map coding examples that show different approaches to making maps with R.</p>
+<p>More examples of Leaflet maps created in RStudio:</p>
+<ul>
+<li><a href="https://thisisnic.shinyapps.io/London-Income-Map/">London Income Map</a></li>
+<li><a href="http://davesteps.com/geoExploreR/">geoExploreR</a></li>
+<li><a href="https://prestonken.shinyapps.io/torontomap/">Mapping Toronto</a></li>
+<li><a href="https://compassnz.shinyapps.io/NZIPR/">New Zealand Institute for Pacific Research</a></li>
+<li><a href="https://olesiakoshyk.shinyapps.io/ukrainemap/">Population of Ukraine</a></li>
+<li><a href="https://rich.shinyapps.io/college_map/">Four-Year Not-for-Profit Colleges</a></li>
+<li><a href="https://asheshwor.shinyapps.io/np-quake/">Nepal Earthquakes</a></li>
+</ul>
+<p>Go <a href="https://www.showmeshiny.com/">here</a> for even more examples.</p>
+</div>
+<div id="in-conclusion" class="section level1">
+<h1>In conclusion</h1>
+<p>The field of web mapping is developing rapidly, and there are many more technology options for the end user to consider than existed even a few years ago. This post has focused in some detail on three different approaches to creating interactive web maps, ranging from drag-and-drop mapping environments that do not require coding (<a href="https://www.google.com/mymaps">Google My Maps</a>), to mapping applications that write the code for you (<a href="https://qgis.org">QGIS</a> + <a href="https://github.com/tomchadwin/qgis2web">qgis2web</a>), to those where you need to have some coding skills (<a href="https://rstudio.github.io/leaflet/">Leaflet for R</a>.) None of the three systems presented here require spending any money to produce a web map. The only cost incurred might be for web server space, but there are free alternatives for that too, e.g., <a href="https://pages.github.com/">GitHub Pages</a> and <a href="https://rpubs.com/">RPubs</a>. (Web maps produced from the examples in this post are currently living on GitHub [<a href="https://richardlent.github.io/leafletTest/">here</a>] and RPubs [<a href="http://rpubs.com/rlent/436761">here</a>].)</p>
+<p>With any web mapping system there are tradeoffs between ease of use, functionality, and cost. There is a <a href="http://geoawesomeness.com/top-19-online-geovisualization-tools-apis-libraries-beautiful-maps/">growing list</a> of web-based mapping platforms, many of which profess easy-to-use, drag-and-drop environments for mapping your data. Free systems may indeed be easy to use but usually limit how much data can be mapped, how many base map and data layers can be included, and other aspects of map design and styling. You often have to pay subscription fees in order to get more mapping power. However, for those who are pressed for time and with adequate funds, commercial web mapping platforms may be a viable solution.</p>
+<p>At the other end of the spectrum, investing some time in learning a little bit of R programming lets you create cost-free, powerful web maps that are not limited by vendor restrictions. And here we have only scratched the surface of the types of interactive web applications that can be created with R, RStudio, and <a href="https://shiny.rstudio.com/">Shiny</a> (a web framework for R). To get an idea of what can be done with a little R coding (OK, so maybe more than a little), go <a href="https://www.rstudio.com/products/shiny/shiny-user-showcase/">here</a>. And <a href="http://shiny.rstudio.com/gallery/">here</a>.</p>
+</div>
+<div class="footnotes">
+<hr />
+<ol>
+<li id="fn1"><p>To “serve” a web map means to put it on a web server, so that it is accessible to the internet.<a href="#fnref1" class="footnote-back">↩</a></p></li>
+<li id="fn2"><p>“Nothing in the world is worth having or worth doing unless it means effort, pain, difficulty.” - <a href="https://www.goodreads.com/quotes/312751-nothing-in-the-world-is-worth-having-or-worth-doing">Theodore Roosevelt</a><a href="#fnref2" class="footnote-back">↩</a></p></li>
+<li id="fn3"><p>See <a href="https://www.britannica.com/science/latitude">Latitude and longitude</a>.<a href="#fnref3" class="footnote-back">↩</a></p></li>
+<li id="fn4"><p>Google Maps now charges <a href="https://www.mapsmarker.com/docs/misc/google-maps-tos-changes/">fees</a> for use of its base layers in mapping applications, whereas OpenStreetMap is <a href="http://geoawesomeness.com/why-would-you-use-openstreetmap-if-there-is-google-maps/">completely free</a>.<a href="#fnref4" class="footnote-back">↩</a></p></li>
+<li id="fn5"><p><a href="https://en.wikipedia.org/wiki/Comma-separated_values">Comma-separated values</a>.<a href="#fnref5" class="footnote-back">↩</a></p></li>
+<li id="fn6"><p>It’s actually <a href="https://www.google.com/maps/">https://www.google.com/maps/</a>, but same difference.<a href="#fnref6" class="footnote-back">↩</a></p></li>
+</ol>
+</div>
+
+  
+  <h4><i class="fas fa-share-alt" aria-hidden="true"></i>&nbsp;Share!</h4>
+<ul class="share-buttons">
+	<li><a href="https://www.facebook.com/sharer/sharer.php?u=%2fpost%2fweb-mapping%2f" target="_blank" title="Share on Facebook"><i class="fab fa-facebook" aria-hidden="true"></i><span class="sr-only">Share on Facebook</span></a>
+	</li>&nbsp;&nbsp;&nbsp;
+	<li><a href="https://twitter.com/intent/tweet?source=%2fpost%2fweb-mapping%2f" target="_blank" title="Tweet"><i class="fab fa-twitter" aria-hidden="true"></i><span class="sr-only">Tweet</span></a>
+	</li>&nbsp;&nbsp;&nbsp;
+	<li><a href="https://plus.google.com/share?url=%2fpost%2fweb-mapping%2f" target="_blank" title="Share on Google+"><i class="fab fa-google-plus" aria-hidden="true"></i><span class="sr-only">Share on Google+</span></a>
+	</li>&nbsp;&nbsp;&nbsp;
+	<li><a href="http://www.tumblr.com/share?v=3&u=%2fpost%2fweb-mapping%2f" target="_blank" title="Post to Tumblr"><i class="fab fa-tumblr" aria-hidden="true"></i><span class="sr-only">Post to Tumblr</span></a>
+	</li>&nbsp;&nbsp;&nbsp;
+	<li><a href="http://pinterest.com/pin/create/button/?url=%2fpost%2fweb-mapping%2f" target="_blank" title="Pin it"><i class="fab fa-pinterest-p" aria-hidden="true"></i><span class="sr-only">Pin it</span></a>
+	</li>&nbsp;&nbsp;&nbsp;
+	<li><a href="http://www.reddit.com/submit?url=%2fpost%2fweb-mapping%2f" target="_blank" title="Submit to Reddit"><i class="fab fa-reddit-alien" aria-hidden="true"></i><span class="sr-only">Submit to Reddit</span></a>
+	</li>
+</ul>
+
+
+<style>
+	ul.share-buttons{
+	  list-style: none;
+	  padding: 0;
+	}
+
+	ul.share-buttons li{
+	  display: inline;
+	}
+
+	ul.share-buttons .sr-only{
+	  position: absolute;
+	  clip: rect(1px 1px 1px 1px);
+	  clip: rect(1px, 1px, 1px, 1px);
+	  padding: 0;
+	  border: 0;
+	  height: 1px;
+	  width: 1px;
+	  overflow: hidden;
+	}
+</style>
+
+
+  
+<div class="prev-next-post pure-g">
+  <div class="pure-u-1-24" style="text-align: left;">
+    
+    <a href="../../post/multivariate-analysis-with-r/"><i class="fa fa-chevron-left"></i></a>
+    
+  </div>
+  <div class="pure-u-10-24">
+    
+    <nav class="prev">
+      <a href="../../post/multivariate-analysis-with-r/">Multivariate Analysis with R</a>
+    </nav>
+    
+  </div>
+  <div class="pure-u-2-24">
+    &nbsp;
+  </div>
+  <div class="pure-u-10-24">
+    
+  </div>
+  <div class="pure-u-1-24" style="text-align: right;">
+    
+  </div>
+</div>
+
+
+  
+  
+  
+  
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+
+(function() {
+    
+    
+    if (window.location.hostname == "localhost")
+        return;
+
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+    var disqus_shortname = 'richardlent';
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com/" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+  
+
+</div>
+
+</div>
+</div>
+<script src="../../js/ui.js"></script>
+<script src="../../js/menus.js"></script>
+
+
+
+
+<script>
+  
+  if (window.location.hostname != "localhost") {
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-48234901-2', 'auto');
+    ga('send', 'pageview');
+  }
+</script>
+
+
+
+
+
+<script src="../../js/math-code.js"></script>
+  <script async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+  
+
+
+</body>
+</html>
+
