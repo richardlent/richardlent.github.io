@@ -32,81 +32,81 @@ ignoreErrors = ["error-remote-getjson"]
   # Shown in the side menu.
    [[menu.main]]
     name = "Home"
-    pre = "<i class='fa fa-home fa-fw'></i>"
+    pre = "<i class='fas fa-home fa-fw'></i>"
     weight = 1
     identifier = "home"
     url = "/"
    [[menu.main]]
      name = "Archive"
-     pre = "<i class='fa fa-list fa-fw'></i>"
+     pre = "<i class='fas fa-list fa-fw'></i>"
      weight = 3
      identifier = "post"
      url = "/post/"
   [[menu.main]]
     name = "About"
-    pre = "<i class='fa fa-user fa-fw'></i>"
+    pre = "<i class='fas fa-user fa-fw'></i>"
     weight = 2
     identifier = "about"
     url = "/misc/about/"
   [[menu.main]]
-    name = "Contact"
-    pre = "<i class='fa fa-envelope-o fa-fw'></i>"
+    name = " Contact"
+    pre = "<i class='far fa-envelope'></i>"
     weight = 6
     identifier = "contact"
     # url = "/contact/"
     url = "mailto:richardlent@gmail.com"
   [[menu.main]]
     name = "Photography"
-    pre = "<i class='fa fa-camera fa-fw'></i>"
+    pre = "<i class='fas fa-camera fa-fw'></i>"
     weight = 8
     identifier = "photography"
     # url = "http://richard-lent.pixels.com"
     url = "https://500px.com/richardlent"
   [[menu.main]]
-    name = "Github"
-    pre = "<i class='fa fa-github fa-fw'></i>"
+    name = "GitHub"
+    pre = "<i class='fab fa-github fa-fw'></i>"
     weight = 9
     identifier = "github"
     url = "https://github.com/richardlent"    
   [[menu.main]]
     name = "Gists"
-    pre = "<i class='fa fa-github fa-fw'></i>"
+    pre = "<i class='fab fa-github fa-fw'></i>"
     weight = 10
     identifier = "gists"
     url = "https://gist.github.com/richardlent"
   # [[menu.main]]
     # name = "Guitar"
-    # pre = "<i class='fa fa-music fa-fw'></i>"
+    # pre = "<i class='fas fa-music fa-fw'></i>"
     # weight = 9
     # identifier = "guitar"
     # url = "/topics/guitar/"  
   [[menu.main]]
     name = "Tags"
-    pre = "<i class='fa fa-tag fa-fw'></i>"
+    pre = "<i class='fas fa-tag fa-fw'></i>"
     weight = 5
     identifier = "tags"
     url = "/tags/"
   [[menu.main]]
     name = "Topics"
-    pre = "<i class='fa fa-folder fa-fw'></i>"
+    pre = "<i class='fas fa-folder fa-fw'></i>"
     weight = 4
     identifier = "topics"
     url = "/topics/" 
   [[menu.main]]
     name = "Publications"
-    pre = "<i class='fa fa-list fa-fw'></i>"
+    pre = "<i class='fas fa-list fa-fw'></i>"
     weight = 7
     identifier = "publications"
     url = "/misc/publications/"
   [[menu.main]]
     name = "Search"
-    pre = "<i class='fa fa-search fa-fw'></i>"
+    pre = "<i class='fas fa-search fa-fw'></i>"
     weight = 10
     identifier = "search"
     url = "/misc/search/"
   [[menu.main]]
-    name = "Mastodon"
-    pre = "<i class='fa fa-mastodon'></i>"
+    name = " Mastodon"
+    pre = "<i class='fab fa-mastodon'></i>"
     weight = 11
     identifier = "mastodon"
     url = "https://mastodon.social/@lentrichard"  
@@ -114,7 +114,6 @@ ignoreErrors = ["error-remote-getjson"]
 [social]
   # Link your social networking accounts to the side menu
   # by entering your username or ID.
-  # github = "richardlent"
   linkedin = "richard-lent"
 
 [markup]
