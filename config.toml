@@ -104,6 +104,12 @@ ignoreErrors = ["error-remote-getjson"]
     weight = 10
     identifier = "search"
     url = "/misc/search/"
+  [[menu.main]]
+    name = "Mastodon"
+    pre = "<i class='fa fa-mastodon'></i>"
+    weight = 11
+    identifier = "mastodon"
+    url = "https://mastodon.social/@lentrichard"  
 
 [social]
   # Link your social networking accounts to the side menu
