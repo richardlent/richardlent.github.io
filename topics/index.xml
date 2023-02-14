@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Topics on Richard A. Lent, Ph.D.</title>
+    <link>/topics/</link>
+    <description>Recent content in Topics on Richard A. Lent, Ph.D.</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; 2017 and beyond by Richard A. Lent. All rights reserved.&lt;br&gt;&lt;br&gt;&lt;a rel=&#39;me&#39; href=&#39;https://mastodon.social/@lentrichard&#39; style=&#39;text-decoration: none; font-size: 12px;&#39;&gt;Switch to Mastodon!&lt;/a&gt;</copyright>
+    <lastBuildDate>Mon, 29 Oct 2018 09:19:00 -0400</lastBuildDate><atom:link href="/topics/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>GIS</title>
+      <link>/topics/gis/</link>
+      <pubDate>Mon, 29 Oct 2018 09:19:00 -0400</pubDate>
+      
+      <guid>/topics/gis/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Programming</title>
+      <link>/topics/programming/</link>
+      <pubDate>Mon, 29 Oct 2018 09:19:00 -0400</pubDate>
+      
+      <guid>/topics/programming/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Web Technology</title>
+      <link>/topics/web-technology/</link>
+      <pubDate>Mon, 29 Oct 2018 09:19:00 -0400</pubDate>
+      
+      <guid>/topics/web-technology/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Data Science</title>
+      <link>/topics/data-science/</link>
+      <pubDate>Thu, 22 Jun 2017 09:21:00 -0400</pubDate>
+      
+      <guid>/topics/data-science/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Statistics</title>
+      <link>/topics/statistics/</link>
+      <pubDate>Thu, 22 Jun 2017 09:21:00 -0400</pubDate>
+      
+      <guid>/topics/statistics/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Writing Tools</title>
+      <link>/topics/writing-tools/</link>
+      <pubDate>Thu, 11 May 2017 15:38:00 -0400</pubDate>
+      
+      <guid>/topics/writing-tools/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>R Notebooks</title>
+      <link>/topics/r-notebooks/</link>
+      <pubDate>Mon, 08 May 2017 12:20:00 -0400</pubDate>
+      
+      <guid>/topics/r-notebooks/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Guitar</title>
+      <link>/topics/guitar/</link>
+      <pubDate>Fri, 05 May 2017 12:08:00 -0400</pubDate>
+      
+      <guid>/topics/guitar/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Ecology</title>
+      <link>/topics/ecology/</link>
+      <pubDate>Thu, 04 May 2017 11:18:00 -0400</pubDate>
+      
+      <guid>/topics/ecology/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
