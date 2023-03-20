@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on Richard A. Lent, Ph.D.</title>
+    <link>/post/</link>
+    <description>Recent content in Posts on Richard A. Lent, Ph.D.</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; 2017 and beyond by Richard A. Lent. All rights reserved.&lt;br&gt;&lt;br&gt;&lt;a rel=&#39;me&#39; href=&#39;https://mstdn.social/@richardlent&#39; style=&#39;text-decoration: none; font-size: 12px;&#39;&gt;Mastodon&lt;/a&gt;</copyright>
+    <lastBuildDate>Mon, 29 Oct 2018 09:19:00 -0400</lastBuildDate><atom:link href="/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Web Mapping with Free Software Tools</title>
+      <link>/post/web-mapping/</link>
+      <pubDate>Mon, 29 Oct 2018 09:19:00 -0400</pubDate>
+      
+      <guid>/post/web-mapping/</guid>
+      <description>Introduction GIS in a nutshell Desirable features of a web mapping platform Set up your data for mapping Google Maps QGIS and the qgis2web plugin RStudio and the R Leaflet Package In conclusion   Reading time: 36 minute(s) @ 200 WPM.
+   Introduction Web mapping is an application of geographic information systems (GIS) that involves the creation of interactive digital maps displayed and manipulated through a web browser.</description>
+    </item>
+    
+    <item>
+      <title>Multivariate Analysis with R</title>
+      <link>/post/multivariate-analysis-with-r/</link>
+      <pubDate>Thu, 22 Jun 2017 09:21:00 -0400</pubDate>
+      
+      <guid>/post/multivariate-analysis-with-r/</guid>
+      <description>Preliminaries Multivariate data A map Distance matrices Cluster analysis Mantel test Multidimensional scaling Principal components analysis Discriminant function analysis Epilogue      Reading time: 32 minute(s) @ 200 WPM.
+Preliminaries  At some time or another, most users of statistics find themselves sitting in front of a large pile of computer output with the realization that it tells them nothing that they really want to know.</description>
+    </item>
+    
+    <item>
+      <title>An Introduction to R</title>
+      <link>/post/introduction-to-r/</link>
+      <pubDate>Fri, 02 Jun 2017 16:14:00 -0400</pubDate>
+      
+      <guid>/post/introduction-to-r/</guid>
+      <description>Prologue Getting a feel for R The console Function calls and arguments HINT: Getting help  Some graphics HINT: Command history and workspace   Getting data into R Data frames Creating data frames HINT: Data management in R and RStudio.   Exploratory data analysis Scatterplot matrix HINT: R packages  Summary statistics and data screening Box plots Stem-and-leaf display Categorical variables: factors Some confirmatory analysis  More graphics R scripts (command files) An R menu system: R-commander Epilogue      Reading time: 23 minute(s) @ 200 WPM.</description>
+    </item>
+    
+    <item>
+      <title>A Comment About Comments</title>
+      <link>/post/a-comment-about-comments/</link>
+      <pubDate>Fri, 19 May 2017 14:32:00 -0400</pubDate>
+      
+      <guid>/post/a-comment-about-comments/</guid>
+      <description>Reading time: 1 minute(s) @ 200 WPM.
+Readers of this website (if any) may have noticed that I recently implemented Disqus comments. This is very easy to do in a Hugo-generated website. Sign up for a free Disqus account, put your Disqus shortname (basically your account ID) into your Hugo configuration file, and Hugo takes care of generating all the necessary code when it creates your static website. Disqus sends you email notifications whenever somebody writes a comment, and you can moderate comments, write replies, delete comments, mark comments as spam, and yada yada yada.</description>
+    </item>
+    
+    <item>
+      <title>How I Deploy My Website to GitHub Using RStudio, blogdown, and Hugo</title>
+      <link>/post/how-i-deploy-my-website-to-github-using-rstudio-blogdown-and-hugo/</link>
+      <pubDate>Wed, 17 May 2017 12:02:00 -0400</pubDate>
+      
+      <guid>/post/how-i-deploy-my-website-to-github-using-rstudio-blogdown-and-hugo/</guid>
+      <description>Reading time: 3 minute(s) @ 200 WPM.
+I have worked for days trying to get this website up and running on GitHub Pages. I think I finally have gotten it to work.
+This is that story.
+I have studied the following sources of punditage:
+ Making a Website Using Blogdown, Hugo, and GitHub pages Update: Deploying Hugo-generated websites on personal GitHub Pages How to make a GitHub pages blog with RStudio and Hugo Including image using blogdown Building a Blog with Blogdown and GitHub The Hugo documentation Create Blogs and Websites with R Markdown Hosting on GitHub Pages Build_Site and Serve_Site Output Issues Create a Free Personal Academic Website with Hugo  All of the articles and discussions were enlightening, and helped me arrive at what I believe to be the simplest way to deploy a Hugo-generated website on GitHub Pages, at least for me.</description>
+    </item>
+    
+    <item>
+      <title>An R script for calculating the reading time of an R Markdown file</title>
+      <link>/post/an-r-script-for-calculating-reading-time-of-an-article/</link>
+      <pubDate>Mon, 15 May 2017 13:00:00 -0400</pubDate>
+      
+      <guid>/post/an-r-script-for-calculating-reading-time-of-an-article/</guid>
+      <description>Reading time: 2 minute(s) @ 200 WPM.
+To see how we just did that, read on.
+Because psychological research tells us that including estimated reading times can increase reader engagement with digital content, I decided to include reading times for my riveting posts.
+So I wrote a simple R script. Here it is, as an R code chunk:
+```{r echo=FALSE} bytes  The script is very simple, such that even I could program it.</description>
+    </item>
+    
+    <item>
+      <title>Musings on blogdown and Hugo</title>
+      <link>/post/musings-on-blogdown-and-hugo/</link>
+      <pubDate>Mon, 15 May 2017 11:56:48 -0400</pubDate>
+      
+      <guid>/post/musings-on-blogdown-and-hugo/</guid>
+      <description>Reading time: 4 minute(s) @ 200 WPM.
+I am a huge fan of R and RStudio, especially relative to their use in creating reproducible research (see RStudio as a Research and Writing Platform). I was thus thrilled to learn that a new R package, blogdown, was being developed for producing websites from R Markdown files using RStudio and the static website generator, Hugo.
+This website was built and is maintained using blogdown and Hugo running inside of RStudio, and is hosted on GitHub Pages.</description>
+    </item>
+    
+    <item>
+      <title>The Plain Text Workflow</title>
+      <link>/post/the-plain-text-workflow/</link>
+      <pubDate>Thu, 11 May 2017 15:38:00 -0400</pubDate>
+      
+      <guid>/post/the-plain-text-workflow/</guid>
+      <description>Introduction What is Plain Text? Why Plain Text? An Example of the Plain Text Workflow Parting Thoughts      Reading time: 10 minute(s) @ 200 WPM.
+Introduction The Plain Text Workflow is an alternative to writing with a word processor. Mind you, I said writing, not typesetting or formatting, which is a major part of what word processors do. The idea of the plain text workflow is that you separate the act of writing from that of producing a formatted, typeset final document.</description>
+    </item>
+    
+    <item>
+      <title>R Markdown Test</title>
+      <link>/post/r-markdown-test/</link>
+      <pubDate>Wed, 10 May 2017 14:20:08 -0400</pubDate>
+      
+      <guid>/post/r-markdown-test/</guid>
+      <description>Reading time: 2 minute(s) @ 200 WPM.
+Yes, it doth work. The blogdown package can nicely deal with R Markdown containing embedded R code for production of statistical analyses and graphics.
+But.
+It cannot deal with R Notebooks, which contain a special flavor of R Markdown allowing for interactive display of R code alongside the results they produce. R Notebooks, when rendered into HTML, produce a special file named *.</description>
+    </item>
+    
+    <item>
+      <title>Google Search</title>
+      <link>/post/google-search/</link>
+      <pubDate>Mon, 08 May 2017 14:54:00 -0400</pubDate>
+      
+      <guid>/post/google-search/</guid>
+      <description>Reading time: 2 minute(s) @ 200 WPM.
+Following the directions for Google’s Custom Search Engine, with additional help from How I added search to my static blog, I have added a local search function to this website. It’s on the sidebar menu, with an adorable magnifying glass icon from Font Awesome Icons, and it basically works.
+This search function will, in all likelihood, probably search only the specific content of richardlent.</description>
+    </item>
+    
+    <item>
+      <title>R Notebook Example with R, Python, and BibTeX</title>
+      <link>/post/r-notebook-example-with-r-python-and-bibtex/</link>
+      <pubDate>Mon, 08 May 2017 12:20:00 -0400</pubDate>
+      
+      <guid>/post/r-notebook-example-with-r-python-and-bibtex/</guid>
+      <description>The accompanying R Notebook is a simple example that combines R code chunks, Python code chunks, and BibTeX literature citations in one R Markdown document.
+For additional information please see RStudio as a Research and Writing Platform.
+Click here to read the notebook.</description>
+    </item>
+    
+    <item>
+      <title>Video test</title>
+      <link>/post/video-test/</link>
+      <pubDate>Fri, 05 May 2017 14:37:00 -0400</pubDate>
+      
+      <guid>/post/video-test/</guid>
+      <description>Reading time: 1 minute(s) @ 200 WPM.
+We now attempt to insert into our R Markdown file, which Hugo then renders into HTML, an mp4 video of dragonflies (insect order Odonata, in case you’re wondering) that were congregating in my front yard a few summers ago.
+So I’m thinking, just insert it using a regular Markdown image tag, yes?
+Like this:
+![](/mp4/Dragonflies.mp4).
+  And so, that worked.
+To center this video on the page I am using the deprecated HTML &amp;lt;center&amp;gt; tag inside of my R Markdown.</description>
+    </item>
+    
+    <item>
+      <title>Bossa Novish</title>
+      <link>/post/bossa-novish/</link>
+      <pubDate>Fri, 05 May 2017 12:08:00 -0400</pubDate>
+      
+      <guid>/post/bossa-novish/</guid>
+      <description> An original tune of mine. This recording gets kind of screwed up in the middle, but hey, that’s how we know it’s live and not lip-synched, right?
+ Guitar: Martin 00-18V (Click for larger image.)  
+ Tuning: Standard
+ Listen/download: Bossa Novish
+  </description>
+    </item>
+    
+    <item>
+      <title>Making Maps with R</title>
+      <link>/post/making-maps-with-r/</link>
+      <pubDate>Thu, 04 May 2017 13:45:00 -0400</pubDate>
+      
+      <guid>/post/making-maps-with-r/</guid>
+      <description>Making maps on a computer has traditionally required the use of desktop geographic information system (GIS) software such as ArcGIS or QGIS. An alternative is to use R, a free software environment for statistical computing and graphics. R has many features that allow it to read GIS data and produce both static and interactive maps. This document (which is an R Notebook) shows how to make maps with R and RStudio, using R base graphics and the maps and mapdata packages, in addition to the leaflet and tmap packages.</description>
+    </item>
+    
+    <item>
+      <title>Habitat structure and phenotypic variation in the invading butterfly Coenonympha tullia</title>
+      <link>/post/habitat-structure-and-phenotypic-variation-in-the-invading-butterfly-coenonympha-tullia/</link>
+      <pubDate>Thu, 04 May 2017 11:18:00 -0400</pubDate>
+      
+      <guid>/post/habitat-structure-and-phenotypic-variation-in-the-invading-butterfly-coenonympha-tullia/</guid>
+      <description>The R Notebook Habitat structure and phenotypic variation in the invading butterfly Coenonympha tullia is a mockup of a scientific paper (although the field data are real) to illustrate the use of R Notebooks as a means of creating reproducible research. The objective is to produce publication-quality output, in HTML, PDF, and Microsoft Word formats, with text, literature citations, a formatted bibliography, statistical analyses, tables, and graphics, all from one, plain-text R Notebook.</description>
+    </item>
+    
+    <item>
+      <title>RStudio as a Research and Writing Platform</title>
+      <link>/post/rstudio-as-a-research-and-writing-platform/</link>
+      <pubDate>Wed, 03 May 2017 14:47:00 -0400</pubDate>
+      
+      <guid>/post/rstudio-as-a-research-and-writing-platform/</guid>
+      <description>Reproducible Research Software Installation Rendering Documents in RStudio Writing and Citing in RStudio R Notebooks Reproducible Research Revisited Coda I: Python Coda II: Inspirational Quotes About Data      Reading time: 22 minute(s) @ 200 WPM.
+R (r-project.org) is a programming language and software platform for statistical computing and graphics, widely used in academia and industry (see An Introduction to R). RStudio is an integrated development environment for R.</description>
+    </item>
+    
+    <item>
+      <title>Getting images to work</title>
+      <link>/post/getting-images-to-work/</link>
+      <pubDate>Tue, 02 May 2017 11:00:00 -0400</pubDate>
+      
+      <guid>/post/getting-images-to-work/</guid>
+      <description>Reading time: 3 minute(s) @ 200 WPM.
+I was until very recently involved in an epic struggle to get the system described in Making a Website Using Blogdown, Hugo, and GitHub pages to work for me. (See also Building a Blog with Blogdown and GitHub.) I really want it to work, because it has produced the current website that you are now reading, and I’m sure you’ll agree that it is very, very beautiful, in a stark, post-apocalyptic, Mordor-esque sort of way.</description>
+    </item>
+    
+    <item>
+      <title>Time stamp issue</title>
+      <link>/post/time-stamp-issue/</link>
+      <pubDate>Wed, 26 Apr 2017 14:52:42 -0400</pubDate>
+      
+      <guid>/post/time-stamp-issue/</guid>
+      <description>There seems to be a bug in blogdown in which time stamps for posts are all 00:00.
+Either that or there is something in some setting somewheres that I am missing.
+If we use the blogdown “New Post” RStudio addin, the time stamp for the post is 00:00.
+However, if we create a post using the blogdown new_post() function, the time stamp is correct.
+This either needs to be fixed or I need to be re-educated.</description>
+    </item>
+    
+    <item>
+      <title>First post</title>
+      <link>/post/2017-04-26-first-post/</link>
+      <pubDate>Wed, 26 Apr 2017 14:49:48 -0400</pubDate>
+      
+      <guid>/post/2017-04-26-first-post/</guid>
+      <description>This site is written, built, and maintained in RStudio using the R blogdown package and the Hugo static website generator. See Making a Website Using Blogdown, Hugo, and GitHub.
+An apparent quirk (or maybe it’s a feature) of this system is that hyperlinks are not displayed in the short summary displayed by default for each post. The summary consists simply of the first n lines of the posts’s text, where the variable n has a value that is unknown to me.</description>
+    </item>
+    
+  </channel>
+</rss>

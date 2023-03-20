@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Reproducible Research on Richard A. Lent, Ph.D.</title>
+    <link>/tags/reproducible-research/</link>
+    <description>Recent content in Reproducible Research on Richard A. Lent, Ph.D.</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; 2017 and beyond by Richard A. Lent. All rights reserved.&lt;br&gt;&lt;br&gt;&lt;a rel=&#39;me&#39; href=&#39;https://mstdn.social/@richardlent&#39; style=&#39;text-decoration: none; font-size: 12px;&#39;&gt;Mastodon&lt;/a&gt;</copyright>
+    <lastBuildDate>Mon, 15 May 2017 11:56:48 -0400</lastBuildDate><atom:link href="/tags/reproducible-research/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Musings on blogdown and Hugo</title>
+      <link>/post/musings-on-blogdown-and-hugo/</link>
+      <pubDate>Mon, 15 May 2017 11:56:48 -0400</pubDate>
+      
+      <guid>/post/musings-on-blogdown-and-hugo/</guid>
+      <description>Reading time: 4 minute(s) @ 200 WPM.
+I am a huge fan of R and RStudio, especially relative to their use in creating reproducible research (see RStudio as a Research and Writing Platform). I was thus thrilled to learn that a new R package, blogdown, was being developed for producing websites from R Markdown files using RStudio and the static website generator, Hugo.
+This website was built and is maintained using blogdown and Hugo running inside of RStudio, and is hosted on GitHub Pages.</description>
+    </item>
+    
+    <item>
+      <title>R Markdown Test</title>
+      <link>/post/r-markdown-test/</link>
+      <pubDate>Wed, 10 May 2017 14:20:08 -0400</pubDate>
+      
+      <guid>/post/r-markdown-test/</guid>
+      <description>Reading time: 2 minute(s) @ 200 WPM.
+Yes, it doth work. The blogdown package can nicely deal with R Markdown containing embedded R code for production of statistical analyses and graphics.
+But.
+It cannot deal with R Notebooks, which contain a special flavor of R Markdown allowing for interactive display of R code alongside the results they produce. R Notebooks, when rendered into HTML, produce a special file named *.</description>
+    </item>
+    
+    <item>
+      <title>Habitat structure and phenotypic variation in the invading butterfly Coenonympha tullia</title>
+      <link>/post/habitat-structure-and-phenotypic-variation-in-the-invading-butterfly-coenonympha-tullia/</link>
+      <pubDate>Thu, 04 May 2017 11:18:00 -0400</pubDate>
+      
+      <guid>/post/habitat-structure-and-phenotypic-variation-in-the-invading-butterfly-coenonympha-tullia/</guid>
+      <description>The R Notebook Habitat structure and phenotypic variation in the invading butterfly Coenonympha tullia is a mockup of a scientific paper (although the field data are real) to illustrate the use of R Notebooks as a means of creating reproducible research. The objective is to produce publication-quality output, in HTML, PDF, and Microsoft Word formats, with text, literature citations, a formatted bibliography, statistical analyses, tables, and graphics, all from one, plain-text R Notebook.</description>
+    </item>
+    
+    <item>
+      <title>RStudio as a Research and Writing Platform</title>
+      <link>/post/rstudio-as-a-research-and-writing-platform/</link>
+      <pubDate>Wed, 03 May 2017 14:47:00 -0400</pubDate>
+      
+      <guid>/post/rstudio-as-a-research-and-writing-platform/</guid>
+      <description>Reproducible Research Software Installation Rendering Documents in RStudio Writing and Citing in RStudio R Notebooks Reproducible Research Revisited Coda I: Python Coda II: Inspirational Quotes About Data      Reading time: 22 minute(s) @ 200 WPM.
+R (r-project.org) is a programming language and software platform for statistical computing and graphics, widely used in academia and industry (see An Introduction to R). RStudio is an integrated development environment for R.</description>
+    </item>
+    
+  </channel>
+</rss>
