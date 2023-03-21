@@ -3,7 +3,7 @@ languageCode = "en-us"
 title = "Richard A. Lent, Ph.D."
 theme = "blackburn-master"
 author = "Richard A. Lent"
-copyright = "&copy; 2017 and beyond by Richard A. Lent. All rights reserved.<br><br><a rel='me' href='https://mstdn.social/@richardlent' style='text-decoration: none; font-size: 12px;'>Mastodon</a>"
+copyright = "&copy; 2017 and beyond by Richard A. Lent. All rights reserved.<br>"
 canonifyurls = true
 relativeURLs = true
 paginate = 7
