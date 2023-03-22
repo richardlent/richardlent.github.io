@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Lepidoptera on Richard A. Lent, Ph.D.</title>
+    <link>/tags/lepidoptera/</link>
+    <description>Recent content in Lepidoptera on Richard A. Lent, Ph.D.</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;a rel=&#39;me&#39; href=&#39;https://mstdn.social/@lentrichard&#39; style=&#39;text-decoration: none; font-size: 14px;&#39;&gt;Mastodon&lt;/a&gt;&lt;br&gt;&lt;br&gt;&amp;copy; 2017 and beyond by Richard A. Lent. All rights reserved.&lt;br&gt;</copyright>
+    <lastBuildDate>Thu, 04 May 2017 11:18:00 -0400</lastBuildDate><atom:link href="/tags/lepidoptera/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Habitat structure and phenotypic variation in the invading butterfly Coenonympha tullia</title>
+      <link>/post/habitat-structure-and-phenotypic-variation-in-the-invading-butterfly-coenonympha-tullia/</link>
+      <pubDate>Thu, 04 May 2017 11:18:00 -0400</pubDate>
+      
+      <guid>/post/habitat-structure-and-phenotypic-variation-in-the-invading-butterfly-coenonympha-tullia/</guid>
+      <description>The R Notebook Habitat structure and phenotypic variation in the invading butterfly Coenonympha tullia is a mockup of a scientific paper (although the field data are real) to illustrate the use of R Notebooks as a means of creating reproducible research. The objective is to produce publication-quality output, in HTML, PDF, and Microsoft Word formats, with text, literature citations, a formatted bibliography, statistical analyses, tables, and graphics, all from one, plain-text R Notebook.</description>
+    </item>
+    
+  </channel>
+</rss>
