@@ -108,7 +108,7 @@ ignoreErrors = ["error-remote-getjson"]
 [social]
   # Link your social networking accounts to the side menu
   # by entering your username or ID.
-  linkedin = "richard-lent"
+  # linkedin = "richard-lent"
   
 [markup]
   [markup.goldmark]
